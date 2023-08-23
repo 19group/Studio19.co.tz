@@ -83,7 +83,7 @@ h6 {
   color: #ffffff;
   font-style: normal;
   text-rendering: optimizeLegibility;
-  margin: 18px 0 15px;
+  /* margin: 18px 0 15px; */
 }
 
 h1 a,
