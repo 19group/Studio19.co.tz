@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: flex-start;
   padding-left: 5%;
+  margin: 2rem 0;
 }
 .team .container {
   position: relative;
@@ -30,7 +31,7 @@
   transition: 0.5s;
   border: 1px solid #fff;
   box-shadow: 0 0 0 4px #222, 0 0 0 6px #fff;
-  transform: rotate(calc(72deg * var(--i)));
+  transform: rotate(calc(40deg * var(--i)));
   transform-origin: 26rem;
   z-index: 100;
   overflow: hidden;
@@ -43,7 +44,7 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  transform: rotate(calc(-72deg * var(--i)));
+  transform: rotate(calc(-40deg * var(--i)));
   transition: 0.5s;
   filter: grayscale(1);
 }
