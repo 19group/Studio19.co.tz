@@ -1914,10 +1914,13 @@ ul#nav li.current a:after {
   line-height: 1;
   overflow: hidden;
   background: #ffffff;
+  height:400px;
+  
 }
 
 #team-wrapper .member-pic img {
   vertical-align: bottom;
+  
 }
 
 #team-wrapper .mask {
