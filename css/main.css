@@ -1923,7 +1923,7 @@ ul#nav li.current a:after {
   
 }
 
-#team-wrapper .mask {
+/* #team-wrapper .mask {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1939,7 +1939,7 @@ ul#nav li.current a:after {
   -webkit-transition: opacity 0.5s ease-in-out;
   -ms-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-}
+} */
 
 #team-wrapper .member:hover .mask {
   filter: alpha(opacity=100);
