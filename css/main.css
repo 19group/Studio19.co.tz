@@ -1913,13 +1913,16 @@ ul#nav li.current a:after {
   position: relative;
   line-height: 1;
   overflow: hidden;
-  background: #ffffff;
+  /* background: #ffffff; */
   height:400px;
+  border-radius: 20px;
+  margin-bottom:1rem;
   
 }
 
 #team-wrapper .member-pic img {
   vertical-align: bottom;
+
   
 }
 
