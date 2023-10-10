@@ -1913,14 +1913,20 @@ ul#nav li.current a:after {
   position: relative;
   line-height: 1;
   overflow: hidden;
-  background: #ffffff;
+  /* background: #ffffff; */
+  height:400px;
+  border-radius: 20px;
+  margin-bottom:1rem;
+  
 }
 
 #team-wrapper .member-pic img {
   vertical-align: bottom;
+
+  
 }
 
-#team-wrapper .mask {
+/* #team-wrapper .mask {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1936,7 +1942,7 @@ ul#nav li.current a:after {
   -webkit-transition: opacity 0.5s ease-in-out;
   -ms-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-}
+} */
 
 #team-wrapper .member:hover .mask {
   filter: alpha(opacity=100);

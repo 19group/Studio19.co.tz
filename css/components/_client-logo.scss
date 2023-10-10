@@ -1,17 +1,18 @@
 .client-logo{
     overflow: hidden;
     position: relative;
-    .client-logo-slide{
+    &-slide{
         display:flex;
-        animation: slide 20s linear infinite;
+        animation: 30s slide  linear infinite;
         white-space: nowrap;
         &:hover{
             animation-play-state: paused;
         }
-    }
-    img{
-        height:50%;
-    }
+        img{
+            height:50%;
+            margin:0 1rem 0 1rem;
+        }
+    } 
     &:before{
         content: "";
         top: 0;
@@ -20,8 +21,7 @@
         height: 100%;
         z-index: 1;
         left: 0;
-        background: linear-gradient(to left, rgba(255,255,255,0), #09141f);
-   
+        background: linear-gradient(to left, rgba(255,255,255,0), #09141f);   
     }
     &:after{
         content: "";
