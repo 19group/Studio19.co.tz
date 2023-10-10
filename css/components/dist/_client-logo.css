@@ -2,16 +2,17 @@
   overflow: hidden;
   position: relative;
 }
-.client-logo .client-logo-slide {
+.client-logo-slide {
   display: flex;
-  animation: slide 20s linear infinite;
+  animation: 30s slide linear infinite;
   white-space: nowrap;
 }
-.client-logo .client-logo-slide:hover {
+.client-logo-slide:hover {
   animation-play-state: paused;
 }
-.client-logo img {
+.client-logo-slide img {
   height: 50%;
+  margin: 0 1rem 0 1rem;
 }
 .client-logo:before {
   content: "";
@@ -41,4 +42,4 @@
   to {
     transform: translatex(-100%);
   }
-}/*# sourceMappingURL=client-logo.css.map */
+}

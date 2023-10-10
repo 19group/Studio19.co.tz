@@ -43,10 +43,8 @@ Customized video production packages for NGOs and non-profit organizations in Da
     <link rel="stylesheet" href="css/base.css" async>
     <link rel="stylesheet" href="css/vendor.css" async>
     <link rel="stylesheet" href="css/main.css" async>
-    <link rel="stylesheet" href="css/client-logo.css" async>
+    <link rel="stylesheet" href="css/styles.css" async>
     <!-- <link rel="stylesheet" href="css/team-section.css" async> -->
-    <link rel="stylesheet" href="css/whatsapp.css" async>
-    <link rel="stylesheet" href="css/testimonial.css" async>
     <link rel="manifest" href="manifest.json">
 
     <!-- script
@@ -62,6 +60,13 @@ Customized video production packages for NGOs and non-profit organizations in Da
     <!-- Canonical tag
  ================================================== -->
     <link rel="canonical" href="https://www.studio19.co.tz/" />
+
+    <!-- Swiper-js
+ ================================================== -->
+ <link
+ rel="stylesheet"
+ href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
 
 
 
@@ -369,46 +374,7 @@ Customized video production packages for NGOs and non-profit organizations in Da
             <!-- Team section end -->
     
         </section>
-<div class="row">
-        <section class="testimonial-section">
-            <div class="testimonials-container">
-              <div class="testimonial">
-                <div class="testimonial-content">
-                  <!-- <img src="images/TED logo.png" alt="Testimonial Image"> -->
-                  <blockquote>
-                    "As  a producer at TED, I'm delighted to recommend Studio 19 for any video and production needs. 
-                    Studio 19's nimble efficiency and warm curiosity impressed us immensely during our TED project. 
-                    Their ability to flex, capture genuine moments, and navigate challenging environments showcased their scrappiness and deep appreciation for the work. 
-                    A truly worthwhile experience"
-                    <cite>Hasiba Haq, Content Producer at TED</cite>
-                  </blockquote>
-                </div>
-              </div>
-              <div class="testimonial">
-                <div class="testimonial-content">
-                  <!-- <img src="testimonial-2.jpg" alt="Testimonial Image"> -->
-                  <blockquote>
-                    "Studio 19's professionalism and collaborative spirit greatly impressed us. 
-                    Their exceptional work in video production, photography, and storytelling captured the essence of our project. 
-                    Their dedication, quality, and support went beyond expectations. A highly recommended partner"
-                    <cite>Felix Bachmann, Country Director, HELVETAS Swiss Intercooperation</cite>
-                  </blockquote>
-                </div>
-              </div>
-              <div class="testimonial">
-                <div class="testimonial-content">
-                  <!-- <img src="testimonial-3.jpg" alt="Testimonial Image"> -->
-                  <blockquote>
-                    "Studio19 consistently delivers creative and high-quality work, and they gave us the quality we were looking for. 
-                    Their support and expertise during our documentary projects, including coordinating logistics and providing creative input, have been invaluable. 
-                    As our trusted regional partner, we highly recommend Studio19 for any documentary and video needs"
-                    <cite>Colby Gottert, President, Digital Development Communications</cite>
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
+
 
         <!--Our clients-->
 
@@ -424,19 +390,19 @@ Customized video production packages for NGOs and non-profit organizations in Da
 
             <div class="client-logo">
                 <div class="client-logo-slide">
-                    <img src="images/clients/cloudstv.webp" alt="Clouds Tv">
-                    <img src="images/clients/darramanihuria.webp" alt="Dar ramani huria">
-                    <img src="images/clients/dawasco.webp" alt="Dawasco">
-                    <img src="images/clients/steps.webp" alt="Steps entertainment Limited">
-                    <img src="images/clients/fsdt.webp" alt="Financial sector deepening trust(FSDT)">
-                    <img src="images/clients/mavc.webp" alt="Making All Voices Count">
-                    <img src="images/clients/theworldbank.webp" alt="The World Bank">
-                    <img src="images/clients/turunyliopisto.webp" alt="Turun yliopisto">
-                    <img src="images/clients/smec.webp" alt="SMEC">
-                    <img src="images/clients/media.webp" alt="Media council of Tanzania">
-                    <img src="images/clients/ubongokids.webp" alt="Ubongo kids">
-                    <img src="images/clients/yglobal.webp" alt="Y Global - KFUK-KFUM Global">
-                </div>
+                    <img src="images/clients/AFDB.png" alt="Clouds Tv">
+                    <img src="images/clients/Binti.png" alt="Dar ramani huria">
+                    <img src="images/clients/BOT.png" alt="Dawasco">
+                    <img src="images/clients/FEMINA.png" alt="Steps entertainment Limited">
+                    <img src="images/clients/FINSCOPE.png" alt="Financial sector deepening trust(FSDT)">
+                    <img src="images/clients/IOM.png" alt="Making All Voices Count">
+                    <img src="images/clients/IUCN.png" alt="The World Bank">
+                    <img src="images/clients/OKY.png" alt="Turun yliopisto">
+                    <img src="images/clients/plan-international.png" alt="SMEC">
+                    <img src="images/clients/Restless-Development.png" alt="Media council of Tanzania">
+                    <img src="images/clients/TADB.png" alt="Ubongo kids">
+                    <img src="images/clients/Un-Women.png" alt="Y Global - KFUK-KFUM Global">
+                </div>  
             </div>
 
             <!-- <div>
@@ -498,6 +464,93 @@ Customized video production packages for NGOs and non-profit organizations in Da
         <!-- end row -->
 
     </section>
+
+            <!-- Testimonial section -->
+            <div class="row">
+                <section class="testimonials">
+                    <div class="testimonials-container">
+                        <div class="testimonials-section-header">
+                            <h2 class="testimonials-section-header-title">What Our clients say</h2>
+                        </div>
+                        <div class="testimonials-content">
+                            <div class="swiper testimonials-content-slider js-testimonials-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide testimonials-item">
+                                        <div class="testimonials-item-info">
+                                            <!-- <img src="" alt="img"> -->
+                                            <div class="testimonials-item-text-box">
+                                                <h3 class="testimonials-item-text-box-name">Hasiba Haq</h3>
+                                                <span class="testimonials-item-text-box-job">Content Producer at TED</span>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            As a TED producer, I highly recommend Studio 19 for video and production. 
+                                            Their nimble efficiency, warm curiosity, and ability to capture genuine moments in challenging
+                                             environments left a lasting impression. Working with them was truly rewarding
+                                    
+                                        </p>
+                                        <div class="testimonials-item-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide testimonials-item">
+                                        <div class="testimonials-item-info">
+                                            <!-- <img src="" alt="img"> -->
+                                            <div class="testimonials-item-text-box">
+                                                <h3 class="testimonials-item-text-box-name">Felix Bachmann</h3>
+                                                <span class="testimonials-item-text-box-job">Country Director at HELVETAS Swiss Intercooperation</span>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            Studio 19's professionalism and collaboration were impressive. 
+                                            Their exceptional work in video, photography, and storytelling truly captured our project's essence. 
+                                            Their dedication, quality, and support exceeded expectations. Highly recommended partners
+                                            
+                                        </p>
+                                        <div class="testimonials-item-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide testimonials-item">
+                                        <div class="testimonials-item-info">
+                                            <!-- <img src="" alt="img"> -->
+                                            <div class="testimonials-item-text-box">
+                                                <h3 class="testimonials-item-text-box-name">Colby Gottert</h3>
+                                                <span class="testimonials-item-text-box-job">President at Digital Development Communications</span>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            Studio19 consistently delivers high-quality work, exceeding our expectations. 
+                                            Their expertise and creative input in our documentary projects were invaluable. 
+                                            We highly recommend them as a trusted regional partner for video needs
+                                            
+                                        </p>
+                                        <div class="testimonials-item-rating">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="swiper-pagination js-testimonials-pagination"></div>
+                        </div>
+                    </div>
+                </section>
+                </div> 
+            </div>
+        
+        
+                <!-- End of Testimonial section -->
+        
 
     <!-- End of Our Services Section -->
 
@@ -930,6 +983,9 @@ Customized video production packages for NGOs and non-profit organizations in Da
     <script src="js/jquery.filterizr.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/team.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/client-slider.js"></script>
 
     <!-- <script>
 
