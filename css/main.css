@@ -598,7 +598,7 @@ hr {
   letter-spacing: 2.5px;
   color: #ffffff;
   margin-bottom: 30px;
-  margin-top: 18px;
+  margin-top: 50px;
 }
 
 .section-head h1 span {
@@ -1028,7 +1028,7 @@ ul#nav li.current a:after {
 /* =================================================================== */
 
 #hero {
-  /*background: #0F1215 url(../images/hero-bg.jpg) no-repeat center;*/
+  background: #09141f no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -1405,6 +1405,11 @@ ul#nav li.current a:after {
   cursor: pointer;
   position: relative;
 }
+.folio-item .item-wrap img {
+ height:425px;
+ width:425px;
+
+}
 
 #portfolio1 .folio-item .item-wrap {
   border: 2px solid #79848c !important;
@@ -1436,7 +1441,7 @@ ul#nav li.current a:after {
   top: unset;
   bottom: 0;
   width: 100%;
-  height: 15%;
+  height: 38%;
   background: #eaa708;
   line-height: 40px;
   opacity: 1;
@@ -1756,8 +1761,8 @@ ul#nav li.current a:after {
 #services {
   /*background: #12151B;*/
   background: #09141f;
-  padding-top: 120px;
-  /*padding-bottom: 120px;*/
+  padding-top: 10px;
+  padding-bottom: 70px;
   border-bottom: 1px solid #15191d;
 }
 
@@ -1843,11 +1848,26 @@ ul#nav li.current a:after {
 #about {
   /*background: #111417;*/
   background: #09141f;
-  padding-top: 120px;
-  /*padding-bottom: 120px;*/
+  padding-top: 40px;
+  padding-bottom: 120px;
+  border-bottom: 1px solid #15191d;
+}
+#team {
+  /*background: #111417;*/
+  background: #09141f;
+  padding-top: 40px;
+  padding-bottom: 120px;
   border-bottom: 1px solid #15191d;
 }
 
+#team h3 {
+  font: 18px/36px "raleway-heavy", sans-serif;
+  color: #eaa708;
+  text-transform: none;
+  letter-spacing: 0;
+  padding: 0;
+  margin-bottom: 6px;
+}
 #about h3 {
   font: 18px/36px "raleway-heavy", sans-serif;
   color: #eaa708;
@@ -2283,7 +2303,7 @@ ul#nav li.current a:after {
 #contact {
   /*background: #12151B;*/
   background: #09141f;
-  padding-top: 120px;
+  /* padding-top: 120px; */
   /*padding-bottom: 138px;*/
   overflow: hidden;
   border-bottom: 1px solid #15191d;
@@ -2542,6 +2562,7 @@ footer {
   padding-bottom: 24px;
   position: relative;
   color: rgba(255, 255, 255, 0.15);
+  background: #09141f;
 }
 
 footer .content {
@@ -2564,7 +2585,7 @@ footer hr {
   margin-bottom: 30px;
   max-width: 400px;
   width: 80%;
-  border-top: 1px solid rgba(150, 150, 150, 0.1);
+  border-top: 1px solid #9696961a;
 }
 
 footer .info {

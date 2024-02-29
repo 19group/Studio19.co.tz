@@ -19,7 +19,8 @@
   margin-bottom: 30px;
 }
 .testimonials-container .testimonials-section-header .testimonials-section-header-title {
-  font-size: 1.3em;
+  color: #eaa708;
+  font-size: 60px;
   font-weight: 600;
   text-transform: capitalize;
   line-height: 1.2;
