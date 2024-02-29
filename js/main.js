@@ -119,7 +119,7 @@
 
 
    /*----------------------------------------------------*/
-	/* Adjust Primary Navigation Background Opacity
+	/* Adjust Primary Navigation  Opacity
 	------------------------------------------------------*/
    $(window).on('scroll', function() {
 
