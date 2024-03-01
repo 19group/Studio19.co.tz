@@ -1,0 +1,30 @@
+/* 2.5 - Spaces or Gaps - Start
+================================================== */
+.section_space_lg {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.section_space_md {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  margin: 70px 0 0 0;
+}
+
+.section_space_sm {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 60px 0 50px 0;
+}
+
+.section_space_sm_tb {
+  padding-bottom: 50px;
+  margin: 0 50px 0;
+}
+
+.section_space_sm_what-we-do {
+  padding-bottom: 50px;
+}
+
+/* 2.5 - Spaces or Gaps - End
+================================================== */

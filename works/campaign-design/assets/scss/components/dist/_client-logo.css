@@ -1,0 +1,25 @@
+.client-logo {
+  overflow: hidden;
+  position: relative;
+}
+.client-logo-slide {
+  display: flex;
+  animation: slide 20s linear infinite;
+  align-items: center;
+  white-space: nowrap;
+}
+.client-logo-slide:hover {
+  animation-play-state: paused;
+}
+.client-logo-image {
+  height: 100%;
+}
+
+@keyframes slide {
+  from {
+    transform: translatex(0);
+  }
+  to {
+    transform: translatex(-100%);
+  }
+}

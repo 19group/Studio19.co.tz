@@ -1,0 +1,191 @@
+main {
+    width: 100%;
+    font-family: "raleway-medium", sans-serif;
+    overflow-x: hidden;
+}
+
+#unicef-hero {
+    width: 100%;
+    padding-top: 10vh;
+    padding-bottom: 20px;
+    padding-right: 10%;
+    padding-left: 10%;
+    background: #102235;
+}
+
+#unicef-hero h1 {
+  text-align: center;
+  letter-spacing: 1.5px;
+  padding-top: 50px;
+}
+
+#unicef-hero p {
+    text-align: center;
+}
+
+.unicef-gallery {
+    height: 670px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 1%;
+    padding-top: 5vh;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: all 0.6s ease-in;
+}
+
+.unicef-gallery-more {
+    height: auto;
+}
+
+.unicef-gallery img {
+    padding-top: 20px;
+    transition: all 0.6s ease-in;
+}
+
+.unicef-description {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 10%;
+    padding-left: 10%;
+    background: #eaa708;
+}
+
+.unicef-description p {
+    width: 100%;
+    display: flex;
+    font-size: 18px;
+    font-weight: normal;
+    color: white; 
+    margin-top: 16px;
+}
+
+.unicef-description span {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.unicef-description .description-title {
+    width: 15%;
+    color:black;
+    font-weight: bold;
+    text-align: right;
+}
+
+.unicef-description .description-content {
+    width: 85%;
+    color:white;
+    font-weight: 400;
+    padding-left: 2%;
+}
+
+.unicef-more-description {
+    width: 100%;
+    padding-left: 17%;
+    transform: translateX(-100000px);
+}
+
+.unicef-more-description p {
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+.container-btn-view-all-images, .container-btn-read-more {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.btn-view-all-images {
+   width: 25%;
+   padding: 15px;
+   background: #102235;
+   color: white;
+   border-radius: 4px;
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 14px;
+   letter-spacing: 2.5px;
+   transition: all 0.3s ease-in-out;
+}
+
+.btn-view-all-images:hover {
+   color: #f3ad09;
+   cursor: pointer;
+}
+
+.btn-read-more {
+    width: 25%;
+   padding: 15px;
+   font-size: 16px;
+    border: 2px solid #102235;
+}
+
+
+/* MOBILE VIEW */
+@media only screen and (max-width: 900px) {
+
+    #unicef-hero {
+        width: 100%;
+        padding-top: 20vh;
+    }
+
+    #unicef-hero h1 {
+        text-align: center;
+        letter-spacing: 1px;
+        padding-top: 30px;
+      }
+
+      .unicef-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 1%;
+        padding-top: 5vh;
+        padding-bottom: 30px;
+    }
+
+    .unicef-gallery img {
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .unicef-description {
+        padding-bottom: 30px;
+        padding-right: 10%;
+        padding-left: 10%;
+        background: #eaa708;
+        opacity: inherit;
+    }
+
+    .unicef-description span {
+        letter-spacing: 0.5;
+        font-size: 10px;
+    }
+
+    .unicef-description p {
+        letter-spacing: 0.5px;
+        font-size: 10px;
+        width: 300px;
+    }
+
+    .btn-view-all-images {
+        width: 55%;
+        padding: 15px;
+        background: #102235;
+        color: #f3ad09;
+        border-radius: 4px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 2.5px;
+        transition: all 0.3s ease-in-out;
+     }
+
+}

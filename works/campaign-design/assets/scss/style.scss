@@ -1,0 +1,61 @@
+// Global Settings
+@import 'variable';
+@import 'fonts';
+@import 'mixin';
+@import 'reset';
+
+// Elements
+@import 'elements/color';
+@import 'elements/animation';
+@import 'elements/backtotop';
+@import 'elements/decoration';
+@import 'elements/space';
+@import 'elements/button';
+@import 'elements/list';
+@import 'elements/typography';
+@import 'elements/carousel';
+@import 'elements/image';
+@import 'elements/video';
+@import 'elements/form';
+@import 'elements/calendar';
+@import 'elements/tab';
+@import 'elements/social';
+@import 'elements/counter';
+@import 'elements/rating';
+@import 'elements/iconbox';
+@import 'elements/accordion';
+@import 'elements/pagination';
+@import 'elements/countdown';
+@import 'elements/comment';
+@import 'elements/typewriter';
+
+// Components
+@import 'components/banner';
+@import 'components/service';
+@import 'components/course';
+@import 'components/event';
+@import 'components/pricing';
+@import 'components/advertisement';
+@import 'components/testimonial';
+@import 'components/newsletter';
+@import 'components/blog';
+@import 'components/calltoaction';
+@import 'components/brands';
+@import 'components/mentor';
+@import 'components/client-logo';
+@import 'components/tab-card';
+
+//  Parts
+@import 'template-parts/header';
+@import 'template-parts/footer';
+@import 'template-parts/breadcrumb';
+@import 'template-parts/sidebar';
+
+//  Pages
+@import 'templates/details';
+@import 'templates/contact';
+@import 'templates/error';
+@import 'templates/register';
+
+// Responsive For Small Devices
+@import 'responsive';

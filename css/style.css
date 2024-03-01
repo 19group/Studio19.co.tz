@@ -1,0 +1,395 @@
+.single-we-do-box {
+
+	transition: .3s;
+    border: solid 2px #eaa708;
+    border-radius: 56px;
+    background: #09141f;
+    padding: 19px 5px 0 5px;
+
+}
+
+.single-we-do-box:hover {
+
+	transform: translateY(-10px);
+
+}
+
+.we-do-btn a {
+
+    color: #eaa708;
+
+    line-height: 1;
+
+    font-size: 18px;
+
+    width: 60px;
+
+    height: 60px;
+
+    line-height: 60px;
+
+    border: 2px solid #ffede1;
+
+    display: inline-block;
+
+    border-radius: 50%;
+
+    margin-bottom: 35px;
+
+    position: relative;
+
+
+
+}
+
+
+
+.we-do-btn a::before {
+
+	position: absolute;
+
+	color: #fff;
+
+	background: #eaa708;
+
+	content: "\f105";
+
+	font-family: 'Font Awesome 5 Pro';
+
+	font-weight: 400;
+
+	font-size: 18px;
+
+	top: 50%;
+
+	transform: translateY(-50%);
+
+	width: 100%;
+
+	height: 100%;
+
+	left: 0;
+
+	border-radius: 50%;
+
+	border: 2px solid transparent;
+
+	transition: .5s;
+
+	opacity: 0;
+
+	z-index: 9999;
+
+	line-height: 54px;
+
+}
+
+
+
+.we-do-tittle h3 {
+
+    font-size: 30px;
+
+    font-weight: 600;
+
+    color: #fff;
+
+    margin-bottom: 26px;
+
+    position: relative;
+
+    z-index: 99;
+
+}
+
+
+
+.we-do-para p {
+
+    color: #999999;
+
+    font-size: 16px;
+
+    margin-bottom: 40px;
+
+}
+
+
+
+.we-do-top-back h2 {
+
+    font-size: 140px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    color: #e6e6e6;
+
+}
+
+
+
+.we-do-top-back {
+
+    position: absolute;
+
+    top: 5%;
+
+    left: 0;
+
+    right: 0;
+
+    opacity: 0;
+
+    transition: .4s;
+
+}
+
+
+
+.single-we-do-box:hover .we-do-top .we-do-btn a::before {
+
+    opacity: 1;
+
+}
+
+
+
+.single-we-do-box:hover .we-do-top-back {
+
+    opacity: 1;
+
+}
+
+
+
+.we-do-area {
+
+    margin-top: -50px;
+
+}
+
+
+
+.section-title.team-titles .archivment-back {
+
+    transform: translateY(-40%);
+
+    right: 40px;
+
+}
+
+
+
+/* 7. Movie */
+
+.movi-area {
+
+    padding: 120px 185px;
+    background: #09141f;
+
+}
+
+
+.section-title2 h3.archivment-back {
+
+    color: #303030;
+
+    left: -12px;
+
+    top: 59%;
+
+}
+
+
+
+.section-title2 .archivment-front {
+
+    text-align: left;
+
+}
+
+
+
+.video-singl-img img {
+
+    width: 100%;
+
+}
+
+
+
+.movi-btn {
+
+    position: relative;
+
+    bottom: 30px;
+
+}
+
+
+
+.video-singl-img {
+
+    position: relative;
+
+}
+
+
+
+.video-singl-img::before {
+
+    position: absolute;
+
+    content: "";
+
+    width: 100%;
+
+    height: 100%;
+
+    background-color: rgb(34, 34, 34);
+
+    opacity: 0.302;
+
+    opacity: 0;
+
+    transition: .4s;
+
+}
+
+
+
+.video-sing-img-wrap:hover .video-singl-img::before {
+
+    opacity: 0.302;
+
+}
+
+
+
+.video-sing-img-wrap {
+
+    position: relative;
+
+}
+
+
+
+.video-link a {
+
+    position: absolute;
+
+    font-weight: 500;
+
+    color: #fff;
+
+    top: 50%;
+
+    left: 0;
+
+    right: 0;
+
+    text-align: center;
+
+    transform: translateY(-50%) scale(.9);
+
+    width: 100px;
+
+    height: 100px;
+
+    line-height: 100px;
+
+    border-radius: 50%;
+
+    border: 2px solid #fff;
+
+    margin: auto;
+
+    opacity: 0;
+
+    transition: .6s;
+
+    cursor: pointer;
+
+}
+
+
+
+.video-link a:hover {
+
+    background: #eaa708;
+
+    border: 2px solid #eaa708;
+
+}
+
+
+
+.video-sing-img-wrap:hover .video-link a {
+
+    opacity: 1;
+
+    transform: translateY(-50%) scale(1);
+
+}
+
+
+
+.portfolio-menu button.active {
+
+    color: #fff;
+
+    background-color: #eaa708;
+
+    border: 2px solid transparent;
+
+}
+
+
+
+.portfolio-menu button {
+
+    color: #b9b9b9;
+
+    background-color: rgba(0, 0, 0, 0);
+
+    border: 2px solid #484848;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    font-family: 'Karla', sans-serif;
+
+    padding: 19px 41px;
+
+    margin: 0 5px;
+
+    line-height: 1;
+
+    transition: .4s;
+
+    cursor: pointer;
+
+    background: none;
+}
+
+
+
+.portfolio-menu button:hover {
+
+	background: #eaa708;
+
+	border: 2px solid transparent;
+
+	color: #fff;
+
+}
+
+
+.portfolio-menu button.active {
+
+    background: #eaa708;
+
+}
