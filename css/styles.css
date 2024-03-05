@@ -572,7 +572,7 @@ body {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   font-size: 17px;
-  color: #0e0e0e;
+  color: #18212a;
   overflow-x: hidden;
 }
 
@@ -588,7 +588,7 @@ img {
 
 /* LINKS */
 a {
-  color: #0e0e0e;
+  color: #18212a;
   -webkit-transition: 0.25s ease-in-out;
   -moz-transition: 0.25s ease-in-out;
   -ms-transition: 0.25s ease-in-out;
@@ -597,11 +597,11 @@ a {
 }
 
 a:hover {
-  color: #0e0e0e;
+  color: #18212a;
 }
 
 a:active {
-  color: #0e0e0e;
+  color: #18212a;
 }
 
 /* SECTIONS */
@@ -642,10 +642,10 @@ section {
 .pagination a {
   display: inline-block;
   font-weight: 600;
-  color: #0e0e0e;
+  color: #18212a;
   margin: 0 10px;
   font-size: 14px;
-  border-bottom: 2px solid #0e0e0e;
+  border-bottom: 2px solid #18212a;
   padding-bottom: 2px;
 }
 .pagination a:hover {
@@ -912,7 +912,7 @@ section {
   position: absolute;
   top: 0;
   transform: skewX(0);
-  background: #0e0e0e;
+  background: #18212a;
 }
 .navigation-menu .bg-layers span:nth-child(1) {
   left: 0;
@@ -921,7 +921,7 @@ section {
   content: "";
   width: 150%;
   height: 100%;
-  background: #0e0e0e;
+  background: #18212a;
   position: absolute;
   left: -149%;
   top: 0;
@@ -939,7 +939,7 @@ section {
   content: "";
   width: 150%;
   height: 100%;
-  background: #0e0e0e;
+  background: #18212a;
   position: absolute;
   right: -149%;
   top: 0;
@@ -1222,7 +1222,7 @@ section {
   font-weight: 600;
   display: inline-block;
   margin-left: 20px;
-  color: #0e0e0e;
+  color: #18212a;
 }
 
 .custom-link .lines {
@@ -1395,7 +1395,7 @@ section {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  background: #0e0e0e;
+  background: #18212a;
 }
 .page-header .video-bg {
   width: 100%;
@@ -1840,12 +1840,12 @@ header .sound .equalizer .holder {
   float: left;
   font-weight: 800;
   color: #eaa708;
-  font-size: 10vw;
+  font-size: 6vw;
   line-height: 1;
 }
 .swiper-slider .swiper-slide .slide-inner .container h1 span {
   -webkit-text-stroke-width: 1px;
-  transform: translateY(-35%);
+  transform: translateY(-10%);
   margin-left: 4%;
   display: flex;
   -webkit-text-stroke-color: #fff;
@@ -1909,8 +1909,8 @@ header .sound .equalizer .holder {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 150px 0;
-  background: rgb(0, 11, 23);
+  padding: 50px 0;
+  background: #eaa708;
   border-top: solid 1px #fff;
   border-bottom: solid 1px #fff;
 }
@@ -1929,7 +1929,7 @@ header .sound .equalizer .holder {
   font-size: 60px;
   line-height: 1.2;
   padding-right: 35%;
-  color: #eaa708;
+  color: #18212a;
 }
 .intro h2:before {
   content: attr(data-text);
@@ -2050,7 +2050,7 @@ s .process span:before {
   display: flex;
   flex-wrap: wrap;
   padding: 150px 0;
-  background: #0e0e0e;
+  background: #18212a;
   color: #fff;
   position: relative;
 }
@@ -2121,7 +2121,7 @@ s .process span:before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 150px 0;
+  padding: 50px 0;
   transition-delay: 0s !important;
   transition: background 0.4s;
 }
@@ -2139,7 +2139,7 @@ s .process span:before {
   font-weight: 800;
   font-size: 60px;
   line-height: 1.2;
-  padding-right: 35%;
+  padding-right: 5%;
   color: #eaa708;
 }
 .works h2:before {
@@ -2403,7 +2403,7 @@ s .process span:before {
 .works-single iframe {
   float: left;
   margin-bottom: 30px;
-  background: #0e0e0e;
+  background: #18212a;
 }
 .works-single figure {
   width: 100%;
@@ -2755,7 +2755,7 @@ s .process span:before {
 }
 .news .post .post-content .inner .post-title a {
   display: block;
-  color: #0e0e0e;
+  color: #18212a;
 }
 .news .post .post-content .inner .post-title a:hover {
   color: #eaa708;
@@ -2908,7 +2908,7 @@ s .process span:before {
   padding: 0 40px;
   font-size: 14px;
   font-weight: 600;
-  color: #0e0e0e;
+  color: #18212a;
   background: #eaa708;
   border: none;
 }
@@ -3009,7 +3009,7 @@ s .process span:before {
   flex-wrap: wrap;
   flex-direction: column;
   padding: 100px 0;
-  background: #0e0e0e;
+  background: #18212a;
   color: #fff;
 }
 .footer .footer-quote {
@@ -3488,5 +3488,15 @@ s .process span:before {
   }
   .footer .footer-bottom ul li {
     margin-right: 15px;
+  }
+}
+.about-image img {
+  border-radius: 30px;
+  height: 50%;
+}
+
+@media (min-width: 300px) and (max-width: 991px) {
+  .about-image img {
+    display: none;
   }
 }/*# sourceMappingURL=styles.css.map */

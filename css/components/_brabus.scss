@@ -64,7 +64,7 @@ theme.
 @mixin blur{ -webkit-filter: blur(25px); -moz-filter: blur(25px); -o-filter: blur(25px); -ms-filter: blur(25px); filter: blur(25px);}
 @mixin no-blur{ -webkit-filter: blur(0); -moz-filter: blur(0); -o-filter: blur(0); -ms-filter: blur(0); filter: blur(0);}
 
-$color-dark :#0e0e0e;
+$color-dark :#18212a;
 $color-red :#eaa708;
 $color-turquaz :#eaa708;;
 
@@ -335,8 +335,8 @@ header{ transform: scale(1.5); @include transition-cubic;
 					span{ color:$color-red; float: left; font-weight: 600; color: #fff;
 						&:after{content: ""; width: 22px; height: 1px; float:right; margin: 10px; background:$color-red;}}
 					h6{ float: left; @include font-two; opacity: 0.5; margin-top: 2px; margin-bottom: 0; color:#fff;}}
-				h1{ width: 100%; float: left; font-weight: 800; color: $color-red; font-size: 10vw; line-height: 1;
-					span{-webkit-text-stroke-width: 1px; transform: translateY(-35%); margin-left: 4%; display: flex;
+				h1{ width: 100%; float: left; font-weight: 800; color: $color-red; font-size: 6vw; line-height: 1;
+					span{-webkit-text-stroke-width: 1px; transform: translateY(-10%); margin-left: 4%; display: flex;
    -webkit-text-stroke-color: #fff; color:transparent;}}
 				.slide-btn{float: left; }}}}
 	.swiper-pagination-bullets{ width: 50px; left: auto; right: 40px; bottom: 50%; text-align: right; font-size: 14px; font-weight: 600; z-index: 2 !important;
@@ -347,10 +347,10 @@ header{ transform: scale(1.5); @include transition-cubic;
 			&:after{content: ""; width: 22px; height: 1px; background: $color-turquaz; position: absolute; top: 10px; right: 0; @include transition;}}}}
 
 /* INTRO */
-.intro{width: 100%; display: flex; flex-wrap: wrap; padding: 150px 0;     background: rgb(0 11 23);
+.intro{width: 100%; display: flex; flex-wrap: wrap; padding: 50px 0;     background: #eaa708;
     border-top: solid 1px #fff; border-bottom: solid 1px #fff;
 	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two; opacity: 0.5; font-size: 14px; color:#fff;}
-	h2{ margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 35%; color:#eaa708;
+	h2{ margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 35%; color:$color-dark;
 		&:before{content: attr(data-text); font-size: 20vw; opacity: 0.05; z-index: -1; position: absolute; left: 0; top: -20%;}}
 	h4{ margin-top: 5px; @include font-two; font-size: 25px; line-height: 40px; text-transform: uppercase; padding-right: 20%; color: #fff;}
 	p{margin-bottom: 30px; font-size: 20px; line-height: 37px; color: #fff;}
@@ -392,9 +392,9 @@ header{ transform: scale(1.5); @include transition-cubic;
 
 
 /* WORKS */
-.works{width: 100%; display: flex; flex-wrap: wrap; padding: 150px 0; transition-delay: 0s !important; transition: background 0.40s;
+.works{width: 100%; display: flex; flex-wrap: wrap; padding: 50px 0; transition-delay: 0s !important; transition: background 0.40s;
 	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two; opacity: 0.5; font-size: 14px; color: #fff;}
-	h2{ margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 35%; color: $color-turquaz;
+	h2{ margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 5%; color: $color-turquaz;
 		&:before{content: attr(data-text); font-size: 20vw; opacity: 0.05; z-index: -1; position: absolute; left: 0; top: -20%;}}
 	.project-box{width: 100%; display: flex; flex-wrap: wrap; padding: 75px 0;	
 		*{@include transition;}
