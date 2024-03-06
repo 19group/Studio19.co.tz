@@ -415,7 +415,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 					span{display: block; font-size: 8vw; color: $color-turquaz; margin-left: -7vw;}}}}}}
 
 /*Services*/				
-.services{width: 100%; display: flex; flex-wrap: wrap; padding: 140px 0 130px 0; transition-delay: 0s !important; transition: background 0.40s;
+.services{width: 100%; display: flex; flex-wrap: wrap; padding: 50px 0 130px 0; transition-delay: 0s !important; transition: background 0.40s;
 	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two; opacity: 0.5; font-size: 14px; color: #fff;}
 	h2{ margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 35%; color: $color-turquaz;
 		&:before{content: attr(data-text); font-size: 20vw; opacity: 0.05; z-index: -1; position: absolute; left: 0; top: -20%;}}
