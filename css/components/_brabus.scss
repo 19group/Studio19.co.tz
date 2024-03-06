@@ -328,8 +328,8 @@ header{ transform: scale(1.5); @include transition-cubic;
 		&.swiper-slide-active .slide-inner{transform: scale(1); 
 			.container{transform: translateY(0); @include transition-cubic; opacity: 1;}}
 		.slide-inner{ width: 100%; height: 100%; transform: scale(0.8); display: flex; flex-wrap:wrap; justify-content: center; flex-direction: column; @include transition-cubic; background-size: cover; background-position: center; position: relative;
-		&:after{content: ""; width: 100%; height: 100%; background: url(../../../../images/bg-noise.gif); opacity: 0.04; position: absolute; left: 0; top: 0;}
-			&:before{content: ""; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../../../../images/bg-lines.png) center; z-index: 1;}
+		&:after{content: ""; width: 100%; height: 100%; background: url(../images/bg-noise.gif); opacity: 0.04; position: absolute; left: 0; top: 0;}
+			&:before{content: ""; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../images/bg-lines.png) center; z-index: 1;}
 			.container{transform: translateY(50px); opacity: 0; transition-delay: 0.15s !important; position: relative; z-index: 2;
 				.tagline{display: block; color: #fff; text-transform: uppercase; margin-bottom: 15px;
 					span{ color:$color-red; float: left; font-weight: 600; color: #fff;

@@ -1784,7 +1784,7 @@ header .sound .equalizer .holder {
   content: "";
   width: 100%;
   height: 100%;
-  background: url(../../../../images/bg-noise.gif);
+  background: url(../images/bg-noise.gif);
   opacity: 0.04;
   position: absolute;
   left: 0;
@@ -1797,7 +1797,7 @@ header .sound .equalizer .holder {
   position: absolute;
   left: 0;
   top: 0;
-  background: url(../../../../images/bg-lines.png) center;
+  background: url(../images/bg-lines.png) center;
   z-index: 1;
 }
 .swiper-slider .swiper-slide .slide-inner .container {
