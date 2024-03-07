@@ -306,7 +306,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 				b{ display: inline-block; font-weight: 400; margin-right: 15px; }}}}
 
 /* SLIDE BTN */
-.slide-btn { display: block;   transition:all .5s; padding-left: 30px;}
+.slide-btn { display: block;   transition:all .5s; padding:15px 0 0 30px;}
 .slide-btn a{display: flex; flex-wrap: wrap; align-items: center; font-size: 14px; color: #fff;}
 .slide-btn a:hover{text-decoration: none;}
 .slide-btn b{font-weight: 600;}
