@@ -647,7 +647,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 
 /* RESPONSIVE MOBILE FIXES */
 @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
-	.container {padding: 0 30px;}
+	.container {padding: 0 30px; margin:110px 0 0 0}
 	.page-header .video-bg:before{display: none;}
 	header .scroll-down{left: -10px;}
 	header .sound{right: 30px; bottom: 30px;}
@@ -677,7 +677,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 	.swiper-slider .swiper-slide .slide-inner{padding: 0;}
 	.swiper-slider .swiper-pagination-bullets{display: none;}
 	.swiper-slider .swiper-slide .slide-inner:before{display: none;}
-	.swiper-slider .swiper-slide .slide-inner .container h1{font-size: 15vw;}
+	.swiper-slider .swiper-slide .slide-inner .container h1{font-size: 10vw;}
 	.swiper-slider .swiper-slide .slide-inner .container h1 span{ margin-left: 0; transform: translateY(0);}
 	.swiper-slider .swiper-slide .slide-inner .container .slide-btn{padding-left: 0;}
 	.awards{padding: 40px 0; padding-bottom: 0;}
@@ -694,6 +694,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 	.intro h4{margin-bottom: 20px;}
 	.intro p{font-size: 18px; line-height: 30px;}
 	.services-content-block h2{font-size: 32px; margin-bottom: 60px;}
+	.services h2{font-size: 32px; margin-bottom: 20px;}
 	.direction h2{font-size: 32px; margin-bottom: 40px;}
 	.direction figure figcaption{width: 100%; position: static; display: block;}
 	.works h2{font-size: 32px; margin-bottom: 20px;}
@@ -711,6 +712,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 	.clients h2{font-size: 32px; margin-bottom: 20px;}
 	.clients ul{margin-left: -10px; margin-right: -10px; margin-top: 40px; width: auto;}
 	.clients ul li{width: 50%;}
+	.client-container{ margin:0;}
 	.news .pagination{margin-top: 0; text-align: left;}
 	.news .pagination a{ margin-left:0; margin-right: 20px;}
 	.news .post .post-content{padding: 0;}
@@ -722,4 +724,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 	.footer .footer-contact{margin-bottom: 40px;}
 	.footer .footer-contact address{margin-bottom: 30px;}
 	.footer .footer-bottom ul li{margin-right: 15px;}
+	.footer-container {
+		margin:0;
+	}
 }

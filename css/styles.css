@@ -3228,6 +3228,7 @@ s .process span:before {
 @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
   .container {
     padding: 0 30px;
+    margin: 110px 0 0 0;
   }
   .page-header .video-bg:before {
     display: none;
@@ -3330,7 +3331,7 @@ s .process span:before {
     display: none;
   }
   .swiper-slider .swiper-slide .slide-inner .container h1 {
-    font-size: 15vw;
+    font-size: 10vw;
   }
   .swiper-slider .swiper-slide .slide-inner .container h1 span {
     margin-left: 0;
@@ -3391,6 +3392,10 @@ s .process span:before {
   .services-content-block h2 {
     font-size: 32px;
     margin-bottom: 60px;
+  }
+  .services h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
   }
   .direction h2 {
     font-size: 32px;
@@ -3455,6 +3460,9 @@ s .process span:before {
   .clients ul li {
     width: 50%;
   }
+  .client-container {
+    margin: 0;
+  }
   .news .pagination {
     margin-top: 0;
     text-align: left;
@@ -3489,6 +3497,9 @@ s .process span:before {
   }
   .footer .footer-bottom ul li {
     margin-right: 15px;
+  }
+  .footer-container {
+    margin: 0;
   }
 }
 .about-image img {
