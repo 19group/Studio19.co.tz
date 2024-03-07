@@ -486,15 +486,15 @@ header{ transform: scale(1.5); @include transition-cubic;
 	
 
 /* CLIENTS */
-.clients{ width: 100%; display: flex; flex-wrap: wrap; padding: 100px 0; background: url(../../../../images/pattern-bg.svg);
+.clients{ width: 100%; display: flex; flex-wrap: wrap; padding: 50px 0; background: url(../../images/pattern-bg.svg); background-color:#fff;
 	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two; opacity: 0.5; font-size: 14px;}
-	h2{ color: #eaa708; margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; 
+	h2{ color: #eaa708; margin-bottom: 10px; font-weight: 800; font-size: 60px; line-height: 1.2; 
 		&:before{content: attr(data-text); font-size: 20vw; opacity: 0.05; position: absolute; left: 0; top: -20%;}}
 	h4{ margin-top: 5px; margin-bottom: 40px; @include font-two; font-size: 25px; line-height: 40px; text-transform: uppercase; padding-right: 20%;}
 	ul{width: 100%; float: left; margin: 0; margin-top: 0; padding: 0;
 		*{@include transition;}
 		li{width: 16%; float: left; margin: 0; padding: 10px; list-style: none; position: relative;
-			img{ opacity:1; background: #fff; border: 1px solid #eee; padding: 15px; height: 100px;}
+			img{  padding: 15px; height: 100px;}
 			small{ width: 100%; height: 50px; line-height: 50px; position: absolute; left: 0; top: 50%; text-align: center; font-size: 600; opacity: 0; @include font-two; font-size: 22px;}
 			&:hover { 
 				small{margin-top: -25px; opacity: 1;}
