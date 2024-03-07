@@ -2250,7 +2250,7 @@ s .process span:before {
   color: #fff;
 }
 .services h2 {
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   font-weight: 800;
   font-size: 60px;
   line-height: 1.2;
@@ -2568,8 +2568,9 @@ s .process span:before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
-  background: url(../../../../images/pattern-bg.svg);
+  padding: 50px 0;
+  background: url(../../images/pattern-bg.svg);
+  background-color: #fff;
 }
 .clients h6 {
   display: block;
@@ -2581,7 +2582,7 @@ s .process span:before {
 }
 .clients h2 {
   color: #eaa708;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   font-weight: 800;
   font-size: 60px;
   line-height: 1.2;
@@ -2626,9 +2627,6 @@ s .process span:before {
   position: relative;
 }
 .clients ul li img {
-  opacity: 1;
-  background: #fff;
-  border: 1px solid #eee;
   padding: 15px;
   height: 100px;
 }
@@ -3008,8 +3006,9 @@ s .process span:before {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 100px 0;
-  background: #18212a;
+  padding: 100px 0 50px 0;
+  background-color: #18212a;
+  background: url(../images/bg-lines.png) center center;
   color: #fff;
 }
 .footer .footer-quote {
