@@ -3593,4 +3593,20 @@ s .process span:before {
   margin-top: 25px;
   padding: 15px 20px;
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+  .box-container {
+    flex-direction: column;
+  }
+  .flip-box-front,
+  .flip-box-back {
+    min-height: 150px;
+  }
+}
+.video-container {
+  display: none;
+  text-align: center;
+  width: cover;
+  height: 100vh;
 }/*# sourceMappingURL=styles.css.map */
