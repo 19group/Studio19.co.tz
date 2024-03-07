@@ -1376,7 +1376,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  background: url(../../../../images/bg-lines.png) center;
+  background: url(../images/bg-lines.png) center;
   z-index: 2;
 }
 .header .video-bg video {
@@ -1412,7 +1412,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  background: url(../../../../images/bg-lines.png) center;
+  background: url(../images/bg-lines.png) center;
   z-index: 2;
 }
 .page-header .video-bg video {
