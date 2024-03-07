@@ -254,27 +254,6 @@
     });
 
 
-   /*----------------------------------------------------*/
-	/*  Placeholder Plugin Settings
-	------------------------------------------------------ */
-	$('input, textarea').placeholder()
-
-
-
-
- var filterizd = $('.filtr-container').filterizr({
-    //options object
- });
-
- $(".filtr-button").on('click',function(e){
-
-  $(".filtr-button").removeClass("filtr-active");
-  $(this).addClass("filtr-active");
- });
-
-
-
-
 	/*----------------------------------------------------*/
 	/*	contact form
 	------------------------------------------------------*/
