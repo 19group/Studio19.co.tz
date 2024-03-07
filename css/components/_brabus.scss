@@ -575,7 +575,8 @@ header{ transform: scale(1.5); @include transition-cubic;
 
 
 /* FOOTER */
-.footer{ width: 100%; display: flex; flex-wrap: wrap; flex-direction: column; padding: 100px 0; background: $color-dark; color: #fff;
+.footer{ width: 100%; display: flex; flex-wrap: wrap; flex-direction: column; padding: 100px 0 50px 0; background-color: $color-dark; background: url(../images/bg-lines.png) center center;
+    color: #fff;
 	.footer-quote{width: 100%; display: flex; flex-wrap: wrap;  margin-bottom: 80px;
 		img{height: 150px; width: 150px !important; display: block; margin-bottom: 20px;}
 		h2{font-size: 3vw; font-weight: 800; margin-bottom: 0; color:$color-turquaz;}}
