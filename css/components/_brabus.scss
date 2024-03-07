@@ -579,12 +579,12 @@ header{ transform: scale(1.5); @include transition-cubic;
     color: #fff;
 	.footer-quote{width: 100%; display: flex; flex-wrap: wrap;  margin-bottom: 80px;
 		img{height: 150px; width: 150px !important; display: block; margin-bottom: 20px;}
-		h2{font-size: 3vw; font-weight: 800; margin-bottom: 0; color:$color-turquaz;}}
+		h2{font-size: 2vw; font-weight: 800; margin-bottom: 0; color:$color-turquaz;}}
 	.footer-contact{width: 100%; display: flex; flex-wrap: wrap; margin-bottom: 80px;
 		address{margin-bottom: 0;
 		a{color:#fff; text-decoration: underline;}}}
 	.footer-bottom{width: 100%; display: flex; flex-wrap: wrap; 
-		h5{ margin-bottom: 10px; @include font-two; text-transform: uppercase; color:$color-turquaz;}
+		h5{ margin-bottom: 10px; @include font-two; text-transform: uppercase; color:$color-turquaz; font-size: 2vw;}
 		ul{display: block; margin: 0;  padding: 0;
 			li{display: inline-block; margin: 0; margin-right: 20px; padding: 0; list-style: none;
 				&:last-child{margin-right: 0;}

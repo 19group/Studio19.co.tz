@@ -1646,7 +1646,7 @@ header .sound .equalizer .holder {
 .slide-btn {
   display: block;
   transition: all 0.5s;
-  padding-left: 30px;
+  padding: 15px 0 0 30px;
 }
 
 .slide-btn a {
@@ -2236,7 +2236,7 @@ s .process span:before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 50px 0 130px 0;
+  padding: 50px 0 100px 0;
   transition-delay: 0s !important;
   transition: background 0.4s;
 }
@@ -2579,6 +2579,7 @@ s .process span:before {
   font-family: "Fjalla One", sans-serif;
   opacity: 0.5;
   font-size: 14px;
+  color: #18212a;
 }
 .clients h2 {
   color: #eaa708;
@@ -3024,7 +3025,7 @@ s .process span:before {
   margin-bottom: 20px;
 }
 .footer .footer-quote h2 {
-  font-size: 3vw;
+  font-size: 2vw;
   font-weight: 800;
   margin-bottom: 0;
   color: #eaa708;
@@ -3052,6 +3053,7 @@ s .process span:before {
   font-family: "Fjalla One", sans-serif;
   text-transform: uppercase;
   color: #eaa708;
+  font-size: 2vw;
 }
 .footer .footer-bottom ul {
   display: block;
