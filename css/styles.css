@@ -3081,11 +3081,10 @@ s .process span:before {
   -ms-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
-  border-bottom: 2px solid transparent;
 }
 .footer .footer-bottom ul li a:hover {
   padding-bottom: 1px;
-  border-bottom: 2px solid #fff;
+  color: #eaa708;
   text-decoration: none;
 }
 
