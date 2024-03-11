@@ -53,9 +53,12 @@
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/components/impact/impact.css">
     <link rel="stylesheet" href="css/components/impact/plugins.css">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <!-- End MAIN-CSS
  ================================================== -->
     <link rel="manifest" href="manifest.json">
+
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
     <!-- script
 ================================================== -->
@@ -283,14 +286,16 @@ ABOUT/HOW WE DO IT
             </div>
             </div>
         </div>
-        <div class="slide-btn"> <a href="#">
+        <div class="slide-btn"> <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/onlinestudio19tz/30min'});return false;">
             <div class="lines"> <span></span> <span></span> </div>
             <!-- end lines -->
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 104 104" enable-background="new 0 0 104 104" xml:space="preserve">
                 <circle class="video-play-circle" fill="none" stroke="#fff" stroke-width="2" stroke-miterlimit="1" cx="52" cy="52" r="50"/>
             </svg>
-            <b>Book a free consultation</b> </a> </div>
+            <b>
+               Book a meeting
+            </b> </a> </div>
                 <!-- end slide-btn --> 
        </div>
         <!-- we_do_wrapper_end -->
@@ -361,7 +366,7 @@ FOOTER/CALL TO  ACTION
         <!-- end container --> 
     </div>
     <!-- end footer-quote -->
-    <div class="footer-contact wow fadeIn">
+    <div class="footer-contact footer-bottom wow fadeIn">
         <div class="container footer-container">
         <div class="row"> <div class="col-md-4">
             <h5>Start a conversation</h5>
@@ -379,12 +384,18 @@ FOOTER/CALL TO  ACTION
             </address>
             </div>
             <!-- end col-4 -->
-            <!-- <div class="col-md-3">
-            <address>
-            <a href="#">service@studio19.co.tz
-            </a>
-            </address>
-            </div> -->
+            <div class="">
+                <div class="col-md-12">
+                <h5>Connect with us </h5>
+                <ul>
+                    <li><a href="https://www.linkedin.com/company/studio19tz/"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a></li>
+                    <li><a href="https://www.instagram.com/studio19tz/"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+                    <li><a href="https://vimeo.com/studio19tz"><i class="fa-brands fa-vimeo-v fa-2xl"></i></a></li>
+                    <li><a href="https://twitter.com/studio19tz"><i class="fa-brands fa-x-twitter fa-2xl"></i></a></li>
+                </ul>
+                </div>
+                <!-- end col-8 --> 
+            </div>  
             <!-- end col-2 --> 
         </div>
         <!-- end row --> 
@@ -392,24 +403,7 @@ FOOTER/CALL TO  ACTION
         <!-- end container --> 
     </div>
     <!-- end footer-contact -->
-    <div class="footer-bottom wow fadeIn">
-        <div class="container footer-container">
-        <div class="row">
-            <div class="col-lg-8">
-            <h5>Connect with us </h5>
-            <ul>
-                <li><a href="https://www.linkedin.com/company/studio19tz/"><i class="fa-brands fa-linkedin-in fa-2xl"></i></a></li>
-                <li><a href="https://www.instagram.com/studio19tz/"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
-                <li><a href="https://vimeo.com/studio19tz"><i class="fa-brands fa-vimeo-v fa-2xl"></i></a></li>
-                <li><a href="https://twitter.com/studio19tz"><i class="fa-brands fa-x-twitter fa-2xl"></i></a></li>
-            </ul>
-            </div>
-            <!-- end col-8 --> 
-        </div>
-        <!-- end row --> 
-        </div>
-        <!-- end container --> 
-    </div>
+    
     <!-- end footer-bottom --> 
 </footer>
 <!-- end footer -->
