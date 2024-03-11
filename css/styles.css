@@ -2620,7 +2620,6 @@ s .process span:before {
   transition: 0.25s ease-in-out;
 }
 .clients ul li {
-  width: 16%;
   float: left;
   margin: 0;
   padding: 10px;

@@ -94,6 +94,17 @@ h5 a,
 h6 a {
   font-weight: inherit;
 }
+.clients ul li {
+
+  height:120px !important;
+  width: 120px !important;
+  max-width: 170px !important;
+}
+.clients ul li img{
+  padding:5px !important;
+  height: auto !important;
+  width: auto !important;
+}
 
 h1 {
   font-size: 30px;
@@ -1937,13 +1948,13 @@ ul#nav li.current a:after {
   height:400px;
   border-radius: 20px;
   margin-bottom:1rem;
-  
+
 }
 
 #team-wrapper .member-pic img {
   vertical-align: bottom;
 
-  
+
 }
 
 /* #team-wrapper .mask {
@@ -2295,6 +2306,3 @@ ul#nav li.current a:after {
     font: 18px/1.9 "merriweather-regular", sans-serif;
   }
 }
-
-
-
