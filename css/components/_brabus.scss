@@ -487,6 +487,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 
 /* CLIENTS */
 .clients{ width: 100%; display: flex; flex-wrap: wrap; padding: 50px 0; background: url(../images/pattern-bg.svg); background-color:#fff;
+	.partnerheader{color:$color-turquaz}
 	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two; opacity: 10px; font-size: 14px; color:$color-turquaz;}
 	h2{ color: #eaa708; margin-bottom: 10px; font-weight: 800; font-size: 60px; line-height: 1.2;
 		&:before{content: attr(data-text); font-size: 20vw; opacity: 0.05; position: absolute; left: 0; top: -20%;}}

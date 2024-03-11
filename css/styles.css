@@ -2572,6 +2572,9 @@ s .process span:before {
   background: url(../images/pattern-bg.svg);
   background-color: #fff;
 }
+.clients .partnerheader {
+  color: #eaa708;
+}
 .clients h6 {
   display: block;
   line-height: 1;
