@@ -3043,6 +3043,13 @@ s .process span:before {
   color: #fff;
   text-decoration: underline;
 }
+.footer .footer-contact h5 {
+  margin-bottom: 10px;
+  font-family: "Fjalla One", sans-serif;
+  text-transform: uppercase;
+  color: #eaa708;
+  font-size: 2vw;
+}
 .footer .footer-bottom {
   width: 100%;
   display: flex;

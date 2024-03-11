@@ -582,7 +582,8 @@ header{ transform: scale(1.5); @include transition-cubic;
 		h2{font-size: 2vw; font-weight: 800; margin-bottom: 0; color:$color-turquaz;}}
 	.footer-contact{width: 100%; display: flex; flex-wrap: wrap; margin-bottom: 80px;
 		address{margin-bottom: 0;
-		a{color:#fff; text-decoration: underline;}}}
+		a{color:#fff; text-decoration: underline;}}
+	h5{margin-bottom: 10px;font-family: "Fjalla One", sans-serif;text-transform: uppercase;color: #eaa708;font-size: 2vw;}}
 	.footer-bottom{width: 100%; display: flex; flex-wrap: wrap; 
 		h5{ margin-bottom: 10px; @include font-two; text-transform: uppercase; color:$color-turquaz; font-size: 2vw;}
 		ul{display: block; margin: 0;  padding: 0;
