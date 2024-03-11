@@ -2577,9 +2577,9 @@ s .process span:before {
   line-height: 1;
   margin-bottom: 20px;
   font-family: "Fjalla One", sans-serif;
-  opacity: 0.5;
+  opacity: 10px;
   font-size: 14px;
-  color: #18212a;
+  color: #eaa708;
 }
 .clients h2 {
   color: #eaa708;
@@ -2633,15 +2633,13 @@ s .process span:before {
 .clients ul li small {
   width: 100%;
   height: 50px;
-  line-height: 50px;
   position: absolute;
   left: 0;
   top: 50%;
   text-align: center;
-  font-size: 600;
+  font-size: 10px;
   opacity: 0;
   font-family: "Fjalla One", sans-serif;
-  font-size: 22px;
 }
 .clients ul li:hover small {
   margin-top: -25px;
