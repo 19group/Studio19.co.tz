@@ -301,7 +301,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 				li{ display: inline-block; margin-left: 15px; padding: 0;
 					a{ position: relative; padding-bottom: 6px; @include transition; border-bottom: 2px solid transparent;
 				&:hover{padding-bottom: 1px; border-bottom: 2px solid #fff; text-decoration: none;}}}}
-			.hamburger-menu{ margin-right: 0; margin-left: 60px;
+			.hamburger-menu{ display:none; margin-right: 0; margin-left: 60px;
 				.hamburger{float: right; margin-top: 1px;}
 				b{ display: inline-block; font-weight: 400; margin-right: 15px; }}}}
 

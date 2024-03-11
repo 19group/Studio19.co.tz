@@ -1629,6 +1629,7 @@ header .sound .equalizer .holder {
   text-decoration: none;
 }
 .navbar .right .hamburger-menu {
+  display: none;
   margin-right: 0;
   margin-left: 60px;
 }
