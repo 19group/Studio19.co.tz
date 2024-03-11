@@ -601,6 +601,11 @@ hr {
   margin-top: 50px;
 }
 
+section#services{
+  padding-left:50px;
+  padding-right:50px;
+}
+
 .section-head h1 span {
   color: #eaa708;
   position: relative;
@@ -1937,13 +1942,13 @@ ul#nav li.current a:after {
   height:400px;
   border-radius: 20px;
   margin-bottom:1rem;
-  
+
 }
 
 #team-wrapper .member-pic img {
   vertical-align: bottom;
 
-  
+
 }
 
 /* #team-wrapper .mask {
