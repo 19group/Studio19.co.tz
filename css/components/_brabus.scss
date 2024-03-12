@@ -320,8 +320,6 @@ header{ transform: scale(1.5); @include transition-cubic;
 .slide-btn svg { width: 50px; height: 50px; transition: transform .3s; margin-left: -25px; margin-right: 15px;}
 .slide-btn:hover .video-play-circle { stroke-dashoffset: 0; }
 
-
-
 /* SWIPER SLIDER */
 .swiper-slider{width: 100%; height: 100%; position: absolute; left: 0; top: 0; color: #fff; overflow: hidden;
 	.swiper-slide{ display: block; overflow: hidden;
