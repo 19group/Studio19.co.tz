@@ -1663,6 +1663,11 @@ blockquote p {
   width: 100%;
 }
 
+.site_logo img {
+  height: 70px;
+  width: 70px;
+}
+
 /* 3.1 - Banner - Start
 ================================================== */
 .hero_banner .banner_small_title {
