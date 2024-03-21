@@ -60,7 +60,7 @@ body {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   font-size: 17px;
-  color: #0e0e0e;
+  color: #18212a;
   overflow-x: hidden;
 }
 
@@ -76,7 +76,7 @@ img {
 
 /* LINKS */
 a {
-  color: #0e0e0e;
+  color: #18212a;
   -webkit-transition: 0.25s ease-in-out;
   -moz-transition: 0.25s ease-in-out;
   -ms-transition: 0.25s ease-in-out;
@@ -85,11 +85,11 @@ a {
 }
 
 a:hover {
-  color: #0e0e0e;
+  color: #18212a;
 }
 
 a:active {
-  color: #0e0e0e;
+  color: #18212a;
 }
 
 /* SECTIONS */
@@ -130,10 +130,10 @@ section {
 .pagination a {
   display: inline-block;
   font-weight: 600;
-  color: #0e0e0e;
+  color: #18212a;
   margin: 0 10px;
   font-size: 14px;
-  border-bottom: 2px solid #0e0e0e;
+  border-bottom: 2px solid #18212a;
   padding-bottom: 2px;
 }
 .pagination a:hover {
@@ -177,7 +177,7 @@ section {
   position: fixed;
   left: 0;
   bottom: 0;
-  z-index: 11;
+  z-index: 11000000;
   overflow: hidden;
   background: #eaa708;
   -webkit-transition: all 0.5s ease;
@@ -400,7 +400,7 @@ section {
   position: absolute;
   top: 0;
   transform: skewX(0);
-  background: #0e0e0e;
+  background: #18212a;
 }
 .navigation-menu .bg-layers span:nth-child(1) {
   left: 0;
@@ -409,7 +409,7 @@ section {
   content: "";
   width: 150%;
   height: 100%;
-  background: #0e0e0e;
+  background: #18212a;
   position: absolute;
   left: -149%;
   top: 0;
@@ -427,7 +427,7 @@ section {
   content: "";
   width: 150%;
   height: 100%;
-  background: #0e0e0e;
+  background: #18212a;
   position: absolute;
   right: -149%;
   top: 0;
@@ -710,7 +710,7 @@ section {
   font-weight: 600;
   display: inline-block;
   margin-left: 20px;
-  color: #0e0e0e;
+  color: #18212a;
 }
 
 .custom-link .lines {
@@ -864,7 +864,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  background: url(../../../../images/bg-lines.png) center;
+  background: url(../images/bg-lines.png) center;
   z-index: 2;
 }
 .header .video-bg video {
@@ -883,7 +883,7 @@ section {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  background: #0e0e0e;
+  background: #18212a;
 }
 .page-header .video-bg {
   width: 100%;
@@ -900,7 +900,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  background: url(../../../../images/bg-lines.png) center;
+  background: url(../images/bg-lines.png) center;
   z-index: 2;
 }
 .page-header .video-bg video {
@@ -1117,6 +1117,7 @@ header .sound .equalizer .holder {
   text-decoration: none;
 }
 .navbar .right .hamburger-menu {
+  display: none;
   margin-right: 0;
   margin-left: 60px;
 }
@@ -1134,7 +1135,7 @@ header .sound .equalizer .holder {
 .slide-btn {
   display: block;
   transition: all 0.5s;
-  padding-left: 30px;
+  padding: 15px 0 0 30px;
 }
 
 .slide-btn a {
@@ -1272,7 +1273,7 @@ header .sound .equalizer .holder {
   content: "";
   width: 100%;
   height: 100%;
-  background: url(../../../../images/bg-noise.gif);
+  background: url(../images/background/bg-noise.gif);
   opacity: 0.04;
   position: absolute;
   left: 0;
@@ -1285,7 +1286,7 @@ header .sound .equalizer .holder {
   position: absolute;
   left: 0;
   top: 0;
-  background: url(../../../../images/bg-lines.png) center;
+  background: url(../images/background/bg-lines.png) center;
   z-index: 1;
 }
 .swiper-slider .swiper-slide .slide-inner .container {
@@ -1328,12 +1329,12 @@ header .sound .equalizer .holder {
   float: left;
   font-weight: 800;
   color: #eaa708;
-  font-size: 10vw;
+  font-size: 6vw;
   line-height: 1;
 }
 .swiper-slider .swiper-slide .slide-inner .container h1 span {
   -webkit-text-stroke-width: 1px;
-  transform: translateY(-35%);
+  transform: translateY(-10%);
   margin-left: 4%;
   display: flex;
   -webkit-text-stroke-color: #fff;
@@ -1397,8 +1398,8 @@ header .sound .equalizer .holder {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 150px 0;
-  background: #000b17;
+  padding: 50px 0;
+  background: #eaa708;
   border-top: solid 1px #fff;
   border-bottom: solid 1px #fff;
 }
@@ -1417,7 +1418,7 @@ header .sound .equalizer .holder {
   font-size: 60px;
   line-height: 1.2;
   padding-right: 35%;
-  color: #eaa708;
+  color: #18212a;
 }
 .intro h2:before {
   content: attr(data-text);
@@ -1538,7 +1539,7 @@ s .process span:before {
   display: flex;
   flex-wrap: wrap;
   padding: 150px 0;
-  background: #0e0e0e;
+  background: #18212a;
   color: #fff;
   position: relative;
 }
@@ -1609,7 +1610,7 @@ s .process span:before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 150px 0;
+  padding: 50px 0;
   transition-delay: 0s !important;
   transition: background 0.4s;
 }
@@ -1627,7 +1628,7 @@ s .process span:before {
   font-weight: 800;
   font-size: 60px;
   line-height: 1.2;
-  padding-right: 35%;
+  padding-right: 5%;
   color: #eaa708;
 }
 .works h2:before {
@@ -1724,7 +1725,7 @@ s .process span:before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 140px 0 130px 0;
+  padding: 50px 0 100px 0;
   transition-delay: 0s !important;
   transition: background 0.4s;
 }
@@ -1738,7 +1739,7 @@ s .process span:before {
   color: #fff;
 }
 .services h2 {
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   font-weight: 800;
   font-size: 60px;
   line-height: 1.2;
@@ -1891,7 +1892,7 @@ s .process span:before {
 .works-single iframe {
   float: left;
   margin-bottom: 30px;
-  background: #0e0e0e;
+  background: #18212a;
 }
 .works-single figure {
   width: 100%;
@@ -1973,7 +1974,7 @@ s .process span:before {
   content: "";
   width: 100%;
   height: 100%;
-  background: url(../images/bg-noise.gif);
+  background: url(../images/background/bg-noise.gif);
   opacity: 0.04;
   position: absolute;
   left: 0;
@@ -1986,7 +1987,7 @@ s .process span:before {
   position: absolute;
   left: 0;
   top: 0;
-  background: url(../images/bg-lines.png) center;
+  background: url(../images/background/bg-lines.png) center;
   z-index: 1;
 }
 .work-with-us .container {
@@ -2056,20 +2057,25 @@ s .process span:before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
-  background: url(../../../../images/pattern-bg.svg);
+  padding: 50px 0;
+  background: url(../images/pattern-bg.svg);
+  background-color: #fff;
+}
+.clients .partnerheader {
+  color: #eaa708;
 }
 .clients h6 {
   display: block;
   line-height: 1;
   margin-bottom: 20px;
   font-family: "Fjalla One", sans-serif;
-  opacity: 0.5;
+  opacity: 10px;
   font-size: 14px;
+  color: #eaa708;
 }
 .clients h2 {
   color: #eaa708;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   font-weight: 800;
   font-size: 60px;
   line-height: 1.2;
@@ -2106,7 +2112,6 @@ s .process span:before {
   transition: 0.25s ease-in-out;
 }
 .clients ul li {
-  width: 16%;
   float: left;
   margin: 0;
   padding: 10px;
@@ -2114,24 +2119,19 @@ s .process span:before {
   position: relative;
 }
 .clients ul li img {
-  opacity: 1;
-  background: #fff;
-  border: 1px solid #eee;
   padding: 15px;
   height: 100px;
 }
 .clients ul li small {
   width: 100%;
   height: 50px;
-  line-height: 50px;
   position: absolute;
   left: 0;
   top: 50%;
   text-align: center;
-  font-size: 600;
+  font-size: 10px;
   opacity: 0;
   font-family: "Fjalla One", sans-serif;
-  font-size: 22px;
 }
 .clients ul li:hover small {
   margin-top: -25px;
@@ -2243,7 +2243,7 @@ s .process span:before {
 }
 .news .post .post-content .inner .post-title a {
   display: block;
-  color: #0e0e0e;
+  color: #18212a;
 }
 .news .post .post-content .inner .post-title a:hover {
   color: #eaa708;
@@ -2396,7 +2396,7 @@ s .process span:before {
   padding: 0 40px;
   font-size: 14px;
   font-weight: 600;
-  color: #0e0e0e;
+  color: #18212a;
   background: #eaa708;
   border: none;
 }
@@ -2496,8 +2496,9 @@ s .process span:before {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 100px 0;
-  background: #0e0e0e;
+  padding: 100px 0 50px 0;
+  background-color: #18212a;
+  background: url(../images/background/bg-lines.png) center center;
   color: #fff;
 }
 .footer .footer-quote {
@@ -2513,7 +2514,7 @@ s .process span:before {
   margin-bottom: 20px;
 }
 .footer .footer-quote h2 {
-  font-size: 3vw;
+  font-size: 2vw;
   font-weight: 800;
   margin-bottom: 0;
   color: #eaa708;
@@ -2531,6 +2532,13 @@ s .process span:before {
   color: #fff;
   text-decoration: underline;
 }
+.footer .footer-contact h5 {
+  margin-bottom: 10px;
+  font-family: "Fjalla One", sans-serif;
+  text-transform: uppercase;
+  color: #eaa708;
+  font-size: 2vw;
+}
 .footer .footer-bottom {
   width: 100%;
   display: flex;
@@ -2541,6 +2549,7 @@ s .process span:before {
   font-family: "Fjalla One", sans-serif;
   text-transform: uppercase;
   color: #eaa708;
+  font-size: 2vw;
 }
 .footer .footer-bottom ul {
   display: block;
@@ -2568,11 +2577,10 @@ s .process span:before {
   -ms-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
-  border-bottom: 2px solid transparent;
 }
 .footer .footer-bottom ul li a:hover {
   padding-bottom: 1px;
-  border-bottom: 2px solid #fff;
+  color: #eaa708;
   text-decoration: none;
 }
 
@@ -2754,6 +2762,7 @@ s .process span:before {
 @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
   .container {
     padding: 0 30px;
+    margin: 110px 0 0 0;
   }
 
   .page-header .video-bg:before {
@@ -2886,7 +2895,7 @@ s .process span:before {
   }
 
   .swiper-slider .swiper-slide .slide-inner .container h1 {
-    font-size: 15vw;
+    font-size: 10vw;
   }
 
   .swiper-slider .swiper-slide .slide-inner .container h1 span {
@@ -2963,6 +2972,11 @@ s .process span:before {
   .services-content-block h2 {
     font-size: 32px;
     margin-bottom: 60px;
+  }
+
+  .services h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
   }
 
   .direction h2 {
@@ -3045,6 +3059,10 @@ s .process span:before {
     width: 50%;
   }
 
+  .client-container {
+    margin: 0;
+  }
+
   .news .pagination {
     margin-top: 0;
     text-align: left;
@@ -3090,4 +3108,11 @@ s .process span:before {
   .footer .footer-bottom ul li {
     margin-right: 15px;
   }
+
+  .footer-container {
+    margin: 0;
+  }
 }
+/* RESPONSIVE MACBOOK FIXES */
+/*--cover up mac , mac-book---*/
+/*--mac book pro , and mac-book retina display screen---*/

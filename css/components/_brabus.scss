@@ -728,3 +728,28 @@ header{ transform: scale(1.5); @include transition-cubic;
 		margin:0;
 	}
 }
+
+/* RESPONSIVE MACBOOK FIXES */
+/*--cover up mac , mac-book---*/
+
+// @media only screen and (max-width: 1920px) {
+// 	section{
+// 		height: 100vh;
+// 	}
+// 	.services{
+// 		padding: 200px 0 100px 0;
+// 	}
+// 	.clients{
+// 		padding: 140px 0 0 0;
+// 		ul{
+// 			padding: 0 196px;
+// 		}
+// 	}
+// 	.swiper-slider .swiper-slide .slide-inner .container h1 {
+// 		font-size: 5vw;
+// 	}
+// }
+
+/*--mac book pro , and mac-book retina display screen---*/
+
+@media only screen and (min-width: 1920px) and (max-width: 2560px) {}

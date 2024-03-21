@@ -3509,6 +3509,9 @@ s .process span:before {
     margin: 0;
   }
 }
+/* RESPONSIVE MACBOOK FIXES */
+/*--cover up mac , mac-book---*/
+/*--mac book pro , and mac-book retina display screen---*/
 .about-image img {
   border-radius: 30px;
   height: 50%;
