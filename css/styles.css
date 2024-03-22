@@ -1811,7 +1811,7 @@ header .sound .equalizer .holder {
 .swiper-slider .swiper-slide .slide-inner .container .tagline {
   display: block;
   color: #fff;
-  text-transform: uppercase;
+  text-transform: lowercase;
   margin-bottom: 15px;
 }
 .swiper-slider .swiper-slide .slide-inner .container .tagline span {

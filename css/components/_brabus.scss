@@ -329,7 +329,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 		&:after{content: ""; width: 100%; height: 100%; background: url(../images/background/bg-noise.gif); opacity: 0.04; position: absolute; left: 0; top: 0;}
 			&:before{content: ""; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../images/background/hero-bg.png) center; z-index: 1;}
 			.container{transform: translateY(50px); opacity: 0; transition-delay: 0.15s !important; position: relative; z-index: 2;
-				.tagline{display: block; color: #fff; text-transform: uppercase; margin-bottom: 15px;
+				.tagline{display: block; color: #fff; text-transform: lowercase; margin-bottom: 15px;
 					span{ color:$color-red; float: left; font-weight: 600; color: #fff;
 						&:after{content: ""; width: 22px; height: 1px; float:right; margin: 10px; background:$color-red;}}
 					h6{ float: left; @include font-two; opacity: 0.5; margin-top: 2px; margin-bottom: 0; color:#fff;}}
