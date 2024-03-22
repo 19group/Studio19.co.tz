@@ -573,7 +573,7 @@ body {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   font-size: 17px;
-  color: #0e0e0e;
+  color: #18212a;
   overflow-x: hidden;
 }
 
@@ -589,7 +589,7 @@ img {
 
 /* LINKS */
 a {
-  color: #0e0e0e;
+  color: #18212a;
   -webkit-transition: 0.25s ease-in-out;
   -moz-transition: 0.25s ease-in-out;
   -ms-transition: 0.25s ease-in-out;
@@ -598,11 +598,11 @@ a {
 }
 
 a:hover {
-  color: #0e0e0e;
+  color: #18212a;
 }
 
 a:active {
-  color: #0e0e0e;
+  color: #18212a;
 }
 
 /* SECTIONS */
@@ -643,10 +643,10 @@ section {
 .pagination a {
   display: inline-block;
   font-weight: 600;
-  color: #0e0e0e;
+  color: #18212a;
   margin: 0 10px;
   font-size: 14px;
-  border-bottom: 2px solid #0e0e0e;
+  border-bottom: 2px solid #18212a;
   padding-bottom: 2px;
 }
 .pagination a:hover {
@@ -690,7 +690,7 @@ section {
   position: fixed;
   left: 0;
   bottom: 0;
-  z-index: 11;
+  z-index: 11000000;
   overflow: hidden;
   background: #eaa708;
   -webkit-transition: all 0.5s ease;
@@ -913,7 +913,7 @@ section {
   position: absolute;
   top: 0;
   transform: skewX(0);
-  background: #0e0e0e;
+  background: #18212a;
 }
 .navigation-menu .bg-layers span:nth-child(1) {
   left: 0;
@@ -922,7 +922,7 @@ section {
   content: "";
   width: 150%;
   height: 100%;
-  background: #0e0e0e;
+  background: #18212a;
   position: absolute;
   left: -149%;
   top: 0;
@@ -940,7 +940,7 @@ section {
   content: "";
   width: 150%;
   height: 100%;
-  background: #0e0e0e;
+  background: #18212a;
   position: absolute;
   right: -149%;
   top: 0;
@@ -1223,7 +1223,7 @@ section {
   font-weight: 600;
   display: inline-block;
   margin-left: 20px;
-  color: #0e0e0e;
+  color: #18212a;
 }
 
 .custom-link .lines {
@@ -1377,7 +1377,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  background: url(../../../../images/bg-lines.png) center;
+  background: url(../images/bg-lines.png) center;
   z-index: 2;
 }
 .header .video-bg video {
@@ -1396,7 +1396,7 @@ section {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  background: #0e0e0e;
+  background: #18212a;
 }
 .page-header .video-bg {
   width: 100%;
@@ -1413,7 +1413,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  background: url(../../../../images/bg-lines.png) center;
+  background: url(../images/bg-lines.png) center;
   z-index: 2;
 }
 .page-header .video-bg video {
@@ -1630,6 +1630,7 @@ header .sound .equalizer .holder {
   text-decoration: none;
 }
 .navbar .right .hamburger-menu {
+  display: none;
   margin-right: 0;
   margin-left: 60px;
 }
@@ -1647,7 +1648,7 @@ header .sound .equalizer .holder {
 .slide-btn {
   display: block;
   transition: all 0.5s;
-  padding-left: 30px;
+  padding: 15px 0 0 30px;
 }
 
 .slide-btn a {
@@ -1785,7 +1786,7 @@ header .sound .equalizer .holder {
   content: "";
   width: 100%;
   height: 100%;
-  background: url(../../../../images/bg-noise.gif);
+  background: url(../images/background/bg-noise.gif);
   opacity: 0.04;
   position: absolute;
   left: 0;
@@ -1798,7 +1799,7 @@ header .sound .equalizer .holder {
   position: absolute;
   left: 0;
   top: 0;
-  background: url(../../../../images/bg-lines.png) center;
+  background: url(../images/background/bg-lines.png) center;
   z-index: 1;
 }
 .swiper-slider .swiper-slide .slide-inner .container {
@@ -1841,12 +1842,12 @@ header .sound .equalizer .holder {
   float: left;
   font-weight: 800;
   color: #eaa708;
-  font-size: 10vw;
+  font-size: 6vw;
   line-height: 1;
 }
 .swiper-slider .swiper-slide .slide-inner .container h1 span {
   -webkit-text-stroke-width: 1px;
-  transform: translateY(-35%);
+  transform: translateY(-10%);
   margin-left: 4%;
   display: flex;
   -webkit-text-stroke-color: #fff;
@@ -1910,8 +1911,8 @@ header .sound .equalizer .holder {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 150px 0;
-  background: #000b17;
+  padding: 50px 0;
+  background: #eaa708;
   border-top: solid 1px #fff;
   border-bottom: solid 1px #fff;
 }
@@ -1930,7 +1931,7 @@ header .sound .equalizer .holder {
   font-size: 60px;
   line-height: 1.2;
   padding-right: 35%;
-  color: #eaa708;
+  color: #18212a;
 }
 .intro h2:before {
   content: attr(data-text);
@@ -2051,7 +2052,7 @@ s .process span:before {
   display: flex;
   flex-wrap: wrap;
   padding: 150px 0;
-  background: #0e0e0e;
+  background: #18212a;
   color: #fff;
   position: relative;
 }
@@ -2122,7 +2123,7 @@ s .process span:before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 150px 0;
+  padding: 50px 0;
   transition-delay: 0s !important;
   transition: background 0.4s;
 }
@@ -2140,7 +2141,7 @@ s .process span:before {
   font-weight: 800;
   font-size: 60px;
   line-height: 1.2;
-  padding-right: 35%;
+  padding-right: 5%;
   color: #eaa708;
 }
 .works h2:before {
@@ -2237,7 +2238,7 @@ s .process span:before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 140px 0 130px 0;
+  padding: 50px 0 100px 0;
   transition-delay: 0s !important;
   transition: background 0.4s;
 }
@@ -2251,7 +2252,7 @@ s .process span:before {
   color: #fff;
 }
 .services h2 {
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   font-weight: 800;
   font-size: 60px;
   line-height: 1.2;
@@ -2404,7 +2405,7 @@ s .process span:before {
 .works-single iframe {
   float: left;
   margin-bottom: 30px;
-  background: #0e0e0e;
+  background: #18212a;
 }
 .works-single figure {
   width: 100%;
@@ -2486,7 +2487,7 @@ s .process span:before {
   content: "";
   width: 100%;
   height: 100%;
-  background: url(../images/bg-noise.gif);
+  background: url(../images/background/bg-noise.gif);
   opacity: 0.04;
   position: absolute;
   left: 0;
@@ -2499,7 +2500,7 @@ s .process span:before {
   position: absolute;
   left: 0;
   top: 0;
-  background: url(../images/bg-lines.png) center;
+  background: url(../images/background/bg-lines.png) center;
   z-index: 1;
 }
 .work-with-us .container {
@@ -2569,20 +2570,25 @@ s .process span:before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 0;
-  background: url(../../../../images/pattern-bg.svg);
+  padding: 50px 0;
+  background: url(../images/pattern-bg.svg);
+  background-color: #fff;
+}
+.clients .partnerheader {
+  color: #eaa708;
 }
 .clients h6 {
   display: block;
   line-height: 1;
   margin-bottom: 20px;
   font-family: "Fjalla One", sans-serif;
-  opacity: 0.5;
+  opacity: 10px;
   font-size: 14px;
+  color: #eaa708;
 }
 .clients h2 {
   color: #eaa708;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   font-weight: 800;
   font-size: 60px;
   line-height: 1.2;
@@ -2619,7 +2625,6 @@ s .process span:before {
   transition: 0.25s ease-in-out;
 }
 .clients ul li {
-  width: 16%;
   float: left;
   margin: 0;
   padding: 10px;
@@ -2627,24 +2632,19 @@ s .process span:before {
   position: relative;
 }
 .clients ul li img {
-  opacity: 1;
-  background: #fff;
-  border: 1px solid #eee;
   padding: 15px;
   height: 100px;
 }
 .clients ul li small {
   width: 100%;
   height: 50px;
-  line-height: 50px;
   position: absolute;
   left: 0;
   top: 50%;
   text-align: center;
-  font-size: 600;
+  font-size: 10px;
   opacity: 0;
   font-family: "Fjalla One", sans-serif;
-  font-size: 22px;
 }
 .clients ul li:hover small {
   margin-top: -25px;
@@ -2756,7 +2756,7 @@ s .process span:before {
 }
 .news .post .post-content .inner .post-title a {
   display: block;
-  color: #0e0e0e;
+  color: #18212a;
 }
 .news .post .post-content .inner .post-title a:hover {
   color: #eaa708;
@@ -2909,7 +2909,7 @@ s .process span:before {
   padding: 0 40px;
   font-size: 14px;
   font-weight: 600;
-  color: #0e0e0e;
+  color: #18212a;
   background: #eaa708;
   border: none;
 }
@@ -3009,8 +3009,9 @@ s .process span:before {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 100px 0;
-  background: #0e0e0e;
+  padding: 100px 0 50px 0;
+  background-color: #18212a;
+  background: url(../images/background/bg-lines.png) center center;
   color: #fff;
 }
 .footer .footer-quote {
@@ -3026,7 +3027,7 @@ s .process span:before {
   margin-bottom: 20px;
 }
 .footer .footer-quote h2 {
-  font-size: 3vw;
+  font-size: 2vw;
   font-weight: 800;
   margin-bottom: 0;
   color: #eaa708;
@@ -3044,6 +3045,13 @@ s .process span:before {
   color: #fff;
   text-decoration: underline;
 }
+.footer .footer-contact h5 {
+  margin-bottom: 10px;
+  font-family: "Fjalla One", sans-serif;
+  text-transform: uppercase;
+  color: #eaa708;
+  font-size: 2vw;
+}
 .footer .footer-bottom {
   width: 100%;
   display: flex;
@@ -3054,6 +3062,7 @@ s .process span:before {
   font-family: "Fjalla One", sans-serif;
   text-transform: uppercase;
   color: #eaa708;
+  font-size: 2vw;
 }
 .footer .footer-bottom ul {
   display: block;
@@ -3081,11 +3090,10 @@ s .process span:before {
   -ms-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
   transition: 0.25s ease-in-out;
-  border-bottom: 2px solid transparent;
 }
 .footer .footer-bottom ul li a:hover {
   padding-bottom: 1px;
-  border-bottom: 2px solid #fff;
+  color: #eaa708;
   text-decoration: none;
 }
 
@@ -3267,6 +3275,7 @@ s .process span:before {
 @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
   .container {
     padding: 0 30px;
+    margin: 110px 0 0 0;
   }
 
   .page-header .video-bg:before {
@@ -3399,7 +3408,7 @@ s .process span:before {
   }
 
   .swiper-slider .swiper-slide .slide-inner .container h1 {
-    font-size: 15vw;
+    font-size: 10vw;
   }
 
   .swiper-slider .swiper-slide .slide-inner .container h1 span {
@@ -3476,6 +3485,11 @@ s .process span:before {
   .services-content-block h2 {
     font-size: 32px;
     margin-bottom: 60px;
+  }
+
+  .services h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
   }
 
   .direction h2 {
@@ -3558,6 +3572,10 @@ s .process span:before {
     width: 50%;
   }
 
+  .client-container {
+    margin: 0;
+  }
+
   .news .pagination {
     margin-top: 0;
     text-align: left;
@@ -3603,4 +3621,310 @@ s .process span:before {
   .footer .footer-bottom ul li {
     margin-right: 15px;
   }
+
+  .footer-container {
+    margin: 0;
+  }
+}
+/* RESPONSIVE MACBOOK FIXES */
+/*--cover up mac , mac-book---*/
+/*--mac book pro , and mac-book retina display screen---*/
+.about-image img {
+  border-radius: 30px;
+  height: 50%;
+}
+
+@media (min-width: 300px) and (max-width: 991px) {
+  .about-image img {
+    display: none;
+  }
+}
+.gradient-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  padding: 30px;
+}
+@media screen and (max-width: 991px) {
+  .gradient-cards {
+    grid-template-columns: 1fr;
+  }
+}
+.gradient-cards .service-card {
+  max-width: 550px;
+  border: 0;
+  width: 100%;
+  margin-inline: auto;
+}
+.gradient-cards .service-card .container-card {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(71deg, #080509, #1a171c, #080509);
+  background-clip: padding-box;
+  border-radius: 45px;
+  padding: 20px;
+  margin: 10px;
+}
+.gradient-cards .service-card .container-card img {
+  margin-bottom: 32px;
+}
+.gradient-cards .service-card .bg-green-box,
+.gradient-cards .service-card .bg-white-box,
+.gradient-cards .service-card .bg-yellow-box,
+.gradient-cards .service-card .bg-blue-box {
+  position: relative;
+}
+.gradient-cards .service-card .bg-green-box::after,
+.gradient-cards .service-card .bg-white-box::after,
+.gradient-cards .service-card .bg-yellow-box::after,
+.gradient-cards .service-card .bg-blue-box::after {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  content: "";
+  z-index: -1;
+  border-radius: 45px;
+}
+.gradient-cards .service-card .bg-green-box::after {
+  background: linear-gradient(71deg, #0d1212, #3da077, #0d1212);
+}
+.gradient-cards .service-card .bg-white-box::after {
+  background: linear-gradient(71deg, #121013, #b0afb0, #121013);
+}
+.gradient-cards .service-card .bg-yellow-box::after {
+  background: linear-gradient(71deg, #110e0e, #afa220, #110e0e);
+}
+.gradient-cards .service-card .bg-blue-box::after {
+  background: linear-gradient(71deg, #0c0a0e, #5f6fad, #0c0a0e);
+}
+.gradient-cards .service-card .card-title {
+  font-weight: 600;
+  color: white;
+  letter-spacing: -0.02em;
+  line-height: 40px;
+  font-style: normal;
+  font-size: 28px;
+  padding-bottom: 8px;
+}
+.gradient-cards .service-card .card-description {
+  font-weight: 600;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  max-width: 470px;
+}
+
+.video-container {
+  display: none;
+  text-align: center;
+  width: cover;
+  height: 100vh;
+}
+
+/* 4.2 - Site Footer - Start
+================================================== */
+.site_footer {
+  color: #C8C8C8;
+  background-color: 9141f;
+}
+.site_footer .site_logo {
+  margin-bottom: 35px;
+}
+.site_footer .section_head h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #eaa708;
+  font-family: "Rubik", san serif;
+}
+.site_footer .section_head h4 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #eaa708 !important;
+}
+.site_footer .footer_widget_area {
+  padding: 80px 0 60px 0;
+}
+.site_footer .contact_widget {
+  padding: 110px 0 0 0;
+}
+.site_footer p {
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 52px;
+}
+.site_footer .footer_widget_title {
+  color: #eaa708;
+}
+.site_footer .page_list a {
+  color: #eaa708;
+}
+.site_footer .page_list a:hover {
+  color: #C8C8C8;
+}
+.site_footer .blog_small:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+.site_footer .blog_small .item_image {
+  flex: 0 0 70px;
+  max-width: 70px;
+  margin-right: 10px;
+}
+.site_footer .blog_small .item_author {
+  display: none;
+}
+.site_footer .blog_small .item_title {
+  font-size: 16px;
+  color: #fff;
+}
+
+.footer_widget_title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 35px;
+}
+
+.copyright_widget .copyright_text {
+  padding: 40px 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  border-top: 1px solid #444444;
+}
+.copyright_widget .copyright_text a {
+  color: #C8C8C8;
+}
+.copyright_widget .copyright_text a:hover {
+  color: #fff;
+}
+
+/* 4.2 - Site Footer - End
+================================================== */
+/* 2.7 - Order & Unorder List - Start
+================================================== */
+.unordered_list,
+.unordered_list_end,
+.unordered_list_center {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.unordered_list > li,
+.unordered_list_end > li,
+.unordered_list_center > li {
+  float: left;
+  list-style: none;
+  display: inline-block;
+}
+
+.unordered_list {
+  justify-content: flex-start;
+}
+
+.unordered_list_center {
+  justify-content: center;
+}
+
+.unordered_list_end {
+  justify-content: flex-end;
+}
+
+.unordered_list_block {
+  margin: 0px;
+  padding: 0px;
+  display: block;
+}
+.unordered_list_block > li {
+  display: block;
+  list-style: none;
+}
+
+ol[type="1"] > li:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.info_list.unordered_list_block > li:not(:last-child) {
+  margin-bottom: 12px;
+}
+.info_list a {
+  display: block;
+  color: #fff;
+}
+.info_list a:hover {
+  opacity: 0.7;
+}
+.info_list i {
+  float: left;
+  font-size: 12px;
+  margin: 5px 10px 0 0;
+  color: #fff;
+  text-shadow: 2px 2px 0 #09141f;
+}
+.info_list i[class*=check] {
+  font-size: 14px;
+  text-shadow: none;
+  color: #fff;
+}
+.info_list span {
+  display: table;
+  font-size: 0.9rem;
+}
+
+/* 2.7 - Order & Unorder List - End
+================================================== */
+/* 2.15 - Social Icons - Start
+================================================== */
+.social_links {
+  margin: -6px;
+}
+.social_links li {
+  padding: 6px;
+}
+.social_links a {
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  position: relative;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.social_links a:before, .social_links a:after {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  z-index: -1;
+  position: absolute;
+  border-radius: 100%;
+  transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.social_links a:before {
+  border: 2px solid #fff;
+}
+.social_links a:after {
+  background-color: #eaa708;
+}
+.social_links a i {
+  color: #fff;
+  transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.social_links a:hover:before {
+  transform: scale(1.1);
+}
+.social_links a:hover:after {
+  transform: scale(0.8);
+}
+
+/* 2.15 - Social Icons - End
+================================================== */
+.site_logo img {
+  height: 70px;
+  width: 70px;
 }

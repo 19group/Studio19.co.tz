@@ -1286,7 +1286,7 @@ header .sound .equalizer .holder {
   position: absolute;
   left: 0;
   top: 0;
-  background: url(../images/background/bg-lines.png) center;
+  background: url(../images/background/hero-bg.png) center;
   z-index: 1;
 }
 .swiper-slider .swiper-slide .slide-inner .container {
@@ -1727,6 +1727,7 @@ s .process span:before {
   flex-wrap: wrap;
   padding: 50px 0 100px 0;
   transition-delay: 0s !important;
+  border-top: 2px solid #18212a;
   transition: background 0.4s;
 }
 .services h6 {
@@ -2058,7 +2059,6 @@ s .process span:before {
   display: flex;
   flex-wrap: wrap;
   padding: 50px 0;
-  background: url(../images/pattern-bg.svg);
   background-color: #fff;
 }
 .clients .partnerheader {

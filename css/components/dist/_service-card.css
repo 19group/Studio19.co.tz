@@ -1,0 +1,19 @@
+.card {
+  background: #18212a;
+}
+.card .card-top {
+  background: #eaa708;
+  padding: 20px;
+}
+.card .card-top .card-img-top {
+  position: relative;
+  left: 40%;
+  top: 8%;
+}
+.card .card-top .card-icon {
+  height: 50px;
+  width: 50px;
+}
+.card .card-text {
+  color: #fff;
+}
