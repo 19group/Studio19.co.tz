@@ -10,6 +10,9 @@
   left: 40%;
   top: 8%;
 }
+.card .card-top .card-title {
+  text-align: center;
+}
 .card .card-top .card-icon {
   height: 50px;
   width: 50px;
