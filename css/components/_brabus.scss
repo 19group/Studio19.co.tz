@@ -783,7 +783,13 @@ header{ transform: scale(1.5); @include transition-cubic;
 	.services{
 		padding: 200px 0 200px 0;
 	}
-	
+	header .left-side {
+		height:190px;
+		top: 45%;
+	}
+	.swiper-slider .swiper-slide .slide-inner .container h1 {
+	font-size: 5vw;
+	}
 }
 
 @media only screen and (min-width: 1920px) and (max-width: 2560px) {}

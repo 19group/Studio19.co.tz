@@ -3149,4 +3149,13 @@ s .process span:before {
   .services {
     padding: 200px 0 200px 0;
   }
+
+  header .left-side {
+    height: 190px;
+    top: 45%;
+  }
+
+  .swiper-slider .swiper-slide .slide-inner .container h1 {
+    font-size: 5vw;
+  }
 }
