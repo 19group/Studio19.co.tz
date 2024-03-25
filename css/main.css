@@ -187,6 +187,10 @@ abbr {
   color: #707273;
 }
 
+.contact_widget{
+  padding:0 0 0 0 !important;
+}
+
 pre,
 code {
   font-family: Consolas, "Andale Mono", Courier, "Courier New", monospace;
