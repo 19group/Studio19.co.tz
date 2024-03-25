@@ -2570,7 +2570,7 @@ s .process span:before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 50px 0;
+  padding: 70px 0;
   background-color: #fff;
 }
 .clients .partnerheader {
@@ -2652,6 +2652,29 @@ s .process span:before {
 .clients ul li:hover img {
   opacity: 0.05;
   transform: scale(1.2);
+}
+
+.client-logos {
+  margin: 0 0 10px 0;
+}
+.client-logos img {
+  padding: 15px;
+  height: 100px;
+}
+
+.client-logos-ctw img {
+  padding: 15px;
+  height: 150px;
+}
+
+.client-logos-helvetas img {
+  padding: 15px;
+  height: 80px;
+}
+
+.client-logos-tadb img {
+  padding: 15px;
+  height: 120px;
 }
 
 /* NEWS */
@@ -3507,6 +3530,18 @@ s .process span:before {
   }
   .footer-container {
     margin: 0;
+  }
+  .client-logos img {
+    height: auto;
+  }
+  .client-logos-ctw img {
+    height: auto;
+  }
+  .client-logos-helvetas img {
+    height: auto;
+  }
+  .client-logos-tadb img {
+    height: auto;
   }
 }
 /* RESPONSIVE MACBOOK FIXES */

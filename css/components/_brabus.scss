@@ -484,7 +484,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 
 
 /* CLIENTS */
-.clients{ width: 100%; display: flex; flex-wrap: wrap; padding: 50px 0;   background-color:#fff;
+.clients{ width: 100%; display: flex; flex-wrap: wrap; padding: 70px 0;   background-color:#fff;
 	.partnerheader{color:$color-turquaz}
 	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two; opacity: 10px; font-size: 14px; color:$color-turquaz;}
 	h2{ color: #eaa708; margin-bottom: 10px; font-weight: 800; font-size: 60px; line-height: 1.2;
@@ -498,7 +498,24 @@ header{ transform: scale(1.5); @include transition-cubic;
 			&:hover {
 				small{margin-top: -25px; opacity: 1;}
 				img {opacity: 0.05; transform: scale(1.2);}}}}}
-
+.client-logos{margin:0 0 10px 0 ;
+	img{  padding: 15px; height: 100px; }
+}
+.client-logos-ctw{
+	img{
+		padding: 15px; height: 150px;
+	}
+}
+.client-logos-helvetas{
+	img{
+		padding: 15px; height: 80px;
+	}
+}
+.client-logos-tadb{
+	img{
+		padding: 15px; height: 120px;
+	}
+}
 /* NEWS */
 .news{width: 100%; display: flex; flex-wrap: wrap; padding: 100px 0;
 	.post{width: 100%; display: flex; flex-wrap: wrap; padding: 50px 0;
@@ -726,6 +743,26 @@ header{ transform: scale(1.5); @include transition-cubic;
 	.footer .footer-bottom ul li{margin-right: 15px;}
 	.footer-container {
 		margin:0;
+	}
+	.client-logos{
+		img{
+			height:auto;
+		}
+	}
+	.client-logos-ctw{
+		img{
+			height:auto;
+		}
+	}
+	.client-logos-helvetas{
+		img{
+			height:auto;
+		}
+	}
+	.client-logos-tadb{
+		img{
+			height:auto;
+		}
 	}
 }
 
