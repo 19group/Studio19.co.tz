@@ -3819,6 +3819,9 @@ ol[type="1"] > li:not(:last-child) {
   top: 125px;
   cursor: pointer;
 }
+.brief .brief-button .brief-button-init h1 {
+  color: #09141f;
+}
 
 .sidebar {
   position: fixed;
