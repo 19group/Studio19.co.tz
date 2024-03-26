@@ -241,6 +241,10 @@ img.partner{
   margin-top:10px;
   margin-bottom:10px;
 }
+.briefsection{
+  background:white;
+  min-height:300px;
+}
 
 /* Lists
 --------------------------------------------------------------------- */
