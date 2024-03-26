@@ -85,7 +85,10 @@ section{overflow: hidden;}
 @media (min-width: 1280px){ .container { max-width: 1260px;}}
 @media (min-width: 1170px){ .container { max-width: 1100px;}}
 
-
+// Highlight
+.highlight{
+	color:$color-turquaz;
+}
 
 /* ODOMETER */
 .odometer{line-height: 1;}
@@ -100,7 +103,7 @@ section{overflow: hidden;}
 
 
 /* PAGE LOADED */
-.page-loaded{ overflow: inherit;
+.page-loaded{ overflow-x: hidden;
 	.preloader{ bottom: -100%; transition-delay: 0.55s;
 		.layer{ bottom: -100%; }
 		.inner{ transform: translateY(30px); opacity: 0;}}
@@ -241,7 +244,11 @@ section{overflow: hidden;}
 	.container{position: relative; z-index: 0;
 				.tagline{display: block; color: #fff; text-transform: uppercase; margin-bottom: 15px;
 					span{ color:$color-red; float: left; font-weight: 600; color: #fff;
-						&:after{content: ""; width: 22px; height: 1px; float:right; margin: 10px; background:$color-red;}}
+						&:after{content: ""; width: 22px; height: 1px; float:right; margin: 10px; background:$color-red;}
+					}
+					h4{
+						color:$color-turquaz;
+					}
 					h6{ float: left; @include font-two; opacity: 0.5; margin-top: 2px; margin-bottom: 0;}}
 				h1{ width: 100%; float: left; font-weight: 800; color: $color-red; font-size: 10vw; line-height: 1;
 					span{-webkit-text-stroke-width: 1px; transform: translateY(-35%); margin-left: 4%; display: flex;
@@ -323,9 +330,9 @@ header{ transform: scale(1.5); @include transition-cubic;
 					span{ color:$color-red; float: left; font-weight: 600; color: #fff;
 						&:after{content: ""; width: 22px; height: 1px; float:right; margin: 10px; background:$color-red;}}
 					h6{ float: left; @include font-two; opacity: 0.5; margin-top: 2px; margin-bottom: 0; color:#fff;}}
-				h1{ width: 100%; float: left; font-weight: 800; color: $color-red; font-size: 6vw; line-height: 1;
-					span{-webkit-text-stroke-width: 1px; transform: translateY(-10%); margin-left: 4%; display: flex;
-   -webkit-text-stroke-color: #fff; color:transparent;}}
+				h1{ width: 100%; float: left; font-weight: 800; color: #fff; font-size: 6vw; line-height: 1;
+					span{-webkit-text-stroke-width: 3px; transform: translateY(-10%); margin-left: 4%; display: flex; margin-top: 15px;
+   -webkit-text-stroke-color: $color-turquaz; color:transparent;}}
 				.slide-btn{float: left; }}}}
 	.swiper-pagination-bullets{ width: 50px; left: auto; right: 40px; bottom: 50%; text-align: right; font-size: 14px; font-weight: 600; z-index: 2 !important;
 		.swiper-pagination-bullet{ width: 100%; height: auto; float: left; margin: 5px 0; background: none; position: relative; text-indent: 9999px; padding-right: 36px; @include transition;
@@ -404,8 +411,8 @@ header{ transform: scale(1.5); @include transition-cubic;
 
 /*Services*/
 .services{width: 100%; display: flex; flex-wrap: wrap; padding: 50px 0 100px 0; transition-delay: 0s !important; border-top:2px solid #18212a; transition: background 0.40s;
-	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two;  font-size: 18px; color: #fff;}
-	h2{ margin-bottom: 10px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 35%; color: $color-turquaz;
+	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two;  font-size: 18px; color: $color-turquaz;}
+	h2{ margin-bottom: 10px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 35%; color: #fff;
 		&:before{content: attr(data-text); font-size: 20vw; opacity: 0.05; z-index: -1; position: absolute; left: 0; top: -20%;}}
 	.project-box{width: 100%; display: flex; flex-wrap: wrap; padding: 75px 0;
 		*{@include transition;}

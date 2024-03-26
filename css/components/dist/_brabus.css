@@ -98,6 +98,10 @@ section {
     max-width: 1100px;
   }
 }
+.highlight {
+  color: #eaa708;
+}
+
 /* ODOMETER */
 .odometer {
   line-height: 1;
@@ -133,7 +137,7 @@ section {
 
 /* PAGE LOADED */
 .page-loaded {
-  overflow: inherit;
+  overflow-x: hidden;
 }
 .page-loaded .preloader {
   bottom: -100%;
@@ -771,6 +775,9 @@ section {
   margin: 10px;
   background: #eaa708;
 }
+.header .container .tagline h4 {
+  color: #eaa708;
+}
 .header .container .tagline h6 {
   float: left;
   font-family: "Fjalla One", sans-serif;
@@ -1319,16 +1326,17 @@ header .sound .equalizer .holder {
   width: 100%;
   float: left;
   font-weight: 800;
-  color: #eaa708;
+  color: #fff;
   font-size: 6vw;
   line-height: 1;
 }
 .swiper-slider .swiper-slide .slide-inner .container h1 span {
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 3px;
   transform: translateY(-10%);
   margin-left: 4%;
   display: flex;
-  -webkit-text-stroke-color: #fff;
+  margin-top: 15px;
+  -webkit-text-stroke-color: #eaa708;
   color: transparent;
 }
 .swiper-slider .swiper-slide .slide-inner .container .slide-btn {
@@ -1727,7 +1735,7 @@ s .process span:before {
   margin-bottom: 20px;
   font-family: "Fjalla One", sans-serif;
   font-size: 18px;
-  color: #fff;
+  color: #eaa708;
 }
 .services h2 {
   margin-bottom: 10px;
@@ -1735,7 +1743,7 @@ s .process span:before {
   font-size: 60px;
   line-height: 1.2;
   padding-right: 35%;
-  color: #eaa708;
+  color: #fff;
 }
 .services h2:before {
   content: attr(data-text);

@@ -755,5 +755,32 @@
         
     }
 
+    document.addEventListener('DOMContentLoaded', function () {
+        const openFormBtn = document.getElementById('openFormBtn');
+        const closeFormBtn = document.getElementById('closeFormBtn');
+        const formContainer = document.getElementById('formContainer');
+        const briefForm = document.getElementById('briefForm');
+      
+        
+        openFormBtn.addEventListener('click', function () {
+          formContainer.classList.add('open');
+        });
+      
+        closeFormBtn.addEventListener('click', function () {
+          formContainer.classList.remove('open');
+        });
+      
+        briefForm.addEventListener('submit', function (e) {
+          e.preventDefault(); // Prevent default form submission
+          // Here you can add code to send the form data using AJAX or any other method
+      
+          // For demonstration, let's just close the form after submission
+          formContainer.classList.remove('open');
+          // You can also reset the form fields if needed
+          briefForm.reset();
+        });
+      });
+      
+      
 
 	

@@ -142,7 +142,9 @@ HEADER
   <!-- end navigation-menu -->
 
   <nav class="navbar">
-    <div class="left logo"> <a href="index.html"><img src="images/logoK@2x.png" alt="Image"></a> </div>
+    <div class="left logo"> 
+      <a href="index.html"><img src="images/logoK@2x.png" alt="Image"></a> 
+    </div>
     <!-- end left -->
     <div class="right">
       <ul class="language">
@@ -181,7 +183,7 @@ HEADER
                         <h4>Welcome To STUDIO19</h4>
                      </div>
                     <!-- end tagline -->
-                     <h1>Contributing towards individual and community transformation<br>
+                     <h1>Contributing towards individual & community transformation<br>
                      <span>Through storytelling</span></h1>
                      <div class="slide-btn" > <a href="https://profile.studio19.co.tz">
                            <div class="lines"> <span></span> <span></span> </div>
@@ -231,6 +233,7 @@ ABOUT/HOW WE DO IT
         <!-- we_do_wrapper_start -->
         <div class="card-deck">
             <div class="card">
+              <a href="./works/campaign-design/">
                 <div class="card-top">
                     <h4 class="card-title">Campaign Design</h4>
                     <img src="images/icons/campaign-design-icon.png" class="card-img-top card-icon" alt="...">
@@ -241,8 +244,10 @@ ABOUT/HOW WE DO IT
               <div class="card-footer">
                <a href="./works/campaign-design/"><small class="text-muted">See Campaign Design</small></a> 
               </div>
+            </a>
             </div>
             <div class="card">
+              <a href="./works/content/">
                 <div class="card-top">
                     <h4 class="card-title">Content Creation</h4>
               <img src="images/icons/content-creation.png" class="card-img-top card-icon" alt="...">
@@ -253,8 +258,10 @@ ABOUT/HOW WE DO IT
               <div class="card-footer">
                 <a href="./works/content/"><small class="text-muted">See Content Creation</small></a>
               </div>
+            </a>
             </div>
             <div class="card">
+              <a href="./works/events/">
                 <div class="card-top">
                     <h3 class="card-title">Event Services </h3>
               <img src="images/icons/events-services-icon.png" class="card-img-top card-icon" alt="...">
@@ -266,7 +273,42 @@ ABOUT/HOW WE DO IT
               <div class="card-footer">
                 <a href="./works/events/"><small class="text-muted">See Events</small></a>
               </div>
+            </a>
             </div>
+            
+          </div>
+          
+          <div id="formContainer" class="sidebar">
+            
+              <span id="closeFormBtn" class="close-btn">&times;</span>
+            
+            <div class="contact-form-header">
+             <h3>Lets tell stories of impact together</h3>
+                <p>Leave your details and we’ll get in touch with you</p>
+            </div>
+            <form id="briefForm" class="p-3">
+              <div class="form-group">
+                <label for="name">First Name:</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="form-group">
+                <label for="name">Last Name:</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="text" class="form-control" id="phone" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Tell Us How you would Like us to impact your story</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send</button>
+            </form>
           </div>
         <!-- <div class="slide-btn"> <a href="https://calendly.com/onlinestudio19tz/30min">
             <div class="lines"> <span></span> <span></span> </div>
@@ -284,6 +326,17 @@ ABOUT/HOW WE DO IT
 </section>
 <!-- we_do_end -->
 
+<div class="brief">
+  <div class="container">
+    <div class="brief-button">
+      <img src="images/background/CTA-border.png" alt="">
+      <div class="brief-button-init" id="openFormBtn">
+        <h1>Send Us a Brief</h1>
+      </div>
+    </div>
+  </div>
+  
+</div>
 
 <!--==============================
 PARTNERS/WHO WE HAVE WORKED WITH
@@ -305,68 +358,81 @@ PARTNERS/WHO WE HAVE WORKED WITH
             <div class="row client-container wow fadeIn" data-wow-delay="0.10s">
                 <div class="container overflow-hidden">
                     <div class="row gy-5">
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos">
+                      <div class="col-6 col-md-2 align-self-center text-center">
+                        <img src="images/clients/2024/AFD-logo.png" alt="OSGEO">
+                      </div>
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos">
                             <img src="images/clients/2024/plan-international.png" alt="PLAN INTERNATIONAL">
                       </div>
                       
                       
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos">
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos">
                         <img src="images/clients/2024/unicef-for-every-child.png" alt="UNICEF FOR EVERY CHILD">
                       </div>
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos">
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos">
                         <img src="images/clients/2024/gain.png" alt="GAIN">
                       </div>
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos-ctw">
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos-ctw">
                         <img src="images/clients/2024/femina-hip.png" alt="FEMINA">
                       </div>
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos">
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos">
                         <img src="images/clients/2024/sahara-sparks.png" alt="SAHARA SPARKS">
                       </div>
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos">
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos">
                         <img src="images/clients/2024/Un-Women-logo.png" alt="UN WOMEN">
                       </div>
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos">
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos">
                         <img src="images/clients/2024/university of Turku.png" alt="UNIVERSITY OF TURKU">
                       </div>
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos-ctw">
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos-ctw">
                         <img src="images/clients/2024/girl-effect.png" alt="GIRL EFFECT">
                       </div>
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos">
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos">
                         <img src="images/clients/2024/canso.png" alt="CANSO">
                       </div>
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos">
+                      <div class="col-6 col-md-2 align-self-center text-center">
                         <img src="images/clients/2024/TURP.png" alt="TURP">
                       </div>
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos">
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos">
                         <img src="images/clients/2024/fsdt-logo.png" alt="FSDT">
                       </div>
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos">
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos">
                         <img src="images/clients/2024/ramanihuria.png" alt="RAMANI HURIA">
                       </div>
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos">
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos">
                         <img src="images/clients/2024/tacaids.png" alt="TACAIDS">
                       </div>
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos">
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos">
                         <img src="images/clients/2024/world-bank.png" alt="WORLD BANK">
                       </div>
-                    <div class="col-6 col-md-3 align-self-center text-center client-logos-helvetas">
+                    <div class="col-6 col-md-2 align-self-center text-center client-logos-helvetas">
                         <img src="images/clients/2024/helvetas-logo.png" alt="HELVETAS">
                       </div>
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos">
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos">
                         <img src="images/clients/2024/courtofarm.png" alt="COURT OF ARM">
                       </div>
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos-tadb">
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos-tadb">
                         <img src="images/clients/2024/tadb-logo.png" alt="TADB">
                       </div>
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos">
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos">
                         <img src="images/clients/2024/ABIC.png" alt="ABIC">
                       </div>
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos-ctw">
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos-ctw">
                         <img src="images/clients/2024/ctw-logo.png" alt="CTW">
                       </div>
                       
-                      <div class="col-6 col-md-3 align-self-center text-center client-logos-ctw">
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos-ctw">
                         <img src="images/clients/2024/osgeo.png" alt="OSGEO">
+                      </div>
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos">
+                        <img src="images/clients/2024/iom.png" alt="IOM">
+                      </div>
+                      
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos-ctw">
+                        <img src="images/clients/2024/gatsby.png" alt="GATSBY AFRICA">
+                      </div>
+                      <div class="col-6 col-md-2 align-self-center text-center client-logos">
+                        <img src="images/clients/2024/World Health Organization.png" alt="WHO">
                       </div>
                       
                       
@@ -379,6 +445,7 @@ PARTNERS/WHO WE HAVE WORKED WITH
     </div>
     <!-- end container -->
 </section>
+
 <!-- end clients -->
 
 <!--==============================
