@@ -661,7 +661,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 
 /* RESPONSIVE MOBILE FIXES */
 @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
-	.container {padding: 0 30px; margin:110px 0 0 0}
+	.container {padding: 0 30px; margin:0px 0 0 0}
 	.page-header .video-bg:before{display: none;}
 	header .scroll-down{left: -10px;}
 	header .sound{right: 30px; bottom: 30px;}
@@ -691,8 +691,8 @@ header{ transform: scale(1.5); @include transition-cubic;
 	.swiper-slider .swiper-slide .slide-inner{padding: 0;}
 	.swiper-slider .swiper-pagination-bullets{display: none;}
 	.swiper-slider .swiper-slide .slide-inner:before{display: none;}
-	.swiper-slider .swiper-slide .slide-inner .container h1{font-size: 10vw;}
-	.swiper-slider .swiper-slide .slide-inner .container h1 span{ margin-left: 0; transform: translateY(0);}
+	.swiper-slider .swiper-slide .slide-inner .container h1{font-size: 8vw;}
+	.swiper-slider .swiper-slide .slide-inner .container h1 span{ margin-left: 0; transform: translateY(0); -webkit-text-stroke-width: 2px;}
 	.swiper-slider .swiper-slide .slide-inner .container .slide-btn{padding-left: 0;}
 	.awards{padding: 40px 0; padding-bottom: 0;}
 	.awards .odometer{margin-bottom: 40px;}

@@ -3256,7 +3256,7 @@ s .process span:before {
 @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
   .container {
     padding: 0 30px;
-    margin: 110px 0 0 0;
+    margin: 0px 0 0 0;
   }
   .page-header .video-bg:before {
     display: none;
@@ -3359,11 +3359,12 @@ s .process span:before {
     display: none;
   }
   .swiper-slider .swiper-slide .slide-inner .container h1 {
-    font-size: 10vw;
+    font-size: 8vw;
   }
   .swiper-slider .swiper-slide .slide-inner .container h1 span {
     margin-left: 0;
     transform: translateY(0);
+    -webkit-text-stroke-width: 2px;
   }
   .swiper-slider .swiper-slide .slide-inner .container .slide-btn {
     padding-left: 0;
