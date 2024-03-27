@@ -659,6 +659,13 @@ header{ transform: scale(1.5); @include transition-cubic;
 
 }
 
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px){
+	.swiper-slider .swiper-slide .slide-inner .container h1 {
+		font-size: 7vw;
+	}
+}
+
+
 /* RESPONSIVE MOBILE FIXES */
 @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
 	.container {padding: 0 30px; margin:0px 0 0 0}
@@ -690,7 +697,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 	.header .container .slide-btn{padding-left: 0;}
 	.swiper-slider .swiper-slide .slide-inner{padding: 0;}
 	.swiper-slider .swiper-pagination-bullets{display: none;}
-	.swiper-slider .swiper-slide .slide-inner:before{display: none;}
+	.swiper-slider .swiper-slide .slide-inner:before{}
 	.swiper-slider .swiper-slide .slide-inner .container h1{font-size: 8vw;}
 	.swiper-slider .swiper-slide .slide-inner .container h1 span{ margin-left: 0; transform: translateY(0); -webkit-text-stroke-width: 2px;}
 	.swiper-slider .swiper-slide .slide-inner .container .slide-btn{padding-left: 0;}
@@ -741,6 +748,9 @@ header{ transform: scale(1.5); @include transition-cubic;
 	.footer-container {
 		margin:0;
 	}
+	.row{
+		margin-right: 0;
+	}    
 	.client-logos{
 		img{
 			height:auto;
@@ -785,6 +795,12 @@ header{ transform: scale(1.5); @include transition-cubic;
 // }
 
 /*--mac book pro , and mac-book retina display screen---*/
+@media only screen and (max-width: 950px), only screen and (max-device-width: 950PX){
+	.footer-row {
+		margin-right: 11px;
+	}
+}
+
 
 @media only screen and (width:1440px) and (height:900px){
 	.services{

@@ -3252,6 +3252,11 @@ s .process span:before {
     font-size: 6vw;
   }
 }
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px) {
+  .swiper-slider .swiper-slide .slide-inner .container h1 {
+    font-size: 7vw;
+  }
+}
 /* RESPONSIVE MOBILE FIXES */
 @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
   .container {
@@ -3353,9 +3358,6 @@ s .process span:before {
     padding: 0;
   }
   .swiper-slider .swiper-pagination-bullets {
-    display: none;
-  }
-  .swiper-slider .swiper-slide .slide-inner:before {
     display: none;
   }
   .swiper-slider .swiper-slide .slide-inner .container h1 {
@@ -3530,6 +3532,9 @@ s .process span:before {
   .footer-container {
     margin: 0;
   }
+  .row {
+    margin-right: 0;
+  }
   .client-logos img {
     height: auto;
   }
@@ -3546,6 +3551,11 @@ s .process span:before {
 /* RESPONSIVE MACBOOK FIXES */
 /*--cover up mac , mac-book---*/
 /*--mac book pro , and mac-book retina display screen---*/
+@media only screen and (max-width: 950px), only screen and (max-device-width: 950PX) {
+  .footer-row {
+    margin-right: 11px;
+  }
+}
 @media only screen and (width: 1440px) and (height: 900px) {
   .services {
     padding: 200px 0 200px 0;
@@ -3805,6 +3815,7 @@ ol[type="1"] > li:not(:last-child) {
 }
 
 .brief {
+  cursor: pointer;
   width: 100%;
   height: 200px;
 }
@@ -3882,4 +3893,52 @@ ol[type="1"] > li:not(:last-child) {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+  .briefsection {
+    min-height: 230px;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .brief {
+    height: 0;
+  }
+  .brief .brief-container {
+    padding: 20px 0;
+  }
+  .brief .brief-container .brief-button {
+    top: 0;
+    left: 0;
+    position: relative;
+  }
+  .brief .brief-container .brief-button .brief-button-init {
+    top: 43%;
+  }
+  .brief .brief-container .brief-button .brief-button-init h1 {
+    font-size: 6vw;
+  }
+}
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px) {
+  .briefsection {
+    min-height: 340px;
+  }
+  .brief {
+    height: 0;
+  }
+  .brief .brief-container {
+    padding: 20px 30;
+  }
+  .brief .brief-container .brief-button {
+    top: 0;
+    left: 0;
+    position: relative;
+  }
+  .brief .brief-container .brief-button .brief-button-init {
+    top: 43%;
+  }
+  .brief .brief-container .brief-button .brief-button-init h1 {
+    font-size: 6vw;
+  }
 }/*# sourceMappingURL=styles.css.map */
