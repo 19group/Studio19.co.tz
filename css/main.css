@@ -232,6 +232,9 @@ hr {
   margin: 23px 0 12px;
   height: 0;
 }
+
+/* CUSTOM:: ADDED
+--------------------------------------------------------------------- */
 img.partner{
   max-height:100px;
   align-items: center;
@@ -245,6 +248,12 @@ img.partner{
   background:white;
   min-height:300px;
 }
+a:hover{
+  text-decoration:none;
+}
+
+/* CUSTOM:: ADDED
+--------------------------------------------------------------------- */
 
 /* Lists
 --------------------------------------------------------------------- */
