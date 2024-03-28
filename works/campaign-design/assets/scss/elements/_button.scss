@@ -218,7 +218,16 @@
     box-shadow: rgb(0, 0, 0) -5px 5px 0px 0px;
 	width: 9.8rem;
 }
-
+.subscribe-button {
+	background: #ffc800;
+	border: 0;
+	padding: 10px 20px;
+	color: #fff;
+	transition: 0.4s;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-left:5px;
+  } 
 // Button Unfill - End
 
 /* 2.6 - Button - End

@@ -513,7 +513,7 @@ input[type="button"] {
   display: inline-block;
   font: 14px/30px "raleway-heavy", sans-serif;
   padding: 2px 16px;
-  margin: 0 3px 6px 0;
+  margin: 0 3px 6px 5px;
   background: #eaa708;
   color: #091420;
   text-decoration: none;

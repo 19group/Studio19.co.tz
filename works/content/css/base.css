@@ -19,6 +19,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 article,
@@ -101,14 +102,16 @@ sup {
 sup {
   top: -0.5em;
 }
-
+p{
+  font-size:2rem;
+}
 sub {
   bottom: -0.25em;
 }
 
 img {
   border: 0;
-  width: 100% !important;
+  width: 100% ;
 }
 
 svg:not(:root) {

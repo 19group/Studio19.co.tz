@@ -511,13 +511,13 @@ input[type="reset"],
 input[type="button"] {
   display: inline-block;
   font: 14px/30px "raleway-heavy", sans-serif;
-  padding: 9px 16px;
-  margin: 0 3px 6px 0;
+  padding: 0 16px;
+  margin: 0 3px 6px 5px;
   background: #eaa708;
   color: #091420;
   text-decoration: none;
   cursor: pointer;
-  height: auto;
+  height: 40px;
   text-align: center;
   border: none;
   -webkit-appearance: none;
@@ -604,6 +604,14 @@ hr {
 section#services{
   padding-left:50px;
   padding-right:50px;
+}
+section#about {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+section#team {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .section-head h1 span {
