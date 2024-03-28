@@ -483,7 +483,7 @@ select {
   line-height: 24px;
   border-radius: 3px;
   max-width: 100%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgb(255, 255, 255);
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -512,13 +512,13 @@ input[type="reset"],
 input[type="button"] {
   display: inline-block;
   font: 14px/30px "raleway-heavy", sans-serif;
-  padding: 9px 16px;
+  padding: 2px 16px;
   margin: 0 3px 6px 0;
   background: #eaa708;
   color: #091420;
   text-decoration: none;
   cursor: pointer;
-  height: auto;
+  height: 40px;
   text-align: center;
   border: none;
   -webkit-appearance: none;

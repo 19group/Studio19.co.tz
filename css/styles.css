@@ -3692,6 +3692,9 @@ s .process span:before {
     display: flex;
     flex-direction: column;
   }
+  .site_footer .section_head h4 {
+    font-size: 1rem;
+  }
   .site_footer .footer_widget_area .container {
     padding: 1px 36px;
     margin: 0px 0 0 0;
@@ -3950,15 +3953,5 @@ ol[type="1"] > li:not(:last-child) {
   }
   .brief .brief-container .brief-button .brief-button-init h1 {
     font-size: 4vw;
-  }
-}
-@media only screen and (max-width: 1400px), only screen and (max-device-width: 1400px) {
-  .brief .brief-container {
-    padding: 20px 140px;
-  }
-  .brief .brief-container .brief-button {
-    top: 0;
-    left: 0;
-    position: relative;
   }
 }/*# sourceMappingURL=styles.css.map */

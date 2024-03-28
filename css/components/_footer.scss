@@ -96,6 +96,11 @@
 	.site_footer{
 		display: flex;
 		flex-direction: column;
+		.section_head{
+			h4{
+				font-size: 1rem;
+			}
+		}
 		.footer_widget_area{
 			.container{
 				padding: 1px 36px;

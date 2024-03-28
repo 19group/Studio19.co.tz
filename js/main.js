@@ -781,6 +781,28 @@
         });
       });
       
+      document.getElementById("mc-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+        var email = document.getElementById("mc-email").value;
+        subscribe(email);
+    });
+    
+    function subscribe(email) {
+        // Display prompt message
+        document.getElementById("promptMessage").style.display = "block";
+    
+        // Simulate a delay of 5 seconds (5000 milliseconds)
+        setTimeout(function() {
+            // Here, you would typically make an AJAX request to submit the form data to Mailchimp
+            // For demonstration purposes, we'll just log the email to console
+            console.log("Subscribed email: " + email);
+    
+            // Reset the form and hide the prompt message after subscription is complete
+            document.getElementById("subscriptionForm").reset();
+            document.getElementById("promptMessage").style.display = "none";
+        }, 5000);
+    }
+    
       
 
 	
