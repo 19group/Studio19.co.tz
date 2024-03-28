@@ -106,26 +106,43 @@
       
     }
   }
-  @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px) {
-    .briefsection{
-      min-height: 340px;
-    }
-    .brief{
-      height: 0;
-      .brief-container{
-        padding: 20px 30;
-        .brief-button{
-          top: 0;
-          left: 0;
-          position:relative;
-          .brief-button-init{
-            top: 43%;
-            h1{
-              font-size: 6vw;
-            }
+
+  @media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+  .briefsection{
+    min-height: 340px;
+  }
+  .brief{
+    height: 0;
+    .brief-container{
+      padding: 20px 140px;
+      .brief-button{
+        top: 0;
+        left: 0;
+        position:relative;
+        .brief-button-init{
+          top: 43%;
+          h1{
+            font-size: 4vw;
           }
         }
       }
-      
+    }
+    
+  }
+}
+  
+  @media only screen and (max-width: 1400px), only screen and (max-device-width: 1400px){
+    .brief {
+      .brief-container {
+        padding: 20px 140px;
+        .brief-button {
+          top: 0;
+          left: 0;
+          position: relative;
+        }
+      }
     }
   }

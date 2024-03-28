@@ -77,6 +77,16 @@
 
 /* 4.2 - Site Footer - End
 ================================================== */
+@media only screen and (max-width: 991px), only screen and (max-device-width: 991px) {
+  .site_footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .site_footer .footer_widget_area .container {
+    padding: 1px 36px;
+    margin: 0px 0 0 0;
+  }
+}
 /* 2.7 - Order & Unorder List - Start
 ================================================== */
 .unordered_list,

@@ -655,8 +655,6 @@ header{ transform: scale(1.5); @include transition-cubic;
 	.hello{padding: 80px 0;}
 	.hello #contact{margin-left: 0; box-shadow: none;}
 	.footer .footer-quote h2{font-size: 6vw;}
-
-
 }
 
 @media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px){

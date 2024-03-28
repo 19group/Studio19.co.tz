@@ -109,7 +109,7 @@
     font-size: 6vw;
   }
 }
-@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px) {
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
   .briefsection {
     min-height: 340px;
   }
@@ -118,7 +118,7 @@
     height: 0;
   }
   .brief .brief-container {
-    padding: 20px 30;
+    padding: 20px 140px;
   }
   .brief .brief-container .brief-button {
     top: 0;
@@ -129,6 +129,16 @@
     top: 43%;
   }
   .brief .brief-container .brief-button .brief-button-init h1 {
-    font-size: 6vw;
+    font-size: 4vw;
+  }
+}
+@media only screen and (max-width: 1400px), only screen and (max-device-width: 1400px) {
+  .brief .brief-container {
+    padding: 20px 140px;
+  }
+  .brief .brief-container .brief-button {
+    top: 0;
+    left: 0;
+    position: relative;
   }
 }
