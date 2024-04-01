@@ -1,0 +1,16 @@
+.about-image{
+   
+    img{
+       border-radius: 30px;
+       height:50%;
+    }
+}
+
+@media (min-width:300px) and (max-width:991px) {
+    .about-image{
+        img{
+            display: none;
+        }
+       
+    }
+}

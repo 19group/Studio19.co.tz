@@ -1,0 +1,25 @@
+{
+  "short_name": "Studio 19",
+  "name": "Telling Africa's Stories",
+  "icons": [
+    {
+      "src": "images/logoK@2x.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "images/logoK@2x.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "images/logoK@2x.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "index.html?launcher=true",
+  "theme_color": "#09141f",
+  "display": "standalone",
+  "background_color":"#09141f"
+}

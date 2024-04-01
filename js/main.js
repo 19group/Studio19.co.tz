@@ -13,7 +13,8 @@
                 div.onclick = labnolIframe;
                 v[n].appendChild(div);
             }
-        });
+        }
+	);
 
     function labnolThumb(id) {
         var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
@@ -253,27 +254,6 @@
     });
 
 
-   /*----------------------------------------------------*/
-	/*  Placeholder Plugin Settings
-	------------------------------------------------------ */
-	$('input, textarea').placeholder()
-
-
-
-
- var filterizd = $('.filtr-container').filterizr({
-    //options object
- });
-
- $(".filtr-button").on('click',function(e){
-
-  $(".filtr-button").removeClass("filtr-active");
-  $(this).addClass("filtr-active");
- });
-
-
-
-
 	/*----------------------------------------------------*/
 	/*	contact form
 	------------------------------------------------------*/
@@ -330,8 +310,499 @@
 })(jQuery);
 
 
-/*----------------------------------------------------*/
-	/*	Team-section
-	------------------------------------------------------*/
+    /* --------------------------------------------------
+     * plugin | owl carousel
+     * --------------------------------------------------*/
+    function load_owl() {
+        jQuery("#items-carousel").owlCarousel({
+            center: false,
+            rewind: true,
+            margin: 25,
+            nav: true,
+            navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+            dots: false,
+            responsive: {
+                1000: {
+                    items: 3
+                },
+                600: {
+                    items: 2
+                },
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+        jQuery(".carousel-3").owlCarousel({
+            center: false,
+            items: 3,
+            rewind: true,
+            margin: 25,
+            nav: true,
+            navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+            dots: false,
+            responsive: {
+                1000: {
+                    items: 3
+                },
+                600: {
+                    items: 2
+                },
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+        jQuery("#carousel__testimonial").owlCarousel({
+            center: false,
+            loop: true,
+            items: 1,
+            singleItem: true,
+            rewind: true,
+            margin: 25,
+            nav: true,
+            navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+            dots: false,
+        });
+
+        jQuery("#collection-carousel").owlCarousel({
+            center: false,
+            items: 4,
+            loop: true,
+            margin: 25,
+            nav: true,
+            navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+            dots: false,
+            responsive: {
+                1000: {
+                    items: 4
+                },
+                600: {
+                    items: 2
+                },
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+        jQuery("#items-carousel-big").owlCarousel({
+            center: false,
+            animateOut: 'fadeOut',
+            animateIn: 'flipInY',
+            items: 1,
+            loop: true,
+            margin: 0,
+            nav: true,
+            navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+            dots: false
+        });
+
+        jQuery("#before-after-carousel-big").owlCarousel({
+            center: false,
+            animateOut: 'fadeOut',
+            animateIn: 'flipInY',
+            items: 1,
+            loop: true,
+            margin: 0,
+            nav: false,
+            mouseDrag:false,
+            touchDrag:false,
+            dots: true
+        });
+
+        jQuery("#items-carousel-5-cols").owlCarousel({
+            center: false,
+            items: 5,
+            rewind: true,
+            margin: 25,
+            nav: true,
+            navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+            dots: false,
+            responsive: {
+                1000: {
+                    items: 5
+                },
+                800: {
+                    items: 3
+                },
+                600: {
+                    items: 2
+                },
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+        jQuery("#collection-carousel-5-cols").owlCarousel({
+            center: false,
+            items: 5,
+            loop: true,
+            margin: 25,
+            nav: true,
+            navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+            dots: false,
+            responsive: {
+                1000: {
+                    items: 5
+                },
+                800: {
+                    items: 3
+                },
+                600: {
+                    items: 2
+                },
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+        jQuery("#item-carousel-big").owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: false,
+            dots: false,
+            responsive: {
+                1000: {
+                    items: 3
+                },
+                600: {
+                    items: 2
+                },
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+        jQuery("#item-carousel-big-type-3").owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: false,
+            dots: false,
+            responsive: {
+                1000: {
+                    items: 2
+                },
+                600: {
+                    items: 2
+                },
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+        jQuery("#item-carousel-big-type-2").owlCarousel({
+            autoplay: true,
+            loop: true,
+            margin: 25,
+            nav: false,
+            dots: false,
+            responsive: {
+                1000: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+        jQuery("#item-carousel-big-type-4").owlCarousel({
+            center: true,
+            loop: true,
+            margin: 0,
+            nav: false,
+            dots: false,
+            responsive: {
+                1000: {
+                    items: 4
+                },
+                600: {
+                    items: 2
+                },
+                0: {
+                    items: 2
+                }
+            }
+        });
+
+        var owl = $('#item-carousel-big,#item-carousel-big-type-4');
+        owl.owlCarousel();
+        $('.d-carousel .d-arrow-right').on("click", function() {
+            owl.trigger('next.owl.carousel');
+        })
+        $('.d-carousel .d-arrow-left').on("click", function() {
+            owl.trigger('prev.owl.carousel');
+        });
+
+        var owl_2 = $('#item-carousel-big-type-2');
+        owl_2.owlCarousel();
+        $('.d-carousel .d-arrow-right').on("click", function() {
+            owl_2.trigger('next.owl.carousel');
+        })
+        $('.d-carousel .d-arrow-left').on("click", function() {
+            owl_2.trigger('prev.owl.carousel');
+        });
+
+        var owl_3 = $('#item-carousel-big-type-3');
+        owl_3.owlCarousel();
+        $('.d-carousel .d-arrow-right').on("click", function() {
+            owl_3.trigger('next.owl.carousel');
+        })
+        $('.d-carousel .d-arrow-left').on("click", function() {
+            owl_3.trigger('prev.owl.carousel');
+        });
+
+        jQuery("#event-carousel").owlCarousel({
+            center: false,
+            items: 3,
+            loop: true,
+            margin: 0,
+            nav: false,
+            dots: false,
+            responsive: {
+                1000: {
+                    items: 3
+                },
+                600: {
+                    items: 3
+                },
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+        jQuery("#crypto-carousel").owlCarousel({
+            center: false,
+            items: 4,
+            loop: true,
+            margin: 25,
+            nav: false,
+            dots: false,
+            responsive: {
+                1000: {
+                    items: 4
+                },
+                600: {
+                    items: 3
+                },
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+        jQuery("#ss-carousel").owlCarousel({
+            center: true,
+            items: 4,
+            loop: true,
+            margin: 60,
+            responsive: {
+                1000: {
+                    items: 4
+                },
+                600: {
+                    items: 3
+                },
+                0: {
+                    items: 2
+                }
+            }
+        });
+
+        jQuery(".rtl #testimonial-carousel").owlCarousel({
+            center: false,
+            loop: true,
+            margin: 25,
+            rtl: true,
+            responsive: {
+                1000: {
+                    items: 3
+                },
+                600: {
+                    items: 1
+                },
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+        jQuery("#testimonial-carousel").owlCarousel({
+            center: false,
+            loop: true,
+            margin: 25,
+            responsive: {
+                1000: {
+                    items: 3
+                },
+                600: {
+                    items: 1
+                },
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+
+
+        jQuery("#blog-carousel").owlCarousel({
+            center: false,
+            items: 3,
+            loop: true,
+            margin: 25,
+            responsive: {
+                1000: {
+                    items: 3
+                },
+                600: {
+                    items: 2
+                },
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+        jQuery("#carousel-blog").owlCarousel({
+            center: false,
+            items: 5,
+            loop: false,
+            margin: 25,
+            responsive: {
+                1000: {
+                    items: 3
+                },
+                600: {
+                    items: 2
+                },
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+        jQuery("#carousel-blog-2-cols").owlCarousel({
+            center: false,
+            items: 2,
+            loop: false,
+            margin: 25,
+            responsive: {
+                1000: {
+                    items: 2
+                },
+                600: {
+                    items: 2
+                },
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+        jQuery("#owl-logo").owlCarousel({
+            center: false,
+            items: 6,
+            loop: true,
+            dots: false,
+            margin: 25,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            responsive: {
+                1000: {
+                    items: 6
+                },
+                600: {
+                    items: 4
+                },
+                0: {
+                    items: 2
+                }
+            }
+        });
+
+        jQuery(".project-carousel-4-nav").owlCarousel({
+            center: true,
+            items: 4,
+            loop: true,
+            margin: 15,
+            responsive: {
+                1000: {
+                    items: 4
+                },
+                600: {
+                    items: 3
+                },
+                0: {
+                    items: 1
+                }
+            }
+        });
+
+        
+
+        
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const openFormBtn = document.getElementById('openFormBtn');
+        const closeFormBtn = document.getElementById('closeFormBtn');
+        const formContainer = document.getElementById('formContainer');
+        const briefForm = document.getElementById('briefForm');
+      
+        
+        openFormBtn.addEventListener('click', function () {
+          formContainer.classList.add('open');
+        });
+      
+        closeFormBtn.addEventListener('click', function () {
+          formContainer.classList.remove('open');
+        });
+      
+        briefForm.addEventListener('submit', function (e) {
+          e.preventDefault(); // Prevent default form submission
+          // Here you can add code to send the form data using AJAX or any other method
+      
+          // For demonstration, let's just close the form after submission
+          formContainer.classList.remove('open');
+          // You can also reset the form fields if needed
+          briefForm.reset();
+        });
+      });
+      
+      document.getElementById("mc-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+        var email = document.getElementById("mc-email").value;
+        subscribe(email);
+    });
+    
+    function subscribe(email) {
+        // Display prompt message
+        document.getElementById("promptMessage").style.display = "block";
+    
+        // Simulate a delay of 5 seconds (5000 milliseconds)
+        setTimeout(function() {
+            // Here, you would typically make an AJAX request to submit the form data to Mailchimp
+            // For demonstration purposes, we'll just log the email to console
+            console.log("Subscribed email: " + email);
+    
+            // Reset the form and hide the prompt message after subscription is complete
+            document.getElementById("subscriptionForm").reset();
+            document.getElementById("promptMessage").style.display = "none";
+        }, 5000);
+    }
+    
+      
 
 	

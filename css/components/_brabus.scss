@@ -1,12 +1,5 @@
 /*
-
 @Author: BrianCeasar
- 
-This file contains the styling for the actual theme, this
-is the file you need to edit to change the look of the
-theme.
-
-
 // Table of contents //
 
 	01.	GOOGLE FONTS
@@ -41,9 +34,6 @@ theme.
 	30.	FOOTER
 	31.	RESPONSIVE TABLET FIXES
 	32. REPSONSIVE MOBILE FIXES
-
-
-
 */
 
 
@@ -64,7 +54,7 @@ theme.
 @mixin blur{ -webkit-filter: blur(25px); -moz-filter: blur(25px); -o-filter: blur(25px); -ms-filter: blur(25px); filter: blur(25px);}
 @mixin no-blur{ -webkit-filter: blur(0); -moz-filter: blur(0); -o-filter: blur(0); -ms-filter: blur(0); filter: blur(0);}
 
-$color-dark :#0e0e0e;
+$color-dark :#18212a;
 $color-red :#eaa708;
 $color-turquaz :#eaa708;;
 
@@ -75,7 +65,7 @@ body{margin: 0; padding: 0; @include font-one; @include font-render; font-size: 
 
 
 /* CUSTOM HTML ELEMENTS */
-img{max-width: 100%;} 
+img{max-width: 100%;}
 
 
 /* CUSTOM ELEMENTS */
@@ -95,7 +85,10 @@ section{overflow: hidden;}
 @media (min-width: 1280px){ .container { max-width: 1260px;}}
 @media (min-width: 1170px){ .container { max-width: 1100px;}}
 
-
+// Highlight
+.highlight{
+	color:$color-turquaz;
+}
 
 /* ODOMETER */
 .odometer{line-height: 1;}
@@ -110,7 +103,7 @@ section{overflow: hidden;}
 
 
 /* PAGE LOADED */
-.page-loaded{ overflow: inherit;
+.page-loaded{ overflow-x: hidden;
 	.preloader{ bottom: -100%; transition-delay: 0.55s;
 		.layer{ bottom: -100%; }
 		.inner{ transform: translateY(30px); opacity: 0;}}
@@ -120,7 +113,7 @@ section{overflow: hidden;}
 
 
 /* PRELOADER */
-.preloader{width: 100%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: column; justify-content: center; text-align: center; position: fixed; left: 0; bottom: 0; z-index: 11; overflow: hidden; background: $color-turquaz; @include transition-cubic;
+.preloader{width: 100%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: column; justify-content: center; text-align: center; position: fixed; left: 0; bottom: 0; z-index: 11000000; overflow: hidden; background: $color-turquaz; @include transition-cubic;
 	.layer{width: 25%; height: 100%; position: absolute; bottom: 0; background: #000; z-index: 2; @include transition-cubic;}
 	.layer:nth-child(1){ left: 0; transition-delay: 0.15s;}
 	.layer:nth-child(2){ left: 25%; transition-delay: 0.20s;}
@@ -170,7 +163,7 @@ section{overflow: hidden;}
 				&:before{content: ""; width: 150%; height: 100%; background: $color-dark; position: absolute; left: -149%; top: 0;}}
 			&:nth-child(2){left: 25%;}
 			&:nth-child(3){left: 50%;}
-			&:nth-child(4){left: 75%; 
+			&:nth-child(4){left: 75%;
 			&:before{content: ""; width: 150%; height: 100%; background: $color-dark; position: absolute; right: -149%; top: 0;}}
 		}}
 	.inner{  position: relative; z-index: 3; color: #fff; text-align: center; padding-top: 96px;
@@ -180,10 +173,10 @@ section{overflow: hidden;}
 			li{display: inline-block; margin: 0 20px; padding: 0; list-style: none;
 				&:hover ul{ opacity: 1; visibility: visible;}
 				&:hover ul li ul{ opacity: 0; visibility: hidden;}
-				a{ display: inline-block; line-height: 1; font-size: 3vw; font-weight: 800; color:#fff; padding-bottom: 8px; border-bottom: 5px solid transparent; 
+				a{ display: inline-block; line-height: 1; font-size: 3vw; font-weight: 800; color:#fff; padding-bottom: 8px; border-bottom: 5px solid transparent;
 					&:hover{padding-bottom: 3px; border-bottom: 5px solid $color-turquaz; text-decoration: none;}}
-				ul{width: 100%; min-height:inherit; position: absolute; left: 0; top: 70px; opacity: 0; visibility: hidden; 
-					li{ margin: 0 15px; 
+				ul{width: 100%; min-height:inherit; position: absolute; left: 0; top: 70px; opacity: 0; visibility: hidden;
+					li{ margin: 0 15px;
 						a{font-size: 2vw; padding: 0; border-bottom: none;
 							&:hover{ padding: 0; border-bottom: none; color: $color-turquaz;}}
 						&:hover ul {opacity: 1; visibility: visible;}
@@ -224,7 +217,7 @@ section{overflow: hidden;}
           &:nth-child(3):after { transition-delay: 0.10s; }
           &:nth-child(2):before { transition-delay: 0.15s; }
           &:nth-child(3):before { transition-delay: 0.20s; } } }
-	
+
 	.hamburger.open span:nth-child(1) {  top: 9px; width: 100%;  -webkit-transform: rotate(135deg);  -moz-transform: rotate(135deg);  -o-transform: rotate(135deg);  transform: rotate(135deg);}
 .hamburger.open span:nth-child(2) {  opacity: 0;  left: -15px;}
 .hamburger.open span:nth-child(3) {  top: 9px; width: 100%;  -webkit-transform: rotate(-135deg);  -moz-transform: rotate(-135deg);
@@ -251,7 +244,11 @@ section{overflow: hidden;}
 	.container{position: relative; z-index: 0;
 				.tagline{display: block; color: #fff; text-transform: uppercase; margin-bottom: 15px;
 					span{ color:$color-red; float: left; font-weight: 600; color: #fff;
-						&:after{content: ""; width: 22px; height: 1px; float:right; margin: 10px; background:$color-red;}}
+						&:after{content: ""; width: 22px; height: 1px; float:right; margin: 10px; background:$color-red;}
+					}
+					h4{
+						color:$color-turquaz;
+					}
 					h6{ float: left; @include font-two; opacity: 0.5; margin-top: 2px; margin-bottom: 0;}}
 				h1{ width: 100%; float: left; font-weight: 800; color: $color-red; font-size: 10vw; line-height: 1;
 					span{-webkit-text-stroke-width: 1px; transform: translateY(-35%); margin-left: 4%; display: flex;
@@ -262,19 +259,19 @@ section{overflow: hidden;}
 	.particles-wrap{ width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; position: absolute; left: 0; top: 0; overflow: hidden;  z-index: 0;
 		.particles{width: 100%; height: calc(100% - 50px); position: absolute; left: 0; bottom: 0;}}
 	.video-bg{width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; position: absolute; left: 0; top: 0; overflow: hidden;  z-index: 0;
-		&:before{content: ""; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../../../../images/bg-lines.png) center; z-index: 2;}
+		&:before{content: ""; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../images/bg-lines.png) center; z-index: 2;}
 	video{ min-width: 100%; min-height: 100%; position: absolute; opacity: 0.8;}}}
 .page-header{ width: 100%; height: 100vh; min-height: 660px; display: flex; flex-wrap: wrap; flex-direction: column; justify-content: center; position: relative; background: $color-dark;
-	.video-bg{width: 100%; height: 100%;  position: absolute; left: 0; top: 0; overflow: hidden; 
-		&:before{content: ""; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../../../../images/bg-lines.png) center; z-index: 2;}
+	.video-bg{width: 100%; height: 100%;  position: absolute; left: 0; top: 0; overflow: hidden;
+		&:before{content: ""; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../images/bg-lines.png) center; z-index: 2;}
 		video{ min-width: 100%; min-height: 100%; float: left; opacity: 0.2;}}
 	.container{position: relative; z-index: 3; padding: 0 10%;
 		h1{font-weight: 800; font-size: 10vw; color: #fff; line-height: 1; text-indent: -5px;}
 		p{ margin-bottom: 0; @include font-two; color:$color-turquaz;}}}
-header{ transform: scale(1.5); @include transition-cubic;	
+header{ transform: scale(1.5); @include transition-cubic;
 	.left-side{width: 50%; height: 60px; display: flex; flex-wrap: wrap; align-content: flex-end; position: absolute; left: 0; top: 50%; transform:  translateX(-50%) translateY(-50%) rotate(-90deg); margin-left: 30px; z-index: 3;
-		ul{margin: 0 auto; padding: 0; 
-			li{ display: inline-block; margin: 0 10px; padding: 0; list-style: none; 
+		ul{margin: 0 auto; padding: 0;
+			li{ display: inline-block; margin: 0 10px; padding: 0; list-style: none;
 				a{font-size: 14px; color: #fff; @include font-two; @include transition; padding-bottom: 6px; border-bottom: 2px solid transparent;
 				&:hover{padding-bottom: 1px; border-bottom: 2px solid #fff; text-decoration: none;}}}} }
 		.scroll-down{  position: absolute; left: 0; bottom: 0; z-index: 3;}
@@ -301,12 +298,12 @@ header{ transform: scale(1.5); @include transition-cubic;
 				li{ display: inline-block; margin-left: 15px; padding: 0;
 					a{ position: relative; padding-bottom: 6px; @include transition; border-bottom: 2px solid transparent;
 				&:hover{padding-bottom: 1px; border-bottom: 2px solid #fff; text-decoration: none;}}}}
-			.hamburger-menu{ margin-right: 0; margin-left: 60px;
+			.hamburger-menu{ display:none; margin-right: 0; margin-left: 60px;
 				.hamburger{float: right; margin-top: 1px;}
 				b{ display: inline-block; font-weight: 400; margin-right: 15px; }}}}
 
 /* SLIDE BTN */
-.slide-btn { display: block;   transition:all .5s; padding-left: 30px;}
+.slide-btn { display: block;   transition:all .5s; padding:15px 0 0 30px;}
 .slide-btn a{display: flex; flex-wrap: wrap; align-items: center; font-size: 14px; color: #fff;}
 .slide-btn a:hover{text-decoration: none;}
 .slide-btn b{font-weight: 600;}
@@ -320,24 +317,22 @@ header{ transform: scale(1.5); @include transition-cubic;
 .slide-btn svg { width: 50px; height: 50px; transition: transform .3s; margin-left: -25px; margin-right: 15px;}
 .slide-btn:hover .video-play-circle { stroke-dashoffset: 0; }
 
-
-
 /* SWIPER SLIDER */
 .swiper-slider{width: 100%; height: 100%; position: absolute; left: 0; top: 0; color: #fff; overflow: hidden;
 	.swiper-slide{ display: block; overflow: hidden;
-		&.swiper-slide-active .slide-inner{transform: scale(1); 
+		&.swiper-slide-active .slide-inner{transform: scale(1);
 			.container{transform: translateY(0); @include transition-cubic; opacity: 1;}}
 		.slide-inner{ width: 100%; height: 100%; transform: scale(0.8); display: flex; flex-wrap:wrap; justify-content: center; flex-direction: column; @include transition-cubic; background-size: cover; background-position: center; position: relative;
-		&:after{content: ""; width: 100%; height: 100%; background: url(../../../../images/bg-noise.gif); opacity: 0.04; position: absolute; left: 0; top: 0;}
-			&:before{content: ""; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../../../../images/bg-lines.png) center; z-index: 1;}
+		&:after{content: ""; width: 100%; height: 100%; background: url(../images/background/bg-noise.gif); opacity: 0.04; position: absolute; left: 0; top: 0;}
+			&:before{content: ""; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../images/background/hero-bg.png) center; background-size: cover; z-index: 1;}
 			.container{transform: translateY(50px); opacity: 0; transition-delay: 0.15s !important; position: relative; z-index: 2;
-				.tagline{display: block; color: #fff; text-transform: uppercase; margin-bottom: 15px;
+				.tagline{display: block; color: #fff; text-transform: lowercase; margin-bottom: 15px;
 					span{ color:$color-red; float: left; font-weight: 600; color: #fff;
 						&:after{content: ""; width: 22px; height: 1px; float:right; margin: 10px; background:$color-red;}}
 					h6{ float: left; @include font-two; opacity: 0.5; margin-top: 2px; margin-bottom: 0; color:#fff;}}
-				h1{ width: 100%; float: left; font-weight: 800; color: $color-red; font-size: 10vw; line-height: 1;
-					span{-webkit-text-stroke-width: 1px; transform: translateY(-35%); margin-left: 4%; display: flex;
-   -webkit-text-stroke-color: #fff; color:transparent;}}
+				h1{ width: 100%; float: left; font-weight: 800; color: #fff; font-size: 6vw; line-height: 1;
+					span{-webkit-text-stroke-width: 3px; transform: translateY(-10%); margin-left: 4%; display: flex; margin-top: 15px;
+   -webkit-text-stroke-color: $color-turquaz; color:transparent;}}
 				.slide-btn{float: left; }}}}
 	.swiper-pagination-bullets{ width: 50px; left: auto; right: 40px; bottom: 50%; text-align: right; font-size: 14px; font-weight: 600; z-index: 2 !important;
 		.swiper-pagination-bullet{ width: 100%; height: auto; float: left; margin: 5px 0; background: none; position: relative; text-indent: 9999px; padding-right: 36px; @include transition;
@@ -347,10 +342,10 @@ header{ transform: scale(1.5); @include transition-cubic;
 			&:after{content: ""; width: 22px; height: 1px; background: $color-turquaz; position: absolute; top: 10px; right: 0; @include transition;}}}}
 
 /* INTRO */
-.intro{width: 100%; display: flex; flex-wrap: wrap; padding: 150px 0;     background: rgb(0 11 23);
+.intro{width: 100%; display: flex; flex-wrap: wrap; padding: 50px 0;     background: #eaa708;
     border-top: solid 1px #fff; border-bottom: solid 1px #fff;
 	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two; opacity: 0.5; font-size: 14px; color:#fff;}
-	h2{ margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 35%; color:#eaa708;
+	h2{ margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 35%; color:$color-dark;
 		&:before{content: attr(data-text); font-size: 20vw; opacity: 0.05; z-index: -1; position: absolute; left: 0; top: -20%;}}
 	h4{ margin-top: 5px; @include font-two; font-size: 25px; line-height: 40px; text-transform: uppercase; padding-right: 20%; color: #fff;}
 	p{margin-bottom: 30px; font-size: 20px; line-height: 37px; color: #fff;}
@@ -392,11 +387,11 @@ header{ transform: scale(1.5); @include transition-cubic;
 
 
 /* WORKS */
-.works{width: 100%; display: flex; flex-wrap: wrap; padding: 150px 0; transition-delay: 0s !important; transition: background 0.40s;
+.works{width: 100%; display: flex; flex-wrap: wrap; padding: 50px 0; transition-delay: 0s !important; transition: background 0.40s;
 	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two; opacity: 0.5; font-size: 14px; color: #fff;}
-	h2{ margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 35%; color: $color-turquaz;
+	h2{ margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 5%; color: $color-turquaz;
 		&:before{content: attr(data-text); font-size: 20vw; opacity: 0.05; z-index: -1; position: absolute; left: 0; top: -20%;}}
-	.project-box{width: 100%; display: flex; flex-wrap: wrap; padding: 75px 0;	
+	.project-box{width: 100%; display: flex; flex-wrap: wrap; padding: 75px 0;
 		*{@include transition;}
 		&:hover figure{transform: scale(0.95);}
 		&:hover figure img{transform: scale(1.15);}
@@ -414,12 +409,12 @@ header{ transform: scale(1.5); @include transition-cubic;
 				h3{ font-size: 5vw; font-weight: 800; margin-bottom: 10vh; line-height: 1;
 					span{display: block; font-size: 8vw; color: $color-turquaz; margin-left: -7vw;}}}}}}
 
-/*Services*/				
-.services{width: 100%; display: flex; flex-wrap: wrap; padding: 140px 0 130px 0; transition-delay: 0s !important; transition: background 0.40s;
-	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two; opacity: 0.5; font-size: 14px; color: #fff;}
-	h2{ margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 35%; color: $color-turquaz;
+/*Services*/
+.services{width: 100%; display: flex; flex-wrap: wrap; padding: 50px 0 100px 0; transition-delay: 0s !important; border-top:2px solid #18212a; transition: background 0.40s;
+	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two;  font-size: 18px; color: $color-turquaz;}
+	h2{ margin-bottom: 10px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 35%; color: #fff;
 		&:before{content: attr(data-text); font-size: 20vw; opacity: 0.05; z-index: -1; position: absolute; left: 0; top: -20%;}}
-	.project-box{width: 100%; display: flex; flex-wrap: wrap; padding: 75px 0;	
+	.project-box{width: 100%; display: flex; flex-wrap: wrap; padding: 75px 0;
 		*{@include transition;}
 		&:hover figure{transform: scale(0.95);}
 		&:hover figure img{transform: scale(1.15);}
@@ -440,7 +435,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 
 
 /* WORKS SINGLE */
-.works-single{width: 100%; display: flex; flex-wrap: wrap; padding: 150px 0; 
+.works-single{width: 100%; display: flex; flex-wrap: wrap; padding: 150px 0;
 	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two; opacity: 0.5; font-size: 14px; }
 	h2{ margin-bottom: 50px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 35%;}
 	h4{ margin-top: 5px; @include font-two; font-size: 25px; line-height: 40px; text-transform: uppercase; padding-right: 20%;}
@@ -451,14 +446,14 @@ header{ transform: scale(1.5); @include transition-cubic;
 	iframe{ float: left; margin-bottom: 30px; background: $color-dark;}
 	figure{width: 100%; display: block; margin-bottom: 30px;
 		img{width: 100%;}}}
-	
-	
-	
+
+
+
 
 /* TEAM */
 .team{ width: 100%; display: flex; flex-wrap: wrap; padding: 150px 0;  background: $color-turquaz; position: relative;
 	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two; opacity: 0.5; font-size: 14px;}
-	h2{ margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; 
+	h2{ margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2;
 	&:before{content: attr(data-text); font-size: 20vw; opacity: 0.05; position: absolute; left: 0; top: -20%;}}
 	figure{width: 100%; display: block; margin-bottom: 0;
 		img{width: 100%; display: block; margin-bottom: 10px;}
@@ -468,8 +463,8 @@ header{ transform: scale(1.5); @include transition-cubic;
 
 /* WORK WITH US */
 .work-with-us{ width: 100%; display: flex; flex-wrap: wrap; padding: 150px 0;  background: $color-turquaz; position: relative;
-	&:before{content: ""; width: 100%; height: 100%; background: url(../images/bg-noise.gif); opacity: 0.04; position: absolute; left: 0; top: 0;}
-	&:after{content: ""; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../images/bg-lines.png) center; z-index: 1;}
+	&:before{content: ""; width: 100%; height: 100%; background: url(../images/background/bg-noise.gif); opacity: 0.04; position: absolute; left: 0; top: 0;}
+	&:after{content: ""; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../images/background/bg-lines.png) center; z-index: 1;}
 	.container{position: relative; z-index: 2;}
 	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two;  font-size: 14px;}
 	h2{ margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 35%;
@@ -482,26 +477,44 @@ header{ transform: scale(1.5); @include transition-cubic;
 		img{ height: 60px;}}
 	h5{font-weight: 600; font-size: 15px;}
 	.odometer{@include font-two; font-size: 40px;}}
-	
-	
+
+
 
 /* CLIENTS */
-.clients{ width: 100%; display: flex; flex-wrap: wrap; padding: 100px 0; background: url(../../../../images/pattern-bg.svg);
-	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two; opacity: 0.5; font-size: 14px;}
-	h2{ color: #eaa708; margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; 
+.clients{ width: 100%; display: flex; flex-wrap: wrap; padding: 70px 0;   background-color:#fff;
+	.partnerheader{color:$color-turquaz}
+	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two; opacity: 10px; font-size: 14px; color:$color-turquaz;}
+	h2{ color: #eaa708; margin-bottom: 10px; font-weight: 800; font-size: 60px; line-height: 1.2;
 		&:before{content: attr(data-text); font-size: 20vw; opacity: 0.05; position: absolute; left: 0; top: -20%;}}
 	h4{ margin-top: 5px; margin-bottom: 40px; @include font-two; font-size: 25px; line-height: 40px; text-transform: uppercase; padding-right: 20%;}
-	ul{width: 100%; float: left; margin: 0; margin-top: 0; padding: 0;
+	ul{ width: 100%; float: left; margin: 0; margin-top: 0; padding: 0;
 		*{@include transition;}
-		li{width: 16%; float: left; margin: 0; padding: 10px; list-style: none; position: relative;
-			img{ opacity:1; background: #fff; border: 1px solid #eee; padding: 15px; height: 100px;}
-			small{ width: 100%; height: 50px; line-height: 50px; position: absolute; left: 0; top: 50%; text-align: center; font-size: 600; opacity: 0; @include font-two; font-size: 22px;}
-			&:hover { 
+		li{ float: left; margin: 0; padding: 10px; list-style: none; position: relative;
+			img{  padding: 15px; height: 100px;}
+			small{ width: 100%; height: 50px;  position: absolute; left: 0; top: 50%; text-align: center; font-size: 10px; opacity: 0; @include font-two;}
+			&:hover {
 				small{margin-top: -25px; opacity: 1;}
 				img {opacity: 0.05; transform: scale(1.2);}}}}}
-
+.client-logos{margin:0 0 10px 0 ;
+	img{  padding: 15px; height: 100px; }
+}
+.client-logos-ctw{
+	img{
+		padding: 15px; height: 150px;
+	}
+}
+.client-logos-helvetas{
+	img{
+		padding: 15px; height: 80px;
+	}
+}
+.client-logos-tadb{
+	img{
+		padding: 15px; height: 120px;
+	}
+}
 /* NEWS */
-.news{width: 100%; display: flex; flex-wrap: wrap; padding: 100px 0; 
+.news{width: 100%; display: flex; flex-wrap: wrap; padding: 100px 0;
 	.post{width: 100%; display: flex; flex-wrap: wrap; padding: 50px 0;
 		&.single-post{ padding-left: 10%; padding-right: 10%; flex-direction: column;
 			.post-content .inner .post-title{font-size: 66px;}
@@ -533,12 +546,12 @@ header{ transform: scale(1.5); @include transition-cubic;
 				h5{font-weight: 800; font-family: Poppins; margin: 0;}}
 				ul{padding-left: 20px;
 					li{line-height: 1.9;}}
-			p{display: block; line-height: 30px; 
+			p{display: block; line-height: 30px;
 				&:last-child{margin-bottom: 0;}}}}}}
 
 
 /* HELLO */
-.hello{width: 100%; display: flex; flex-wrap: wrap; padding: 150px 0; 
+.hello{width: 100%; display: flex; flex-wrap: wrap; padding: 150px 0;
 	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two; opacity: 0.5; font-size: 14px; }
 	h2{ margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 35%;
 		&:before{content: attr(data-text); font-size: 20vw; opacity: 0.05; z-index: -1; position: absolute; left: 0; top: -20%;}}
@@ -556,7 +569,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 
 
 /* DIRECTION */
-.direction{width: 100%; display: flex; flex-wrap: wrap; padding: 150px 0; 
+.direction{width: 100%; display: flex; flex-wrap: wrap; padding: 150px 0;
 	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two; opacity: 0.5; font-size: 14px; }
 	h2{ margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 35%;
 		&:before{content: attr(data-text); font-size: 20vw; opacity: 0.05; z-index: -1; position: absolute; left: 0; top: -20%;}}
@@ -565,7 +578,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 		figcaption{width: 40%; height: 100%; display: flex; flex-wrap: wrap; flex-direction: column; justify-content: center; position: absolute; left: 0; top: 0; background: rgba(0,0,0,0.7);
 			.inner{width: 100%; padding: 40px; color: #fff;
 				.custom-link{ margin-top: 40px;
-					a{color: #fff;} 
+					a{color: #fff;}
 					.lines span{background: #fff;}}
 				h5{ @include font-two; font-size: 26px; margin-bottom: 20px;}
 				b{font-weight: 600;}
@@ -575,20 +588,22 @@ header{ transform: scale(1.5); @include transition-cubic;
 
 
 /* FOOTER */
-.footer{ width: 100%; display: flex; flex-wrap: wrap; flex-direction: column; padding: 100px 0; background: $color-dark; color: #fff;
+.footer{ width: 100%; display: flex; flex-wrap: wrap; flex-direction: column; padding: 100px 0 50px 0; background-color: $color-dark; background: url(../images/background/bg-lines.png) center center;
+    color: #fff;
 	.footer-quote{width: 100%; display: flex; flex-wrap: wrap;  margin-bottom: 80px;
 		img{height: 150px; width: 150px !important; display: block; margin-bottom: 20px;}
-		h2{font-size: 3vw; font-weight: 800; margin-bottom: 0; color:$color-turquaz;}}
+		h2{font-size: 2vw; font-weight: 800; margin-bottom: 0; color:$color-turquaz;}}
 	.footer-contact{width: 100%; display: flex; flex-wrap: wrap; margin-bottom: 80px;
 		address{margin-bottom: 0;
-		a{color:#fff; text-decoration: underline;}}}
+		a{color:#fff; text-decoration: underline;}}
+	h5{margin-bottom: 10px;font-family: "Fjalla One", sans-serif;text-transform: uppercase;color: #eaa708;font-size: 2vw;}}
 	.footer-bottom{width: 100%; display: flex; flex-wrap: wrap; 
-		h5{ margin-bottom: 10px; @include font-two; text-transform: uppercase; color:$color-turquaz;}
+		h5{ margin-bottom: 10px; @include font-two; text-transform: uppercase; color:$color-turquaz; font-size: 2vw;}
 		ul{display: block; margin: 0;  padding: 0;
 			li{display: inline-block; margin: 0; margin-right: 20px; padding: 0; list-style: none;
 				&:last-child{margin-right: 0;}
-				a{ position: relative; color: #fff; font-size: 14px; font-weight: 600; padding-bottom: 6px; @include transition; border-bottom: 2px solid transparent;
-				&:hover{padding-bottom: 1px; border-bottom: 2px solid #fff; text-decoration: none;}}}}}}
+				a{ position: relative; color: #fff; font-size: 14px; font-weight: 600; padding-bottom: 6px; @include transition; ;
+				&:hover{padding-bottom: 1px; color: $color-turquaz; text-decoration: none;}}}}}}
 
 
 /* MEDIUM FIXES */
@@ -640,13 +655,18 @@ header{ transform: scale(1.5); @include transition-cubic;
 	.hello{padding: 80px 0;}
 	.hello #contact{margin-left: 0; box-shadow: none;}
 	.footer .footer-quote h2{font-size: 6vw;}
-	
-	
 }
+
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px){
+	.swiper-slider .swiper-slide .slide-inner .container h1 {
+		font-size: 7vw;
+	}
+}
+
 
 /* RESPONSIVE MOBILE FIXES */
 @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
-	.container {padding: 0 30px;}
+	.container {padding: 0 30px; margin:0px 0 0 0}
 	.page-header .video-bg:before{display: none;}
 	header .scroll-down{left: -10px;}
 	header .sound{right: 30px; bottom: 30px;}
@@ -675,9 +695,9 @@ header{ transform: scale(1.5); @include transition-cubic;
 	.header .container .slide-btn{padding-left: 0;}
 	.swiper-slider .swiper-slide .slide-inner{padding: 0;}
 	.swiper-slider .swiper-pagination-bullets{display: none;}
-	.swiper-slider .swiper-slide .slide-inner:before{display: none;}
-	.swiper-slider .swiper-slide .slide-inner .container h1{font-size: 15vw;}
-	.swiper-slider .swiper-slide .slide-inner .container h1 span{ margin-left: 0; transform: translateY(0);}
+	.swiper-slider .swiper-slide .slide-inner:before{}
+	.swiper-slider .swiper-slide .slide-inner .container h1{font-size: 8vw;}
+	.swiper-slider .swiper-slide .slide-inner .container h1 span{ margin-left: 0; transform: translateY(0); -webkit-text-stroke-width: 2px;}
 	.swiper-slider .swiper-slide .slide-inner .container .slide-btn{padding-left: 0;}
 	.awards{padding: 40px 0; padding-bottom: 0;}
 	.awards .odometer{margin-bottom: 40px;}
@@ -693,6 +713,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 	.intro h4{margin-bottom: 20px;}
 	.intro p{font-size: 18px; line-height: 30px;}
 	.services-content-block h2{font-size: 32px; margin-bottom: 60px;}
+	.services h2{font-size: 32px; margin-bottom: 20px;}
 	.direction h2{font-size: 32px; margin-bottom: 40px;}
 	.direction figure figcaption{width: 100%; position: static; display: block;}
 	.works h2{font-size: 32px; margin-bottom: 20px;}
@@ -710,6 +731,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 	.clients h2{font-size: 32px; margin-bottom: 20px;}
 	.clients ul{margin-left: -10px; margin-right: -10px; margin-top: 40px; width: auto;}
 	.clients ul li{width: 50%;}
+	.client-container{ margin:0;}
 	.news .pagination{margin-top: 0; text-align: left;}
 	.news .pagination a{ margin-left:0; margin-right: 20px;}
 	.news .post .post-content{padding: 0;}
@@ -721,4 +743,74 @@ header{ transform: scale(1.5); @include transition-cubic;
 	.footer .footer-contact{margin-bottom: 40px;}
 	.footer .footer-contact address{margin-bottom: 30px;}
 	.footer .footer-bottom ul li{margin-right: 15px;}
+	.footer-container {
+		margin:0;
+	}
+	.row{
+		margin-right: 0;
+	}    
+	.client-logos{
+		img{
+			height:auto;
+		}
+	}
+	.client-logos-ctw{
+		img{
+			height:auto;
+		}
+	}
+	.client-logos-helvetas{
+		img{
+			height:auto;
+		}
+	}
+	.client-logos-tadb{
+		img{
+			height:auto;
+		}
+	}
 }
+
+/* RESPONSIVE MACBOOK FIXES */
+/*--cover up mac , mac-book---*/
+
+// @media only screen and (max-width: 1920px) {
+// 	section{
+// 		height: 100vh;
+// 	}
+// 	.services{
+// 		padding: 200px 0 100px 0;
+// 	}
+// 	.clients{
+// 		padding: 140px 0 0 0;
+// 		ul{
+// 			padding: 0 196px;
+// 		}
+// 	}
+// 	.swiper-slider .swiper-slide .slide-inner .container h1 {
+// 		font-size: 5vw;
+// 	}
+// }
+
+/*--mac book pro , and mac-book retina display screen---*/
+@media only screen and (max-width: 950px), only screen and (max-device-width: 950PX){
+	.footer-row {
+		margin-right: 11px;
+	}
+}
+
+
+@media only screen and (width:1440px) and (height:900px){
+	.services{
+		padding: 200px 0 200px 0;
+	}
+	header .left-side {
+		height:190px;
+		top: 45%;
+	}
+	.swiper-slider .swiper-slide .slide-inner .container h1 {
+	font-size: 5vw;
+	}
+}
+
+@media only screen and (min-width: 1920px) and (max-width: 2560px) {}

@@ -1,6 +1,7 @@
 /* 4.3 - Breadcrumb - Start
 ================================================== */
 .page_banner {
+	#container
 	.content_wrapper {
 		display: flex;
 		min-height: 520px;
@@ -9,8 +10,8 @@
 		background-size: 571px;
 		background-repeat: no-repeat;
 		// background-color: $color_light;
-		background: rgb(255,255,255);
-background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(228,228,227,1) 24%, #09141f 100%);
+		// background: rgb(255,255,255);
+		background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(228,228,227,1) 24%, #09141f 100%);
 		background-position: right bottom;
 	}
 	.container {
@@ -95,6 +96,11 @@ background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(228,228,227,1) 
 				opacity: 1;
 			}
 		}
+	}
+}
+.project_banner{
+	.container{
+		margin:140px 0 0 0;
 	}
 }
 /* 4.3 - Breadcrumb - End
