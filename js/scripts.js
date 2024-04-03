@@ -4,14 +4,14 @@
 		
 	
 		// WORKS BACKGROUND
-		$(".project-box").hover(function () {
-		$(".works").css("background-color", $(this).data('bg'));
-        $(".works").not(this).each(function(){
-            $(this).css("background-color", $(this).data('bg'));
-        });
-		}, function(){
-			$(".works").css("background-color", '');
-		});	
+		// $(".project-box").hover(function () {
+		// $(".works").css("background-color", $(this).data('bg'));
+        // $(".works").not(this).each(function(){
+        //     $(this).css("background-color", $(this).data('bg'));
+        // });
+		// }, function(){
+		// 	$(".works").css("background-color", '');
+		// });	
 		
 		
 		

@@ -1215,8 +1215,8 @@ section {
 .custom-link b {
   font-weight: 600;
   display: inline-block;
-  margin-left: 20px;
-  color: #18212a;
+  margin-left: 5px;
+  color: #e2fdf1;
 }
 
 .custom-link .lines {
@@ -1385,8 +1385,7 @@ section {
 
 .page-header {
   width: 100%;
-  height: 100vh;
-  min-height: 660px;
+  min-height: 200px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -1421,11 +1420,11 @@ section {
 .page-header .container {
   position: relative;
   z-index: 3;
-  padding: 0 10%;
+  padding: 0 15%;
 }
 .page-header .container h1 {
   font-weight: 800;
-  font-size: 10vw;
+  font-size: 3vw;
   color: #fff;
   line-height: 1;
   text-indent: -5px;
@@ -1434,6 +1433,7 @@ section {
   margin-bottom: 0;
   font-family: "Fjalla One", sans-serif;
   color: #eaa708;
+  font-size: 1vw;
 }
 
 header {
@@ -2121,7 +2121,8 @@ s .process span:before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 50px 0;
+  padding: 50px 0 100px 0;
+  margin: 0 0 50px 0;
   transition-delay: 0s !important;
   transition: background 0.4s;
 }
@@ -2191,6 +2192,7 @@ s .process span:before {
 }
 .works .project-box figure {
   width: 55%;
+  height: 50vh;
   margin: 0;
   position: relative;
   overflow: hidden;
@@ -2198,6 +2200,7 @@ s .process span:before {
 }
 .works .project-box figure img {
   width: 100%;
+  height: 100%;
 }
 .works .project-box .content-box {
   width: 45%;
@@ -2215,7 +2218,7 @@ s .process span:before {
   display: block;
   margin-bottom: 20px;
   font-family: "Fjalla One", sans-serif;
-  opacity: 0.5;
+  color: #e2fdf1;
   font-size: 14px;
 }
 .works .project-box .content-box .inner h3 {
@@ -2226,7 +2229,7 @@ s .process span:before {
 }
 .works .project-box .content-box .inner h3 span {
   display: block;
-  font-size: 8vw;
+  font-size: 2vw;
   color: #eaa708;
   margin-left: -7vw;
 }
@@ -2367,6 +2370,7 @@ s .process span:before {
   font-size: 60px;
   line-height: 1.2;
   padding-right: 35%;
+  color: #eaa708;
 }
 .works-single h4 {
   margin-top: 5px;
@@ -2385,6 +2389,7 @@ s .process span:before {
   text-transform: uppercase;
   font-size: 20px;
   margin-top: 10px;
+  color: #eaa708;
 }
 .works-single h3 {
   font-size: 60px;
@@ -2399,6 +2404,7 @@ s .process span:before {
   margin-bottom: 30px;
   font-size: 20px;
   line-height: 37px;
+  color: #e2fdf1;
 }
 .works-single iframe {
   float: left;
@@ -2412,6 +2418,10 @@ s .process span:before {
 }
 .works-single figure img {
   width: 100%;
+}
+
+.works-container {
+  height: 100vh;
 }
 
 /* TEAM */
@@ -3263,6 +3273,12 @@ s .process span:before {
     padding: 0 30px;
     margin: 0px 0 0 0;
   }
+  .page-header .container {
+    padding: 0 0 0 22%;
+  }
+  .page-header .container p {
+    font-size: 2vw;
+  }
   .page-header .video-bg:before {
     display: none;
   }
@@ -3277,10 +3293,10 @@ s .process span:before {
     min-height: inherit;
   }
   .page-header {
-    min-height: inherit;
+    min-height: 150px;
   }
   .page-header .container h1 {
-    font-size: 15vw;
+    font-size: 6vw;
   }
   .navigation-menu.active .bg-layers span {
     width: 50%;
@@ -3384,6 +3400,7 @@ s .process span:before {
   }
   .works-single h4 {
     margin-bottom: 20px;
+    font-size: 15px;
   }
   .works-single p {
     font-size: 18px;
@@ -3438,7 +3455,7 @@ s .process span:before {
     display: block;
   }
   .works h2 {
-    font-size: 32px;
+    font-size: 24px;
     margin-bottom: 20px;
   }
   .works .project-box {
@@ -3446,6 +3463,7 @@ s .process span:before {
   }
   .works .project-box figure {
     width: 100%;
+    height: auto;
     margin-bottom: 20px;
   }
   .works .project-box:nth-child(2n+2) figure {
@@ -3463,13 +3481,14 @@ s .process span:before {
   }
   .works .project-box .content-box .inner small {
     margin-bottom: 5px;
+    font-size: 1.8vw;
   }
   .works .project-box .content-box .inner h3 {
     margin-bottom: 30px;
   }
   .works .project-box .content-box .inner h3 span {
     margin-left: 0;
-    font-size: 12vw;
+    font-size: 5vw;
   }
   .services-content-block .col-md-4:nth-child(3) {
     margin: 40px 0;
@@ -3531,6 +3550,9 @@ s .process span:before {
   }
   .footer-container {
     margin: 0;
+  }
+  .custom-link b {
+    font-size: 2.8vw;
   }
   .row {
     margin-right: 0;
@@ -3954,4 +3976,11 @@ ol[type="1"] > li:not(:last-child) {
   .brief .brief-container .brief-button .brief-button-init h1 {
     font-size: 4vw;
   }
+}
+.project-scroll {
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS devices */
 }/*# sourceMappingURL=styles.css.map */

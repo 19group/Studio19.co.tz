@@ -2248,7 +2248,7 @@ s .process span:before {
   margin-bottom: 20px;
   font-family: "Fjalla One", sans-serif;
   font-size: 18px;
-  color: #fff;
+  color: #eaa708;
 }
 .services h2 {
   margin-bottom: 10px;
@@ -2256,7 +2256,7 @@ s .process span:before {
   font-size: 60px;
   line-height: 1.2;
   padding-right: 35%;
-  color: #eaa708;
+  color: #fff;
 }
 .services h2:before {
   content: attr(data-text);
@@ -3292,11 +3292,16 @@ s .process span:before {
     font-size: 6vw;
   }
 }
+@media only screen and (max-width: 1024px), only screen and (max-device-width: 1024px) {
+  .swiper-slider .swiper-slide .slide-inner .container h1 {
+    font-size: 7vw;
+  }
+}
 /* RESPONSIVE MOBILE FIXES */
 @media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
   .container {
     padding: 0 30px;
-    margin: 110px 0 0 0;
+    margin: 0px 0 0 0;
   }
 
   .page-header .video-bg:before {
@@ -3424,17 +3429,14 @@ s .process span:before {
     display: none;
   }
 
-  .swiper-slider .swiper-slide .slide-inner:before {
-    display: none;
-  }
-
   .swiper-slider .swiper-slide .slide-inner .container h1 {
-    font-size: 10vw;
+    font-size: 8vw;
   }
 
   .swiper-slider .swiper-slide .slide-inner .container h1 span {
     margin-left: 0;
     transform: translateY(0);
+    -webkit-text-stroke-width: 2px;
   }
 
   .swiper-slider .swiper-slide .slide-inner .container .slide-btn {
@@ -3647,6 +3649,10 @@ s .process span:before {
     margin: 0;
   }
 
+  .row {
+    margin-right: 0;
+  }
+
   .client-logos img {
     height: auto;
   }
@@ -3666,6 +3672,11 @@ s .process span:before {
 /* RESPONSIVE MACBOOK FIXES */
 /*--cover up mac , mac-book---*/
 /*--mac book pro , and mac-book retina display screen---*/
+@media only screen and (max-width: 950px), only screen and (max-device-width: 950PX) {
+  .footer-row {
+    margin-right: 11px;
+  }
+}
 @media only screen and (width: 1440px) and (height: 900px) {
   .services {
     padding: 200px 0 200px 0;
@@ -3799,6 +3810,19 @@ s .process span:before {
 
 /* 4.2 - Site Footer - End
 ================================================== */
+@media only screen and (max-width: 991px), only screen and (max-device-width: 991px) {
+  .site_footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .site_footer .section_head h4 {
+    font-size: 1rem;
+  }
+  .site_footer .footer_widget_area .container {
+    padding: 1px 36px;
+    margin: 0px 0 0 0;
+  }
+}
 /* 2.7 - Order & Unorder List - Start
 ================================================== */
 .unordered_list,
@@ -3926,21 +3950,147 @@ ol[type="1"] > li:not(:last-child) {
   width: 70px;
 }
 
+.brief {
+  cursor: pointer;
+  width: 100%;
+  height: 200px;
+}
+.brief .brief-button {
+  position: absolute;
+  right: 25%;
+  left: 25%;
+}
+.brief .brief-button .brief-button-init {
+  position: absolute;
+  right: 25%;
+  left: 25%;
+  top: 125px;
+  cursor: pointer;
+}
+.brief .brief-button .brief-button-init h1 {
+  color: #09141f;
+}
+
 .sidebar {
   position: fixed;
   top: 0;
   right: -300px;
   /* Initially hidden */
-  width: 300px;
+  width: 40%;
   height: 100%;
   background-color: #f4f4f4;
   transition: right 0.3s ease;
   overflow-y: auto;
   padding: 20px;
+  z-index: 10;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  /* Hide initially */
+}
+
+.contact-form-header {
+  padding: 20px 0 0 0;
+  margin: 30px 0 0 0;
+}
+.contact-form-header h3 {
+  color: #eaa708;
 }
 
 .sidebar.open {
   right: 0;
   /* Revealed when open */
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 0;
+  margin: 10px 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  color: #eaa708;
+  font-size: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #999;
+}
+
+.close-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+  .briefsection {
+    min-height: 230px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .brief {
+    height: 0;
+  }
+  .brief .brief-container {
+    padding: 20px 0;
+  }
+  .brief .brief-container .brief-button {
+    top: 0;
+    left: 0;
+    position: relative;
+  }
+  .brief .brief-container .brief-button .brief-button-init {
+    top: 43%;
+  }
+  .brief .brief-container .brief-button .brief-button-init h1 {
+    font-size: 6vw;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .briefsection {
+    min-height: 340px;
+  }
+
+  .brief {
+    height: 0;
+  }
+  .brief .brief-container {
+    padding: 20px 140px;
+  }
+  .brief .brief-container .brief-button {
+    top: 0;
+    left: 0;
+    position: relative;
+  }
+  .brief .brief-container .brief-button .brief-button-init {
+    top: 43%;
+  }
+  .brief .brief-container .brief-button .brief-button-init h1 {
+    font-size: 4vw;
+  }
+}
+.project-scroll {
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  /* For smooth scrolling on iOS devices */
+  margin-top: 20px;
+  /* Adjust as needed */
+  padding-bottom: 20px;
+  /* Adjust as needed */
 }
