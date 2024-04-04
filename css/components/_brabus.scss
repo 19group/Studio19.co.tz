@@ -391,23 +391,23 @@ header{ transform: scale(1.5); @include transition-cubic;
 	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two; opacity: 0.5; font-size: 14px; color: #fff;}
 	h2{ margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 5%; color: $color-turquaz;
 		&:before{content: attr(data-text); font-size: 20vw; opacity: 0.05; z-index: -1; position: absolute; left: 0; top: -20%;}}
-	.project-box{width: 100%; display: flex; flex-wrap: wrap; padding: 75px 0;
+	.project-box{width: 100%; display: flex; flex-wrap: wrap;
 		*{@include transition;}
 		&:hover figure{transform: scale(0.95);}
 		&:hover figure img{transform: scale(1.15);}
-		&:last-child{padding-bottom: 0;}
+		&:last-child{padding-bottom: 0; background: #18212a; border-radius: 20px;}
 		&:nth-child(2n+2) {
 			.custom-link a{float: right;}
 			.content-box{ order: 1; text-align: right; padding-left: 0; padding-right: 5%;
 				h3 span{ margin-left: 0; margin-right: -7vw;}}
 			figure{ order:2;}}
 		figure{ width:55%; height: 50vh; margin: 0; position: relative; overflow: hidden; border: 1px solid transparent;
-			img{width: 100%; height: 100%;}}
-		.content-box{width: 45%; padding-left: 5%; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2;
+			img{width: 100%; height: 100%; border-radius: 20px;}}
+		.content-box{width: 45%; padding-left: 2%; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2;
 			.inner{margin: 0;
 				small{display: block; margin-bottom: 20px; @include font-two; color:#e2fdf1; font-size: 14px;}
 				h3{ font-size: 5vw; font-weight: 800; margin-bottom: 10vh; line-height: 1;
-					span{display: block; font-size: 2vw; color: $color-turquaz; margin-left: -7vw;}}}}}}
+					span{display: block; font-size: 2vw; color: $color-turquaz; }}}}}}
 
 /*Services*/
 .services{width: 100%; display: flex; flex-wrap: wrap; padding: 50px 0 100px 0; transition-delay: 0s !important; border-top:2px solid #18212a; transition: background 0.40s;
