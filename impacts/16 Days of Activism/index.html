@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--- basic page needs
+ ================================================== -->
+ <meta charset="utf-8">
+ <title>Studio 19 ltd | Telling Africas Stories</title>
+
+ <meta name="description" content="Contributing Towards Individual and Community Transformation Through Storytelling">
+
+ <meta name="keywords" content="Campaign Design,
+ studio19tz,
+ studio 19,
+ studio19,
+ Communication Agency,
+ Documentary production,
+ Production company,
+ Communication Agency in Tanzania,
+ Professional scriptwriting services for video and film projects in Tanzania,
+ Customized video production packages for NGOs and non-profit organizations in Dar es Salaam,
+ ">
+ <meta name="author" content="">
+ <meta name="theme-color" content="#09141f" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <!--- End basic page needs
+================================================== -->
+
+ <!-- mobile specific metassdf
+================================================== -->
+ <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+ <!-- End mobile specific metassdf
+================================================== -->
+
+ <!-- MAIN-CSS
+================================================== -->
+ <link rel="stylesheet" href="../../css/animate.min.css">
+ <link rel="stylesheet" href="../../css/bootstrap.min.css">
+ <link rel="stylesheet" href="../../css/magnific-popup.css">
+ <link rel="stylesheet" href="../../css/owl.carousel.min.css">
+ <link rel="stylesheet" href="../../css/fontawesome.min.css">
+ <link rel="stylesheet" href="../../css/default.css">
+ <link rel="stylesheet" href="../../css/vendor.css" async>
+ <link rel="stylesheet" href="../../css/main.css" async>
+ <link rel="stylesheet" href="../../css/styles.css" async>
+ <link rel="stylesheet" href="../../css/style.css" async>
+ <link rel="stylesheet" href="../../css/responsive.css">
+ <link rel="stylesheet" href="../../css/odometer.min.css">
+ <link rel="stylesheet" href="../../css/fancybox.min.css">
+ <link rel="stylesheet" href="../../css/swiper.min.css">
+ <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/clients/client-1/assets/css/client-1.css">
+<!-- End MAIN-CSS
+================================================== -->
+ <link rel="manifest" href="../manifest.json">
+
+
+ <!-- script
+================================================== -->
+ <script src="../js/modernizr.js" async></script>
+ <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+ <!-- favicons
+================================================== -->
+ <link rel="shortcut icon" href="../favicon.png">
+
+ <!-- Canonical tag
+================================================== -->
+ <link rel="canonical" href="https://www.studio19.co.tz/" />
+
+ <!-- Swiper-js
+================================================== -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+
+<!-- Google Tag (gtag.js)
+================================================== -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-7JWYS7S0P1"></script>
+ <script>
+     window.dataLayer = window.dataLayer || [];
+
+     function gtag() {
+         dataLayer.push(arguments);
+     }
+     gtag('js', new Date());
+
+     gtag('config', 'G-7JWYS7S0P1');
+ </script>
+</head>
+
+<body>
+    <div id="impacts-header"></div>
+    <section id="impacts-body"></section>
+    <section id="impacts-footer"></section>
+
+    <Script>
+        $(function(){
+            $('#impacts-header').load('../impacts-header.html')
+            $('#impacts-body').load('../impacts-body.html')
+            $('#impacts-footer').load('../impacts-footer.html')
+             //Load a Json Files
+            $.getJSON("data.json",function(data){
+                appendhtml(data);
+            });
+
+            //Append Html
+            function appendhtml(data){
+                //main page components
+                $("#subparagraph1").append(data.subparagraph1);
+                $("#subparagraph2").append(data.subparagraph2);
+                $("#subparagraph3").append(data.subparagraph3);
+                $("#subparagraph4").append(data.subparagraph4);
+                $("#mainparagraph1").append(data.mainparagraph1);
+                $("#mainparagraph2").append(data.mainparagraph2);
+                $("#mainparagraph3").append(data.mainparagraph2);
+                $("#impactheading").append(data.impactheading);
+                $("#impacttag").append(data.impacttag);
+                $("#impactheadingparagraph").append(data.impactheadingparagraph);
+            }
+          })
+    </Script>
+
+   
+
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/jquery.placeholder.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/team.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/service-corousel-nav.js"></script>
+    
+    <!-- All JS Custom Plugins Link Here here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Jquery Slick-Carousel Plugins -->
+    <script src="js/slick.min.js"></script>
+    <!-- Jquery Owl-Carousel Plugins -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- One Page -->
+    <script src="js/one-page-nav-min.js"></script>
+    <!-- Ajax Form -->
+    <script src="js/ajax-form.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <!-- Jquery Counter & Waypoint -->
+    <script src="js/waypoint.js"></script>
+    <!-- Animation -->
+    <script src="js/wow.min.js"></script>
+    
+    <!-- PopUp Image & Video -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Custom Plugins -->
+    <script src="js/plugins.js"></script>
+    <!-- Custom Main JS -->
+    
+    <!-- Custom Brabus JS -->
+    <script src="js/odometer.min.js"></script>
+    <script src="js/jquery.typewriter.js"></script>
+    <script src="js/fancybox.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/reel.js"></script>
+    
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    
+</body>
+</html>
