@@ -229,8 +229,8 @@ section{overflow: hidden;}
 .custom-link *{@include transition;}
 .custom-link a{display: flex; flex-wrap: wrap; align-items: center; font-size: 14px; color: #fff;}
 .custom-link a:hover{text-decoration: none;}
-.custom-link b{font-weight: 600; display: inline-block; margin-left: 5px; color: #e2fdf1;}
-.custom-link .lines{width: 42px; height: 1px; float: left; overflow: hidden;}
+.custom-link b{font-weight: 600; display: inline-block; margin-left: 5px; color: #e2fdf1; font-size: 10px;}
+.custom-link .lines{width: 20px; height: 1px; float: left; overflow: hidden;}
 .custom-link .lines span:nth-child(1){width: 100%; height: 1px; float: right; background: $color-turquaz; }
 .custom-link .lines span:nth-child(2){width: 0; height: 1px; float: left; background: $color-turquaz; }
 .custom-link:hover .lines{width: 62px; margin-left: 20px; }
@@ -261,7 +261,7 @@ section{overflow: hidden;}
 	.video-bg{width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; position: absolute; left: 0; top: 0; overflow: hidden;  z-index: 0;
 		&:before{content: ""; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../images/bg-lines.png) center; z-index: 2;}
 	video{ min-width: 100%; min-height: 100%; position: absolute; opacity: 0.8;}}}
-.page-header{ width: 100%; min-height: 200px; display: flex; flex-wrap: wrap; flex-direction: column; justify-content: center; position: relative; background: $color-dark;
+.page-header{ width: 100%; min-height: 250px; display: flex; flex-wrap: wrap; flex-direction: column; justify-content: center; position: relative; background: url();
 	.video-bg{width: 100%; height: 100%;  position: absolute; left: 0; top: 0; overflow: hidden;
 		&:before{content: ""; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../images/bg-lines.png) center; z-index: 2;}
 		video{ min-width: 100%; min-height: 100%; float: left; opacity: 0.2;}}
@@ -387,7 +387,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 
 
 /* WORKS */
-.works{width: 100%; display: flex; flex-wrap: wrap; padding: 50px 0 100px 0; margin: 0 0 50px 0; transition-delay: 0s !important; transition: background 0.40s;
+.works{width: 100%; display: flex; flex-wrap: wrap; padding: 150px 0 150px 0;  transition-delay: 0s !important; background:#18212a; transition: background 0.40s;
 	h6{ display: block; line-height: 1; margin-bottom: 20px; @include font-two; opacity: 0.5; font-size: 14px; color: #fff;}
 	h2{ margin-bottom: 60px; font-weight: 800; font-size: 60px; line-height: 1.2; padding-right: 5%; color: $color-turquaz;
 		&:before{content: attr(data-text); font-size: 20vw; opacity: 0.05; z-index: -1; position: absolute; left: 0; top: -20%;}}
@@ -395,18 +395,18 @@ header{ transform: scale(1.5); @include transition-cubic;
 		*{@include transition;}
 		&:hover figure{transform: scale(0.95);}
 		&:hover figure img{transform: scale(1.15);}
-		&:last-child{padding-bottom: 0; background: #18212a; border-radius: 20px;}
+		&:last-child{padding-bottom: 0;}
 		&:nth-child(2n+2) {
 			.custom-link a{float: right;}
 			.content-box{ order: 1; text-align: right; padding-left: 0; padding-right: 5%;
 				h3 span{ margin-left: 0; margin-right: -7vw;}}
 			figure{ order:2;}}
-		figure{ width:55%; height: 50vh; margin: 0; position: relative; overflow: hidden; border: 1px solid transparent;
-			img{width: 100%; height: 100%; border-radius: 20px;}}
-		.content-box{width: 45%; padding-left: 2%; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2;
+		figure{ width:100%; height: 100%; margin: 0; position: relative; overflow: hidden; border: 1px solid transparent;
+			img{width: 100%; height:230px; border-radius: 20px;}}
+		.content-box{ padding-left: 2%; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2;
 			.inner{margin: 0;
-				small{display: block; margin-bottom: 20px; @include font-two; color:#e2fdf1; font-size: 14px;}
-				h3{ font-size: 5vw; font-weight: 800; margin-bottom: 10vh; line-height: 1;
+				small{display: block; margin-bottom: 5px; @include font-two; color:$color-turquaz; font-size: 14px;}
+				h3{ font-size: 5vw; font-weight: 800; margin-bottom: 10vh; line-height: 1; width: 60%;
 					span{display: block; font-size: 2vw; color: $color-turquaz; }}}}}}
 
 /*Services*/
@@ -672,6 +672,10 @@ header{ transform: scale(1.5); @include transition-cubic;
 	.page-header .container{ padding: 0 0 0 22%; p{
 		font-size: 2vw;
 	}}
+	.project-scroll {
+		flex-direction: column;
+		width:100%;
+	}
 	.page-header .video-bg:before{display: none;}
 	header .scroll-down{left: -10px;}
 	header .sound{right: 30px; bottom: 30px;}
@@ -728,7 +732,7 @@ header{ transform: scale(1.5); @include transition-cubic;
 	.works .project-box:nth-child(2n+2) .content-box{text-align: left;}
 	.works .project-box:nth-child(2n+2) .custom-link a{float: left;}
 	.works .project-box .content-box{width: 100%; padding-left: 0;}
-	.works .project-box .content-box .inner small{margin-bottom: 5px; font-size: 1.8vw;}
+	.works .project-box .content-box .inner small{margin-bottom: 5px; font-size: 4vw;}
 	.works .project-box .content-box .inner h3{margin-bottom: 30px;}
 	.works .project-box .content-box .inner h3 span{ margin-left: 0; font-size: 5vw;}
 	.services-content-block .col-md-4:nth-child(3){margin: 40px 0;}

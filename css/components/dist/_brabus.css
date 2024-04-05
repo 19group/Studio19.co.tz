@@ -705,10 +705,11 @@ section {
   display: inline-block;
   margin-left: 5px;
   color: #e2fdf1;
+  font-size: 10px;
 }
 
 .custom-link .lines {
-  width: 42px;
+  width: 20px;
   height: 1px;
   float: left;
   overflow: hidden;
@@ -873,13 +874,13 @@ section {
 
 .page-header {
   width: 100%;
-  min-height: 200px;
+  min-height: 250px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   position: relative;
-  background: #18212a;
+  background: url();
 }
 .page-header .video-bg {
   width: 100%;
@@ -1609,9 +1610,9 @@ s .process span:before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 50px 0 100px 0;
-  margin: 0 0 50px 0;
+  padding: 150px 0 150px 0;
   transition-delay: 0s !important;
+  background: #18212a;
   transition: background 0.4s;
 }
 .works h6 {
@@ -1660,8 +1661,6 @@ s .process span:before {
 }
 .works .project-box:last-child {
   padding-bottom: 0;
-  background: #18212a;
-  border-radius: 20px;
 }
 .works .project-box:nth-child(2n+2) .custom-link a {
   float: right;
@@ -1680,8 +1679,8 @@ s .process span:before {
   order: 2;
 }
 .works .project-box figure {
-  width: 55%;
-  height: 50vh;
+  width: 100%;
+  height: 100%;
   margin: 0;
   position: relative;
   overflow: hidden;
@@ -1689,11 +1688,10 @@ s .process span:before {
 }
 .works .project-box figure img {
   width: 100%;
-  height: 100%;
+  height: 230px;
   border-radius: 20px;
 }
 .works .project-box .content-box {
-  width: 45%;
   padding-left: 2%;
   display: flex;
   flex-direction: column;
@@ -1706,9 +1704,9 @@ s .process span:before {
 }
 .works .project-box .content-box .inner small {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   font-family: "Fjalla One", sans-serif;
-  color: #e2fdf1;
+  color: #eaa708;
   font-size: 14px;
 }
 .works .project-box .content-box .inner h3 {
@@ -1716,6 +1714,7 @@ s .process span:before {
   font-weight: 800;
   margin-bottom: 10vh;
   line-height: 1;
+  width: 60%;
 }
 .works .project-box .content-box .inner h3 span {
   display: block;
@@ -2809,6 +2808,11 @@ s .process span:before {
     font-size: 2vw;
   }
 
+  .project-scroll {
+    flex-direction: column;
+    width: 100%;
+  }
+
   .page-header .video-bg:before {
     display: none;
   }
@@ -3066,7 +3070,7 @@ s .process span:before {
 
   .works .project-box .content-box .inner small {
     margin-bottom: 5px;
-    font-size: 1.8vw;
+    font-size: 4vw;
   }
 
   .works .project-box .content-box .inner h3 {
