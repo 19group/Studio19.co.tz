@@ -874,7 +874,7 @@ section {
 
 .page-header {
   width: 100%;
-  min-height: 250px;
+  min-height: 350px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -926,7 +926,6 @@ section {
 }
 
 header {
-  transform: scale(1.5);
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -1600,7 +1599,7 @@ s .process span:before {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 150px 0 150px 0;
+  padding: 80px 0 90px 0;
   transition-delay: 0s !important;
   background: #18212a;
   transition: background 0.4s;
@@ -1670,7 +1669,7 @@ s .process span:before {
 }
 .works .project-box figure {
   width: 100%;
-  height: 100%;
+  height: 450px;
   margin: 0;
   position: relative;
   overflow: hidden;
@@ -1678,7 +1677,7 @@ s .process span:before {
 }
 .works .project-box figure img {
   width: 100%;
-  height: 230px;
+  height: 100%;
   border-radius: 20px;
 }
 .works .project-box .content-box {
@@ -1833,6 +1832,10 @@ s .process span:before {
   display: flex;
   flex-wrap: wrap;
   padding: 150px 0;
+  background: #efebd8;
+}
+.works-single h1 {
+  color: #18212a;
 }
 .works-single h6 {
   display: block;
@@ -1841,6 +1844,7 @@ s .process span:before {
   font-family: "Fjalla One", sans-serif;
   opacity: 0.5;
   font-size: 14px;
+  color: #18212a;
 }
 .works-single h2 {
   margin-bottom: 50px;
@@ -1882,7 +1886,7 @@ s .process span:before {
   margin-bottom: 30px;
   font-size: 20px;
   line-height: 37px;
-  color: #e2fdf1;
+  color: #18212a;
 }
 .works-single iframe {
   float: left;
@@ -2801,6 +2805,9 @@ s .process span:before {
   .project-scroll {
     flex-direction: column;
     width: 100%;
+  }
+  .project-scroll .scroll-down {
+    display: none;
   }
 
   .page-header .video-bg:before {

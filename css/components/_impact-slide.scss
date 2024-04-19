@@ -4,4 +4,11 @@
     scrollbar-width: none; 
     -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS devices */
+    // Scroll-Right
+.scroll-down{  position: absolute; left: 120px; margin-top: 180px; z-index: 3;}
+.scroll-down small{ width: 210px; display: inline-block; color: #fff; @include font-two;}
+.scroll-down span {display: block;  position: relative; transform: rotate(-90deg);}
+.scroll-down span::before { -webkit-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite; -moz-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;  -o-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite; animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;}
+.scroll-down span::before{ position: absolute; top: 0px; left: 57%; margin-left: -0.5px; width: 1px; height: 270px; background: #fff; content:"";}
+
   }
