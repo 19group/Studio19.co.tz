@@ -324,8 +324,8 @@ header{  @include transition-cubic;
 	.swiper-slide{ display: block; overflow: hidden;
 		&.swiper-slide-active .slide-inner{transform: scale(1);
 			.container{transform: translateY(0); @include transition-cubic; opacity: 1;}}
-		.slide-inner{ width: 100%; height: 100%; transform: scale(0.8); display: flex; flex-wrap:wrap; justify-content: center; flex-direction: column; @include transition-cubic; background-size: cover; background-position: center; position: relative;
-			&:before{content: ""; width: 100%; height: 100%; position: absolute; left: 0; top: 0; background: url(../images/background/hero-bg.webp) center; background-size: cover; z-index: 1;}
+		.slide-inner{ width: 100%; height: 100%; transform: scale(0.8); display: flex; flex-wrap:wrap; justify-content: center; flex-direction: column; @include transition-cubic; position: relative;
+			img{width: 100%; height: 100%; position: absolute; left: 0; top: 0; object-fit: cover; z-index: 1;}
 			.container{transform: translateY(50px); opacity: 0; transition-delay: 0.15s !important; position: relative; z-index: 2;
 				.tagline{display: block; color: #fff; text-transform: lowercase; margin-bottom: 15px;
 					span{ color:$color-red; float: left; font-weight: 600; color: #fff;
@@ -709,7 +709,6 @@ header{  @include transition-cubic;
 	.header .container .slide-btn{padding-left: 0;}
 	.swiper-slider .swiper-slide .slide-inner{padding: 0;}
 	.swiper-slider .swiper-pagination-bullets{display: none;}
-	.swiper-slider .swiper-slide .slide-inner:before{}
 	.swiper-slider .swiper-slide .slide-inner .container h1{font-size: 8vw;}
 	.swiper-slider .swiper-slide .slide-inner .container h1 span{ margin-left: 0; transform: translateY(0); -webkit-text-stroke-width: 2px;}
 	.swiper-slider .swiper-slide .slide-inner .container .slide-btn{padding-left: 0;}
