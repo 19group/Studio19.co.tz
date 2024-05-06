@@ -218,6 +218,7 @@
 }
 .testimonials {
   padding: 50px 0;
+  background: #09141f;
 }
 .testimonials-container {
   max-width: 1170px;
@@ -244,7 +245,7 @@
   border-radius: 30px;
 }
 .testimonials-container .testimonials-content-slider .testimonials-item p {
-  font-size: 0.7em;
+  font-size: 1.4em;
   margin-top: 20px;
   color: #fff;
 }
@@ -259,16 +260,16 @@
   vertical-align: middle;
 }
 .testimonials-container .testimonials-content-slider .testimonials-item-text-box-name {
-  font-size: 1em;
+  font-size: 2em;
   text-transform: capitalize;
-  font-weight: 600;
+  font-weight: 900;
   line-height: 1.2;
   color: #fff;
   margin-bottom: 10px;
 }
 .testimonials-container .testimonials-content-slider .testimonials-item-text-box-job {
   text-transform: capitalize;
-  font-size: 0.8em;
+  font-size: 1.2em;
   color: #eaa608d9;
 }
 .testimonials-container .testimonials-content-slider .testimonials-item-rating {
@@ -378,6 +379,20 @@ event-center {
 }
 .movi-area {
   padding: 120px 185px;
+}
+
+header {
+  height: 66px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 600;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 /* 4.2 - Site Footer - Start
