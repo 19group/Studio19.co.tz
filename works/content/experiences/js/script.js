@@ -143,3 +143,29 @@ function filterArchive() {
         }
     });
 }
+
+// Function to generate the URL with filter parameters
+function generateFilterURL() {
+    const searchTerm = encodeURIComponent(searchInput.value.trim().toLowerCase());
+    const checkedCategories = Array.from(categoryCheckBoxes)
+        .filter((catCheck) => catCheck.checked)
+        .map((catCheck) => catCheck.id);
+    const checkedLocations = Array.from(locationCheckBoxes)
+        .filter((locCheck) => locCheck.checked)
+        .map((locCheck) => locCheck.id);
+    const checkedTags = Array.from(tagsCheckBoxes)
+        .filter((tagsCheck) => tagsCheck.checked)
+        .map((tagsCheck) => tagsCheck.id);
+    
+    const params = new URLSearchParams();
+    params.append('search', searchTerm);
+    checkedCategories.forEach(category => params.append('category', category));
+    checkedLocations.forEach(location => params.append('location', location));
+    checkedTags.forEach(tag => params.append('tag', tag));
+    
+    // Construct the URL with query parameters
+    const baseURL = window.location.href.split('?')[0]; // Get the base URL
+    const filterURL = `${baseURL}?${params.toString()}`; // Append query parameters
+    
+    return filterURL;
+}
