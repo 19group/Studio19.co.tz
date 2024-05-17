@@ -169,3 +169,36 @@ function generateFilterURL() {
     
     return filterURL;
 }
+
+// Function to parse URL parameters and apply filters
+function applyFiltersFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchParam = urlParams.get('search');
+    const categoryParams = urlParams.getAll('category');
+    const locationParams = urlParams.getAll('location');
+    const tagParams = urlParams.getAll('tag');
+    
+    // Apply search term
+    searchInput.value = searchParam || '';
+    
+    // Apply category filters
+    categoryCheckBoxes.forEach(checkBox => {
+        checkBox.checked = categoryParams.includes(checkBox.id);
+    });
+    
+    // Apply location filters
+    locationCheckBoxes.forEach(checkBox => {
+        checkBox.checked = locationParams.includes(checkBox.id);
+    });
+
+    // Apply tags filters
+    tagsCheckBoxes.forEach(checkBox => {
+        checkBox.checked = tagParams.includes(checkBox.id);
+    });
+    
+    // Trigger filter function
+    filterArchive();
+}
+
+// Parse URL parameters and apply filters when the page loads
+window.addEventListener('load', applyFiltersFromURL);
