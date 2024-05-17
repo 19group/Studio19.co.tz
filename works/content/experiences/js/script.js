@@ -144,8 +144,8 @@ function filterArchive() {
     });
 }
 
-// Function to generate the URL with filter parameters
-function generateFilterURL() {
+// Function to update the URL with filter parameters
+function updateURLWithFilters() {
     const searchTerm = encodeURIComponent(searchInput.value.trim().toLowerCase());
     const checkedCategories = Array.from(categoryCheckBoxes)
         .filter((catCheck) => catCheck.checked)
@@ -158,47 +158,33 @@ function generateFilterURL() {
         .map((tagsCheck) => tagsCheck.id);
     
     const params = new URLSearchParams();
+    params.append('filter', 'on');
     params.append('search', searchTerm);
     checkedCategories.forEach(category => params.append('category', category));
     checkedLocations.forEach(location => params.append('location', location));
     checkedTags.forEach(tag => params.append('tag', tag));
     
     // Construct the URL with query parameters
-    const baseURL = window.location.href.split('?')[0]; // Get the base URL
+    const baseURL = window.location.origin + window.location.pathname; // Get the base URL
     const filterURL = `${baseURL}?${params.toString()}`; // Append query parameters
     
-    return filterURL;
+    window.history.replaceState({}, '', filterURL); // Update URL without refreshing
 }
 
-// Function to parse URL parameters and apply filters
-function applyFiltersFromURL() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const searchParam = urlParams.get('search');
-    const categoryParams = urlParams.getAll('category');
-    const locationParams = urlParams.getAll('location');
-    const tagParams = urlParams.getAll('tag');
-    
-    // Apply search term
-    searchInput.value = searchParam || '';
-    
-    // Apply category filters
-    categoryCheckBoxes.forEach(checkBox => {
-        checkBox.checked = categoryParams.includes(checkBox.id);
-    });
-    
-    // Apply location filters
-    locationCheckBoxes.forEach(checkBox => {
-        checkBox.checked = locationParams.includes(checkBox.id);
-    });
-
-    // Apply tags filters
-    tagsCheckBoxes.forEach(checkBox => {
-        checkBox.checked = tagParams.includes(checkBox.id);
-    });
-    
-    // Trigger filter function
+// Add event listeners to filter elements
+filtersContainer.addEventListener('change', () => {
     filterArchive();
-}
-
-// Parse URL parameters and apply filters when the page loads
-window.addEventListener('load', applyFiltersFromURL);
+    updateURLWithFilters(); // Update URL when filters are changed
+});
+searchInput.addEventListener('input', () => {
+    filterArchive();
+    updateURLWithFilters(); // Update URL when search input changes
+});
+locationFiltersContainer.addEventListener('change', () => {
+    filterArchive();
+    updateURLWithFilters(); // Update URL when location filters are changed
+});
+tagsFiltersContainer.addEventListener('change', () => {
+    filterArchive();
+    updateURLWithFilters(); // Update URL when tags filters are changed
+});
