@@ -187,3 +187,31 @@ tagsFiltersContainer.addEventListener('change', () => {
     filterArchive();
     updateURLWithFilters(); 
 });
+
+function applyFiltersFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const searchTerm = urlParams.get('search');
+    searchInput.value = searchTerm || '';
+
+    const categories = urlParams.getAll('category');
+    categoryCheckBoxes.forEach(checkbox => {
+        checkbox.checked = categories.includes(checkbox.id);
+    });
+
+    const locations = urlParams.getAll('location');
+    locationCheckBoxes.forEach(checkbox => {
+        checkbox.checked = locations.includes(checkbox.id);
+    });
+
+    const tags = urlParams.getAll('tag');
+    tagsCheckBoxes.forEach(checkbox => {
+        checkbox.checked = tags.includes(checkbox.id);
+    });
+
+    filterArchive();
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    applyFiltersFromURL();
+});
