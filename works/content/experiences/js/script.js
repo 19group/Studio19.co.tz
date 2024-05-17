@@ -144,7 +144,7 @@ function filterArchive() {
     });
 }
 
-// Function to update the URL with filter parameters
+
 function updateURLWithFilters() {
     const searchTerm = encodeURIComponent(searchInput.value.trim().toLowerCase());
     const checkedCategories = Array.from(categoryCheckBoxes)
@@ -164,27 +164,26 @@ function updateURLWithFilters() {
     checkedLocations.forEach(location => params.append('location', location));
     checkedTags.forEach(tag => params.append('tag', tag));
     
-    // Construct the URL with query parameters
-    const baseURL = window.location.origin + window.location.pathname; // Get the base URL
-    const filterURL = `${baseURL}?${params.toString()}`; // Append query parameters
     
-    window.history.replaceState({}, '', filterURL); // Update URL without refreshing
+    const baseURL = window.location.origin + window.location.pathname;
+    const filterURL = `${baseURL}?${params.toString()}`; 
+    
+    window.history.replaceState({}, '', filterURL); 
 }
 
-// Add event listeners to filter elements
 filtersContainer.addEventListener('change', () => {
     filterArchive();
-    updateURLWithFilters(); // Update URL when filters are changed
+    updateURLWithFilters(); 
 });
 searchInput.addEventListener('input', () => {
     filterArchive();
-    updateURLWithFilters(); // Update URL when search input changes
+    updateURLWithFilters(); 
 });
 locationFiltersContainer.addEventListener('change', () => {
     filterArchive();
-    updateURLWithFilters(); // Update URL when location filters are changed
+    updateURLWithFilters(); 
 });
 tagsFiltersContainer.addEventListener('change', () => {
     filterArchive();
-    updateURLWithFilters(); // Update URL when tags filters are changed
+    updateURLWithFilters(); 
 });
