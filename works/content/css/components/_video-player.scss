@@ -1,0 +1,59 @@
+.works{
+    .project-box-wrap {
+        position: relative;
+        :hover{
+            .video-link a{
+                opacity: 1;
+
+                transform: translateY(-50%) scale(1);
+            }
+        }
+        .video-link a {
+    
+            position: absolute;
+        
+            font-weight: 500;
+        
+            color: #fff;
+        
+            top: 50%;
+        
+            left: 0;
+        
+            right: 0;
+        
+            text-align: center;
+        
+            transform: translateY(-50%) scale(.9);
+        
+            width: 100px;
+        
+            height: 100px;
+        
+            line-height: 100px;
+        
+            border-radius: 50%;
+        
+            border: 2px solid #fff;
+        
+            margin: auto;
+        
+            opacity: 0;
+        
+            transition: .6s;
+        
+            cursor: pointer;
+            :hover {
+        
+                background: #eaa708;
+            
+                border: 2px solid #eaa708;
+            
+            }
+        
+        }
+    
+    }
+}
+
+

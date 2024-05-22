@@ -261,15 +261,15 @@
 
 
 
- var filterizd = $('.filtr-container').filterizr({
+//  var filterizd = $('.filtr-container').filterizr({
     //options object
- });
+//  });
 
- $(".filtr-button").on('click',function(e){
+//  $(".filtr-button").on('click',function(e){
 
-  $(".filtr-button").removeClass("filtr-active");
-  $(this).addClass("filtr-active");
- });
+//   $(".filtr-button").removeClass("filtr-active");
+//   $(this).addClass("filtr-active");
+//  });
 
 
 
@@ -331,7 +331,13 @@
 
 })(jQuery);
 
+$('.popup-video').magnificPopup({
 
+	type: 'iframe'
+
+	
+
+});
 /*----------------------------------------------------*/
 	/*	Team-section
 	------------------------------------------------------*/
