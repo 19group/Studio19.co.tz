@@ -4,15 +4,15 @@ const archive = [
         url: 'canso-africa-conference-2019/images/thumbnail/canso-africa-conference-thumb.png',
         category: 'event',
         location: 'Tanzania',
-        tag:'coverage',
+        tag:'aviation',
         pageUrl:'canso-africa-conference-2019',
     },
     {
-        title: 'FOSS4G Conference summary',
+        title: 'FOSS4G Conference',
         url: 'FOSS4G-conference-summary/images/thumbnail/thumb.png',
         category: 'event',
         location: 'Tanzania',
-        tag:'conference',
+        tag:'technology',
         pageUrl:'FOSS4G-conference-summary',
 
     },
@@ -22,7 +22,7 @@ const archive = [
         category: 'event',
         location: 'Tanzania',
         pageUrl:'binti-day',
-        tag:'animation',
+        tag:'women',
 
     },
     {
@@ -31,6 +31,7 @@ const archive = [
         category: 'event',
         location: 'Tanzania',
         pageUrl:'go-blue-launch-event',
+        tag:'children',
 
     },
     {
@@ -39,7 +40,7 @@ const archive = [
         category: 'event',
         location: 'Tanzania',
         pageUrl:'financial-inclusion',
-        tag:'educational',
+        tag:'financial',
 
     },
     {
@@ -48,7 +49,7 @@ const archive = [
         category: 'documentary',
         location: 'Tanzania',
         pageUrl:'harvest-management',
-        tag:'animation',
+        tag:'agriculture',
     },
     {
         title: "GRREAT Diana's story",
@@ -56,7 +57,7 @@ const archive = [
         category: 'documentary',
         location: 'Tanzania',
         pageUrl:'great-diana-story',
-        tag:'',
+        tag:'women',
     },
     {
         title: "Participatory GIS and land Planning in Tanzania",
@@ -64,7 +65,7 @@ const archive = [
         category: 'documentary',
         location: 'Tanzania',
         pageUrl:'gis-landplanning',
-        tag:'educational',
+        tag:'technology',
     },
     {
         title: "GOUI-POWERING LIFE",
@@ -72,7 +73,7 @@ const archive = [
         category: 'documentary',
         location: 'Tanzania',
         pageUrl:'goui-powering-life',
-        tag:'documentary',
+        tag:'energy',
     },
     {
         title: "Doris Mkiva International Day of Disability",
@@ -80,7 +81,7 @@ const archive = [
         category: 'documentary',
         location: 'Tanzania',
         pageUrl:'international-dayofdisability',
-        tag:'documentary',
+        tag:'women',
     },
     {
         title: "Development of the National Strategy on Post harvest Management",
@@ -88,7 +89,7 @@ const archive = [
         category: 'documentary',
         location: 'Tanzania',
         pageUrl:'national-strategy-postharvest-management',
-        tag:'documentary',
+        tag:'agriculture',
     },
     {
         title: "Artisans Producing Metal Silos",
@@ -96,7 +97,7 @@ const archive = [
         category: 'documentary',
         location: 'Tanzania',
         pageUrl:'artisanproducing-metalsilos',
-        tag:'documentary',
+        tag:'agriculture',
     },
     {
         title: "Mr and Mrs Nassoro",
@@ -104,7 +105,7 @@ const archive = [
         category: 'documentary',
         location: 'Tanzania',
         pageUrl:'mr-mrs-nassoro',
-        tag:'documentary',
+        tag:'women',
     },
     
 ];
@@ -134,7 +135,7 @@ function createArchiveElement(item) {
         />
         
     </div>
-    <p class="text-xl">${item.title}</p>
+    <p class="text-base">${item.title}</p>
     `;
 
     archiveElement
