@@ -1,171 +1,3 @@
-const archive = [
-    {
-        title: 'Canso Africa Conference',
-        url: 'canso-africa-conference-2019/images/thumbnail/canso-africa-conference-thumb.png',
-        pageUrl:'canso-africa-conference-2019',
-        videourl:"",
-        category: 'event',
-        location: 'Tanzania',
-        tag:'aviation',
-    },
-    {
-        title: 'FOSS4G Conference',
-        url: 'FOSS4G-conference-summary/images/thumbnail/thumb.png',
-        pageUrl:'FOSS4G-conference-summary',
-        videourl:"",
-        category: 'event',
-        location: 'Tanzania',
-        tag:'technology',
-    },
-    {
-        title: 'Binti Day Event',
-        url: 'binti-day/images/thumbnail/thumb.png',
-        pageUrl:'binti-day',
-        videourl:"",
-        category: 'event',
-        location: 'Tanzania',
-        tag:'women',
-    },
-    {
-        title: 'Go Blue Launch Event',
-        url: 'go-blue-launch-event/images/thumbnail/thumb.png',
-        pageUrl:'go-blue-launch-event',
-        videourl:"",
-        category: 'event',
-        location: 'Tanzania',
-        tag:'children',
-    },
-    {
-        title: 'The National Financial Inclusion Framework Launch',
-        url: 'financial-inclusion/images/thumbnail/thumb.png',
-        pageUrl:'financial-inclusion',
-        videourl:"",
-        category: 'event',
-        location: 'Tanzania',
-        tag:'financial',
-    },
-    {
-        title: 'Improving Post-harvest Management',
-        url: 'harvest-management/images/thumbnail/thumb.png',
-        pageUrl:'harvest-management',
-        videourl:"",
-        category: 'documentary',
-        location: 'Tanzania',
-        tag:'agriculture',
-    },
-    {
-        title: "GRREAT Diana's story",
-        url: 'great-diana-story/images/thumbnail/thumb.png',
-        pageUrl:'great-diana-story',
-        videourl:"",
-        category: 'documentary',
-        location: 'Tanzania',
-        tag:'women',
-    },
-    {
-        title: "Participatory GIS and land Planning in Tanzania",
-        url: 'gis-landplanning/images/thumbnail/thumb.png',
-        pageUrl:'gis-landplanning',
-        videourl:"",
-        category: 'documentary',
-        location: 'Tanzania',
-        tag:'technology',
-    },
-    {
-        title: "GOUI-POWERING LIFE",
-        url: 'goui-powering-life/images/thumbnail/thumb.png',
-        pageUrl:'goui-powering-life',
-        videourl:"https://www.youtube.com/watch?v=yj7eMj_05Zg",
-        category: 'documentary',
-        location: 'Tanzania',
-        tag:'energy',
-    },
-    {
-        title: "Doris Mkiva International Day of Disability",
-        url: 'international-dayofdisability/images/thumbnail/thumb.png',
-        pageUrl:'international-dayofdisability',
-        videourl:"",
-        category: 'documentary',
-        location: 'Tanzania',
-        tag:'women',
-    },
-    {
-        title: "Development of the National Strategy on Post harvest Management",
-        url: 'national-strategy-postharvest-management/images/thumbnail/thumb.png',
-        pageUrl:'national-strategy-postharvest-management',
-        videourl:"",
-        category: 'documentary',
-        location: 'Tanzania',
-        tag:'agriculture',
-    },
-    {
-        title: "Artisans Producing Metal Silos",
-        url: 'artisanproducing-metalsilos/images/thumbnail/thumb.png',
-        pageUrl:'artisanproducing-metalsilos',
-        videourl:"",
-        category: 'documentary',
-        location: 'Tanzania',
-        tag:'agriculture',
-    },
-    {
-        title: "Mr and Mrs Nassoro",
-        url: 'mr-mrs-nassoro/images/thumbnail/thumb.png',
-        pageUrl:'mr-mrs-nassoro',
-        videourl:"",
-        category: 'documentary',
-        location: 'Tanzania',
-        tag:'women',
-    },
-    {
-        title: "Buni Hub Documentary",
-        url: 'mr-mrs-nassoro/images/thumbnail/thumb.png',
-        pageUrl:'mr-mrs-nassoro',
-        videourl:'',
-        category: 'documentary',
-        location: 'Tanzania',
-        tag:'technology',
-    },
-    {
-        title: "Amorette TVC",
-        url: 'mr-mrs-nassoro/images/thumbnail/thumb.png',
-        pageUrl:'mr-mrs-nassoro',
-        videourl:"",
-        videourl:'',
-        category: 'tvc',
-        location: 'Tanzania',
-        tag:'technology',
-    },
-    {
-        title: "Dawasco TVC",
-        url: 'mr-mrs-nassoro/images/thumbnail/thumb.png',
-        pageUrl:'mr-mrs-nassoro',
-        videourl:"",
-        videourl:'',
-        category: 'tvc',
-        location: 'Tanzania',
-        tag:'energy',
-    },
-    {
-        title: "A PATH TO HIGHER EDUCATION AND EMPLOYMENT FOR REFUGEES",
-        url: 'mr-mrs-nassoro/images/thumbnail/thumb.png',
-        pageUrl:'mr-mrs-nassoro',
-        videourl:'https://www.ted.com/talks/chrystina_russell_a_path_to_higher_education_and_employment_for_refugees',
-        category: 'documentary',
-        location: 'kenya',
-        tag:'energy',
-    },
-    {
-        title: "Towards a Blue Future in the Tanga-Pemba Seascape Initiative",
-        url: 'mr-mrs-nassoro/images/thumbnail/thumb.png',
-        pageUrl:'mr-mrs-nassoro',
-        videourl:'https://vimeo.com/756844476/ae9dd09650',
-        category: 'documentary',
-        location: 'zanzibar',
-        tag:'energy',
-    },
-    
-];
-
 const archiveWrapper = document.getElementById('archive-wrapper');
 const categoryCheckBoxes = document.querySelectorAll('.cat-check');
 const filtersContainer = document.getElementById('filters-container');
@@ -175,43 +7,86 @@ const searchInput = document.getElementById('search');
 const locationCheckBoxes = document.querySelectorAll('.loc-check'); 
 const tagsCheckBoxes = document.querySelectorAll('.tag-check'); 
 
-
+let archive = [];
 const archiveElements = [];
 
 function createArchiveElement(item) {
-    const archiveElement = document.createElement('a');
-    archiveElement.className = 'item space-y-2';
-    archiveElement.href = item.pageUrl;
+    const archiveElement = document.createElement('div');
+    archiveElement.className = 'item wow fadeIn space-y-2';
+    // archiveElement.href = item.pageUrl;
     archiveElement.innerHTML = `
-    <div class="flex justify-center relative overflow-hidden group cursor-pointer border rounded-xl">
+    
+    <div class="flex  justify-center relative overflow-hidden group cursor-pointer border rounded-xl"
+    >
+        
         <img 
-            src="${item.url}" 
+            src="${item.imgurl}" 
             alt="${item.title}"
             class="w-full h-full object-cover"
         />
-        
+
+        <div class="video-play-button">
+            <i 
+                class="fa-solid fa-play text-white text-4xl">
+            </i>
+        </div>
+
+        <div class="video-link">
+            <a 
+                class="popup-video"
+                href="${item.videourl}"
+            >
+            </a>
+        </div>
     </div>
     <p class="text-base">${item.title}</p>
     `;
 
+    const playButton = archiveElement.querySelector('.video-play-button');
+    playButton.addEventListener('click', function() {
+        $(archiveElement.querySelector('.popup-video')).magnificPopup('open');
+    });
+
     archiveElement
     .querySelector('.status')
     // .addEventListener('click');
-
     return archiveElement;
 }
 
-archive.forEach((item) => {
-    const archiveElement = createArchiveElement(item);
-    archiveElements.push(archiveElement);
-    archiveWrapper.appendChild(archiveElement);
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('./js/archive.json')
+    .then(response => {
+        if (!response.ok){
+            throw new Error('Network response not ok');
+        }
+        return response.json()
+    })
+    .then(data => {
+        console.log('Data fetched successfully:', data);
+        archive = data;
+        archive.forEach((item) => {
+            const archiveElement = createArchiveElement(item);
+            archiveElements.push(archiveElement);
+            archiveWrapper.appendChild(archiveElement);
+        });
 
-    // Add event listener to each archive item
-    archiveElement.addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default link behavior
-        window.location.href = item.pageUrl; // Redirect to single archive page
-    });
+        initializeMagnificPopup()
+       
+        
+    })
+    .catch(error => console.error('Error fetching data:', error));
 });
+
+function initializeMagnificPopup() {
+    $('.popup-video').magnificPopup({
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+        fixedContentPos: false
+    });
+}
+
 
 filtersContainer.addEventListener('change', filterArchive);
 searchInput.addEventListener('input', filterArchive);
@@ -255,6 +130,7 @@ function filterArchive() {
             }
         }
     });
+    initializeMagnificPopup();
 }
 
 
@@ -328,3 +204,11 @@ function applyFiltersFromURL() {
 window.addEventListener('DOMContentLoaded', () => {
     applyFiltersFromURL();
 });
+
+
+
+// $('.popup-video').magnificPopup({
+
+//     type: 'iframe'
+
+// });

@@ -1,145 +1,175 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Studio 19 Project Filter</title>
-</head>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://cdn.tailwindcss.com"></script>
+      <title>Studio 19 Project Filter</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
 
-<body class="">
-    <nav class="bg-gray-900 p-4 mb-6">
-      <div
-        class="container max-w-6xl mx-auto flex flex-col sm:flex-row gap-8 items-center"
-      >
-        <!-- Search area -->
-        <div class="relative w-full">
-          <input
-            type="text"
-            id="search"
-            class="bg-gray-700 rounded-full p-2 pl-10 transition focus:w-full"
-            placeholder="Search Projects..."
-          />
-          <svg
-            class="absolute left-2 top-1/2 -translate-y-1/2"
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-            <path d="M21 21l-6 -6" />
-          </svg>
-        </div>
+      <style>
+        .video-link a {
+          position: absolute;
+          font-weight: 500;
+          color: #fff;
+          top: 50%;
+          left: 0;
+          right: 0;
+          text-align: center;
+          transform: translateY(-50%) scale(.9);
+          width: 100px;
+          height: 100px;
+          line-height: 100px;
+          border-radius: 50%;
+          border: 2px solid #fff;
+          margin: auto;
+          opacity: 0;
+          transition: .6s;
+          cursor: pointer;
+      }
+      </style>
 
-        
-      </div>
-    </nav>
+  </head>
 
-    <main class="flex flex-col md:flex-row container mx-auto max-w-6xl">
-      <div class="space-y-4 p-2 w-full md:max-w-[10rem]">
-        <h2 class="text-2xl">Filters</h2>
-        <!-- Services -->
-        <h3 class="text-xl mb-2">Services</h3>
-        <div id="filters-container" class="text-base space-y-1">
-          <div>
-            <input type="checkbox" class="cat-check" id="event" />
-            <label for="event">Event Coverage</label>
-          </div>
-          <div>
-            <input type="checkbox" class="cat-check" id="tvc" />
-            <label for="tvc">Commercials</label>
-          </div>
-          <div>
-            <input type="checkbox" class="cat-check" id="documentary" />
-            <label for="documentary">Documentary</label>
-          </div>
-          <div>
-            <input type="checkbox" class="cat-check" id="documentary" />
-            <label for="drama">Drama</label>
-          </div>
-        </div>
-        <!-- Services -->
-
-        <!-- Sector -->
-        <h3 class="text-xl mb-2">Sector</h3>
-        <div id="tags-filters-container" class="text-base space-y-1">
-              
-              <div>
-                <input type="checkbox" class="tag-check" id="women" />
-                <label for="women">Women & Girls</label>
-              </div>    
-              <div>
-                  <input type="checkbox" class="tag-check" id="health" />
-                  <label for="health">Health</label>
-              </div>
-              <div>
-                  <input type="checkbox" class="tag-check" id="education" />
-                  <label for="education">Education</label>
-              </div>
-              <div>
-                  <input type="checkbox" class="tag-check" id="agriculture" />
-                  <label for="agriculture">Agriculture</label>
-              </div>
-              <div>
-                <input type="checkbox" class="tag-check" id="energy" />
-                <label for="energy">Energy</label>
-              </div>
-              <div>
-                <input type="checkbox" class="tag-check" id="tourism" />
-                <label for="tourism">Tourism</label>
-              </div>
-              <div>
-                <input type="checkbox" class="tag-check" id="financial" />
-                <label for="financial">Financial Inclusion</label>
-              </div>
-              <div>
-                <input type="checkbox" class="tag-check" id="technology" />
-                <label for="technology">Technology</label>
-              </div>
-        </div>
-        <!-- Sector-->
-        <!-- Location filter section -->
-        <h3 class="text-xl mb-2">Location</h3>
-        <div id="location-filters-container" class="text-base space-y-1">
-            <div>
-                <input type="checkbox" class="loc-check" id="tanzania" />
-                <label for="tanzania">Tanzania</label>
-            </div>
-            <div>
-              <input type="checkbox" class="loc-check" id="zanzibar" />
-              <label for="zanzibar">Zanzibar</label>
-          </div>
-            <div>
-                <input type="checkbox" class="loc-check " id="kenya" />
-                <label for="kenya">Kenya</label>
-            </div>
-            <div>
-                <input type="checkbox" class="loc-check" id="uganda" />
-                <label for="uganda">Uganda</label>
-            </div>
-            <div>
-                <input type="checkbox" class="loc-check" id="malawi" />
-                <label for="malawi">Malawi</label>
-            </div>
-        </div>
-        <!-- Location-->
-      </div>
-
-      <!-- Project wrapper -->
-      <div
-        id="archive-wrapper"
-        class="w-full max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-2 gap-6 p-2"
+  <body class="">
+      <nav class="bg-gray-900 p-4 mb-6">
+        <div
+          class="container max-w-6xl mx-auto flex flex-col sm:flex-row gap-8 items-center"
         >
-    </div>
-    </main>
-    <script src="js/script.js"></script>
+          <!-- Search area -->
+          <div class="relative w-full">
+            <input
+              type="text"
+              id="search"
+              class="bg-gray-700 rounded-full p-2 pl-10 transition focus:w-full"
+              placeholder="Search Projects..."
+            />
+            <svg
+              class="absolute left-2 top-1/2 -translate-y-1/2"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+              <path d="M21 21l-6 -6" />
+            </svg>
+          </div>
 
-</body>
-</html>
+          
+        </div>
+      </nav>
+
+      <main class="flex flex-col md:flex-row container mx-auto max-w-6xl">
+        <div class="space-y-4 p-2 w-full md:max-w-[10rem]">
+          <h2 class="text-2xl">Filters</h2>
+          <!-- Services -->
+          <h3 class="text-xl mb-2">Services</h3>
+          <div id="filters-container" class="text-base space-y-1">
+            <div>
+              <input type="checkbox" class="cat-check" id="event" />
+              <label for="event">Event Coverage</label>
+            </div>
+            <div>
+              <input type="checkbox" class="cat-check" id="tvc" />
+              <label for="tvc">Commercials</label>
+            </div>
+            <div>
+              <input type="checkbox" class="cat-check" id="documentary" />
+              <label for="documentary">Documentary</label>
+            </div>
+            <div>
+              <input type="checkbox" class="cat-check" id="drama" />
+              <label for="drama">Drama</label>
+            </div>
+          </div>
+          <!-- Services -->
+
+          <!-- Sector -->
+          <h3 class="text-xl mb-2">Sector</h3>
+          <div id="tags-filters-container" class="text-base space-y-1">
+                
+                <div>
+                  <input type="checkbox" class="tag-check" id="women" />
+                  <label for="women">Women & Girls</label>
+                </div>    
+                <div>
+                    <input type="checkbox" class="tag-check" id="health" />
+                    <label for="health">Health</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="tag-check" id="education" />
+                    <label for="education">Education</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="tag-check" id="agriculture" />
+                    <label for="agriculture">Agriculture</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="tag-check" id="energy" />
+                  <label for="energy">Energy</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="tag-check" id="tourism" />
+                  <label for="tourism">Tourism</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="tag-check" id="financial" />
+                  <label for="financial">Financial Inclusion</label>
+                </div>
+                <div>
+                  <input type="checkbox" class="tag-check" id="technology" />
+                  <label for="technology">Technology</label>
+                </div>
+          </div>
+          <!-- Sector-->
+          <!-- Location filter section -->
+          <h3 class="text-xl mb-2">Location</h3>
+          <div id="location-filters-container" class="text-base space-y-1">
+              <div>
+                  <input type="checkbox" class="loc-check" id="tanzania" />
+                  <label for="tanzania">Tanzania</label>
+              </div>
+              <div>
+                <input type="checkbox" class="loc-check" id="zanzibar" />
+                <label for="zanzibar">Zanzibar</label>
+            </div>
+              <div>
+                  <input type="checkbox" class="loc-check " id="kenya" />
+                  <label for="kenya">Kenya</label>
+              </div>
+              <div>
+                  <input type="checkbox" class="loc-check" id="uganda" />
+                  <label for="uganda">Uganda</label>
+              </div>
+              <div>
+                  <input type="checkbox" class="loc-check" id="malawi" />
+                  <label for="malawi">Malawi</label>
+              </div>
+          </div>
+          <!-- Location-->
+        </div>
+
+        <!-- Project wrapper -->
+        <div
+          id="archive-wrapper"
+          class=" w-full max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-2 xl:grid-cols-2 gap-6 p-2"
+          >
+      </div>
+      </main>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="../js/jquery.magnific-popup.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+      <script src="js/script.js"></script>
+
+  </body>
+  </html>
