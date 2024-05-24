@@ -109,10 +109,10 @@ sub {
   bottom: -0.25em;
 }
 
-img {
+/* img {
   border: 0;
   width: 100% ;
-}
+} */
 
 svg:not(:root) {
   overflow: hidden;

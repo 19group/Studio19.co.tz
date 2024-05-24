@@ -127,9 +127,9 @@
     },
     {
         "title": "Amorette TVC",
-        "imgurl": "mr-mrs-nassoro/images/thumbnail/thumb.png",
-        "pageUrl":"mr-mrs-nassoro",
-        "videourl":"",
+        "imgurl": "amorette/images/thumbnail/thumb.jpg",
+        "pageUrl":"",
+        "videourl":"https://player.vimeo.com/video/208444893?h=17590f45f0",
         "category": "tvc",
         "location": "Tanzania",
         "tag":"technology"
@@ -160,5 +160,23 @@
         "category": "documentary",
         "location": "zanzibar",
         "tag":"energy"
+    },
+    {
+        "title": "The Fight Against Child Marriage",
+        "imgurl": "child-marriage/images/thumbnail/thumb.jpg",
+        "pageUrl":"",
+        "videourl":"https://player.vimeo.com/video/896896275?h=5177fe7fdd",
+        "category": "tvc",
+        "location": "Tanzania",
+        "tag":"women"
+    },
+    {
+        "title": "Covid 19 Vaccine",
+        "imgurl": "covid-19/images/thumbnail/thumb.jpg",
+        "pageUrl":"",
+        "videourl":"https://player.vimeo.com/video/658575262?h=cf8c11d6eb",
+        "category": "tvc",
+        "location": "Tanzania",
+        "tag":"women"
     }
 ]
