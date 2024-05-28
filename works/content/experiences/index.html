@@ -32,7 +32,8 @@
   </head>
 
   <body class="">
-      <nav class="bg-gray-900 p-4 mb-6">
+    <header class=" bg-gray-900 fixed top-0 z-10 w-full">
+      <nav class=" container px-6 py-3 mx-auto">
         <div
           class="container max-w-6xl mx-auto flex flex-col sm:flex-row gap-8 items-center"
         >
@@ -42,7 +43,7 @@
               type="text"
               id="search"
               class="bg-gray-700 rounded-full p-2 pl-10 transition focus:w-full"
-              placeholder="Search Projects..."
+              placeholder="Search by services/sector/location..."
             />
             <svg
               class="absolute left-2 top-1/2 -translate-y-1/2"
@@ -62,11 +63,16 @@
             </svg>
           </div>
 
-          
+         
+
         </div>
       </nav>
+    </header>
 
-      <main class="flex flex-col md:flex-row container mx-auto max-w-6xl">
+    
+      
+
+      <main class="flex flex-col md:flex-row container mx-auto py-20 max-w-6xl">
         <div class="space-y-4 p-2 w-full md:max-w-[10rem]">
           <h2 class="text-2xl">Filters</h2>
           <!-- Services -->
