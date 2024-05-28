@@ -6,6 +6,8 @@
       <script src="https://cdn.tailwindcss.com"></script>
       <title>Studio 19 Project Filter</title>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
       <style>
         .video-link a {
@@ -33,7 +35,10 @@
 
   <body class="">
     <header class=" bg-gray-900 fixed top-0 z-10 w-full">
-      <nav class=" container px-6 py-3 mx-auto">
+      <nav class="container px-6 py-3 flex justify-between items-center mx-auto">
+        <div class="text-xl font-bold text-white" >
+          <img style="height:50px; width:auto;" src="../images/logoK@2x.png" alt="">
+        </div>
         <div
           class="container max-w-6xl mx-auto flex flex-col sm:flex-row gap-8 items-center"
         >
@@ -62,17 +67,17 @@
               <path d="M21 21l-6 -6" />
             </svg>
           </div>
-
-         
-
+          <div class="space-x-4 flex text-white">
+            <a href="#home" class="hover:text-gray-400">Home</a>
+            <a href="#contact" class="hover:text-gray-400">Contact</a>
+          </div>
         </div>
+
+        
       </nav>
     </header>
 
-    
-      
-
-      <main class="flex flex-col md:flex-row container mx-auto py-20 max-w-6xl">
+      <main class="flex flex-col md:flex-row container mx-auto py-24 max-w-6xl">
         <div class="space-y-4 p-2 w-full md:max-w-[10rem]">
           <h2 class="text-2xl">Filters</h2>
           <!-- Services -->
@@ -169,6 +174,12 @@
           >
       </div>
       </main>
+      <footer class="bg-white dark:bg-gray-900" id="footer" ></footer>
+            <script>
+              $(function(){
+                $('#footer').load('footer.html');
+              });
+            </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="../js/jquery.magnific-popup.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
