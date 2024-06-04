@@ -37,7 +37,7 @@
     <header class=" bg-gray-900 fixed top-0 z-10 w-full">
       <nav class="container px-6 py-3 flex justify-between items-center mx-auto">
         <div class="text-xl font-bold text-white" >
-          <img style="height:50px; width:auto;" src="../images/logoK@2x.png" alt="">
+          <a href="../"><img style="height:50px; width:auto;" src="../images/logoK@2x.png" alt=""></a>
         </div>
         <div
           class="container max-w-6xl mx-auto flex flex-col sm:flex-row gap-8 items-center"
@@ -67,10 +67,12 @@
               <path d="M21 21l-6 -6" />
             </svg>
           </div>
+          <!--
           <div class="space-x-4 flex text-white">
             <a href="#home" class="hover:text-gray-400">Home</a>
             <a href="#contact" class="hover:text-gray-400">Contact</a>
           </div>
+          -->
         </div>
 
         
@@ -84,16 +86,16 @@
           <h3 class="text-xl mb-2">Services</h3>
           <div id="filters-container" class="text-base space-y-1">
             <div>
+              <input type="checkbox" class="cat-check" id="documentary" />
+              <label for="documentary">Documentary</label>
+            </div>
+            <div>
               <input type="checkbox" class="cat-check" id="event" />
               <label for="event">Event Coverage</label>
             </div>
             <div>
               <input type="checkbox" class="cat-check" id="tvc" />
-              <label for="tvc">Commercials</label>
-            </div>
-            <div>
-              <input type="checkbox" class="cat-check" id="documentary" />
-              <label for="documentary">Documentary</label>
+              <label for="tvc">Scripted Work</label>
             </div>
             <div>
               <input type="checkbox" class="cat-check" id="drama" />

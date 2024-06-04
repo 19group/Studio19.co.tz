@@ -53,6 +53,341 @@ body {
   color: #575859;
 }
 
+:root {
+	--font-1: "Roboto Flex", sans-serif;
+	--font-2: "DM Serif Display", Serif;
+
+  /* monospace
+   */
+	--font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
+}
+
+/* ------------------------------------------------------------------- 
+ * ## grid variables
+ * ------------------------------------------------------------------- */
+ :root {
+  
+  /* widths for rows and containers
+   */
+	--width-sixteen-cols: 1760px;
+	--width-default     : 1320px;
+	--width-wide        : 1600px;
+	--width-wider       : 1800px;
+	--width-narrow      : 1200px;
+	--width-narrower    : 1000px;
+	--width-narrowest   : 800px;
+	--width-full        : 100%;
+	--width-grid-max    : var(--width-default);
+
+  /* gutter
+   */
+	--gutter            : 2.4rem;
+}
+
+
+/* on large screen devices
+ */
+ @media screen and (max-width: 1000px) {
+	:root {
+		--gutter: 2.2rem;
+	}
+}
+
+/* on small devices
+ */
+@media screen and (max-width: 600px) {
+	:root {
+		--gutter: 1rem;
+	}
+}
+
+
+/* ------------------------------------------------------------------- 
+ * ## colors
+ * ------------------------------------------------------------------- */
+ :root {
+  /* color-1(#EA9010)
+   * color-2(#343D35)
+   * color-3(#FEF5E4)
+   */
+	--color-1: hsla(35, 87%, 49%, 1);
+	--color-2: hsla(127, 8%, 22%, 1);
+	--color-3: hsla(39, 93%, 95%, 1);
+
+  /* theme color variations
+   */
+	--color-1-lightest             : hsla(35, 87%, 96%, 1);
+	--color-1-lighter              : hsla(35, 87%, 69%, 1);
+	--color-1-light                : hsla(35, 87%, 59%, 1);
+	--color-1-dark                 : hsla(35, 87%, 39%, 1);
+	--color-1-darker               : hsla(35, 87%, 29%, 1);
+	--color-1-darkest              : hsla(35, 87%, 10%, 1);
+
+	--color-2-lightest             : hsla(127, 8%, 55%, 1);
+	--color-2-lighter              : hsla(127, 8%, 42%, 1);
+	--color-2-light                : hsla(127, 8%, 32%, 1);
+	--color-2-dark                 : #18212a;
+	--color-2-darker               : hsla(127, 8%, 2%, 1);
+	
+	--color-3-light                : hsla(39, 93%, 100%, 1);
+	--color-3-dark                 : hsla(39, 93%, 85%, 1);
+	--color-3-darker               : hsla(39, 93%, 75%, 1);
+
+  /* feedback colors
+   * color-error(#ffd1d2), color-success(#c8e675), 
+   * color-info(#d7ecfb), color-notice(#fff099)
+   */
+	--color-error                  : hsla(359, 100%, 91%, 1);
+	--color-success                : hsla(76, 69%, 68%, 1);
+	--color-info                   : hsla(205, 82%, 91%, 1);
+	--color-notice                 : hsla(51, 100%, 80%, 1);
+	--color-error-content          : hsla(359, 50%, 50%, 1);
+	--color-success-content        : hsla(76, 29%, 28%, 1);
+	--color-info-content           : hsla(205, 32%, 31%, 1);
+	--color-notice-content         : hsla(51, 30%, 30%, 1);
+
+  /* shades 
+   * generated using 
+   * Tint & Shade Generator 
+   * (https                     ://maketintsandshades.com/)
+   */
+	--color-black                  : #000000;
+	--color-gray-19                : #121212;
+	--color-gray-18                : #242525;
+	--color-gray-17                : #363737;
+	--color-gray-16                : #484949;
+	--color-gray-15                : #5b5c5c;
+	--color-gray-14                : #6d6e6e;
+	--color-gray-13                : #7f8080;
+	--color-gray-12                : #919292;
+	--color-gray-11                : #a3a5a5;
+	--color-gray-10                : #b5b7b7;
+	--color-gray-9                 : #bcbebe;
+	--color-gray-8                 : #c4c5c5;
+	--color-gray-7                 : #cbcdcd;
+	--color-gray-6                 : #d3d4d4;
+	--color-gray-5                 : #dadbdb;
+	--color-gray-4                 : #e1e2e2;
+	--color-gray-3                 : #e9e9e9;
+	--color-gray-2                 : #f0f1f1;
+	--color-gray-1                 : #f8f8f8;
+	--color-white                  : #ffffff;
+
+  /* text
+   */
+	--color-text                   : var(--color-gray-18);
+	--color-text-dark              : #181818;
+	--color-text-light             : var(--color-gray-14);
+	--color-placeholder            : var(--color-gray-12);
+
+  /* link
+   */
+	--color-link                   : var(--color-1);
+	--color-link-hover             : var(--color-2-lighter);
+	--color-link-active            : var(--color-2-lighter);
+
+  /* buttons
+   */
+	--color-btn                    : var(--color-gray-4);
+	--color-btn-text               : var(--color-text);
+	--color-btn-hover              : var(--color-gray-5);
+	--color-btn-hover-text         : var(--color-text);
+	--color-btn-primary            : var(--color-1);
+	--color-btn-primary-text       : var(--color-2-dark);
+	--color-btn-primary-hover      : var(--color-1-light);
+	--color-btn-primary-hover-text : var(--color-2-dark);
+	--color-btn-stroke             : var(--color-text-dark);
+	--color-btn-stroke-text        : var(--color-text-dark);
+	--color-btn-stroke-hover       : var(--color-text-dark);
+	--color-btn-stroke-hover-text  : var(--color-white);
+
+  /* preloader
+   */
+	--color-preloader-bg           : var(--color-2-dark);
+	--color-loader                 : var(--color-white);
+	--color-loader-light           : var(--color-2-light);
+
+  /* others
+   */
+	--color-body                   : white;
+	--color-border                 : rgba(0, 0, 0, .1);
+	--border-radius                : 5px;
+}
+
+
+/* ------------------------------------------------------------------- 
+ * ## spacing and typescale
+ * ------------------------------------------------------------------- */
+ :root {
+  /* spacing
+   * base font size: 20px 
+   * vertical space unit : 32px
+   */
+	--base-size        : 62.5%;
+	--multiplier       : 1;
+	--base-font-size   : calc(2rem * var(--multiplier));
+	--space            : calc(3.2rem * var(--multiplier));
+
+  /* vertical spacing 
+   */
+	--vspace-0_125     : calc(0.125 * var(--space));
+	--vspace-0_25      : calc(0.25 * var(--space));
+	--vspace-0_375     : calc(0.375 * var(--space));
+	--vspace-0_5       : calc(0.5 * var(--space));
+	--vspace-0_625     : calc(0.625 * var(--space));
+	--vspace-0_75      : calc(0.75 * var(--space));
+	--vspace-0_875     : calc(0.875 * var(--space));
+	--vspace-1         : calc(var(--space));
+	--vspace-1_25      : calc(1.25 * var(--space));
+	--vspace-1_5       : calc(1.5 * var(--space));
+	--vspace-1_75      : calc(1.75 * var(--space));
+	--vspace-2         : calc(2 * var(--space));
+	--vspace-2_5       : calc(2.5 * var(--space));
+	--vspace-3         : calc(3 * var(--space));
+	--vspace-3_5       : calc(3.5 * var(--space));
+	--vspace-4         : calc(4 * var(--space));
+	--vspace-4_5       : calc(4.5 * var(--space));
+	--vspace-5         : calc(5 * var(--space));
+	--vspace-5_5       : calc(5.5 * var(--space));
+	--vspace-6         : calc(6 * var(--space));
+	--vspace-6_5       : calc(6.5 * var(--space));
+	--vspace-7         : calc(7 * var(--space));
+	--vspace-7_5       : calc(7.5 * var(--space));
+	--vspace-8         : calc(8 * var(--space));
+	--vspace-8_5       : calc(8.5 * var(--space));
+	--vspace-9         : calc(9 * var(--space));
+	--vspace-9_5       : calc(9.5 * var(--space));
+	--vspace-10        : calc(10 * var(--space));
+
+  /* type scale
+   * ratio 1        :2 | base: 20px
+   * -------------------------------------------------------
+   *
+   * --text-huge-3    = (148.60px)
+   * --text-huge-2    = (123.83px)
+   * --text-huge-1    = (103.20px)
+   * --text-display-3 = (86.00px)
+   * --text-display-2 = (71.66px)
+   * --text-display-1 = (59.72px)
+   * --text-xxxl      = (49.77px)
+   * --text-xxl       = (41.47px)
+   * --text-xl        = (34.56px)
+   * --text-lg        = (28.80px)
+   * --text-md        = (24.00px)
+   * --text-size      = (20.00px) BASE
+   * --text-sm        = (16.67px)
+   * --text-xs        = (13.89px)
+   *
+   * ---------------------------------------------------------
+   */
+	--text-scale-ratio : 1.2;
+	--text-size        : var(--base-font-size);
+	--text-xs          : calc((var(--text-size) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+	--text-sm          : calc(var(--text-xs) * var(--text-scale-ratio));
+	--text-md          : calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+	--text-lg          : calc(var(--text-md) * var(--text-scale-ratio));
+	--text-xl          : calc(var(--text-lg) * var(--text-scale-ratio));
+	--text-xxl         : calc(var(--text-xl) * var(--text-scale-ratio));
+	--text-xxxl        : calc(var(--text-xxl) * var(--text-scale-ratio));
+	--text-display-1   : calc(var(--text-xxxl) * var(--text-scale-ratio));
+	--text-display-2   : calc(var(--text-display-1) * var(--text-scale-ratio));
+	--text-display-3   : calc(var(--text-display-2) * var(--text-scale-ratio));
+	--text-huge-1      : calc(var(--text-display-3) * var(--text-scale-ratio));
+	--text-huge-2      : calc(var(--text-huge-1) * var(--text-scale-ratio));
+	--text-huge-3      : calc(var(--text-huge-2) * var(--text-scale-ratio));
+
+  /* default button height
+   */
+	--vspace-btn       : var(--vspace-2);
+}
+
+.btn.btn--primary, button.btn--primary, input[type=submit].btn--primary, input[type=reset].btn--primary, input[type=button].btn--primary {
+    background: var(--color-btn-primary);
+    border-color: var(--color-btn-primary) !important;
+    color: var(--color-btn-primary-text) !important;
+}
+.btn--cta {
+    --btn-height: var(--vspace-btn);
+    display: inline-block !important;
+    font-family: var(--font-1) !important;
+    font-weight: 500 !important;
+    font-size: calc(var(--text-size) * 0.9) !important;
+    height: var(--btn-height) !important;
+    line-height: calc(var(--btn-height) - 4px) !important;
+    padding: 0 3.6rem !important;
+    margin: 0 0.4rem var(--vspace-0_5) 0 !important;
+    color: var(--color-btn-text) !important;
+    text-decoration: none !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    cursor: pointer !important;
+    transition: all 0.3s !important;
+    border-radius: var(--border-radius) !important;
+    background-color: var(--color-btn-primary) ;
+    border: 2px solid var(--color-btn) !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+
+/*--------*/
+
+.s-cta {
+  padding-top: var(--vspace-4_5);
+  padding-bottom: var(--vspace-3_5);
+  background-color: var(--color-2-dark);
+  color: var(--color-3);
+}
+
+.xl-8 {
+  flex: none;
+  width: 66.6666666667%;
+}
+
+
+.s-cta .text-display-title {
+  color: var(--color-3);
+}
+.text-display-title {
+  font-size: var(--text-display-2);
+  line-height: 1.0606;
+  letter-spacing: -0.012em;
+  color: var(--color-text-dark);
+  margin-top: 0;
+  margin-bottom: var(--vspace-1_5);
+}
+
+.s-cta .lead {
+  font-weight: 300;
+}
+.lead, .attention-getter {
+  font-family: var(--font-1);
+  font-size: var(--text-md);
+  line-height: var(--vspace-1_25);
+}
+
+.row.row-x-center {
+  justify-content: center;
+}
+
+.row-cta {
+  display: flex;
+  flex-flow: row wrap;
+  width: min(92%, var(--width-grid-max));
+  margin: 0 auto !important;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--font-2);
+  font-weight: 400;
+  color: var(--color-text-dark);
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+}
+
+/*--------*/
+
+
 /* links
 ---------------------------------------------------------------------- */
 a,
