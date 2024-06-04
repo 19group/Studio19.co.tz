@@ -127,7 +127,14 @@ Customized video production packages for NGOs and non-profit organizations in Da
       .play-button:active {
         transform: scale(0.9);
       }
-      
+      .project-number + .project-number::before {
+        content: '|';
+        margin: 0 8px;
+        color: white;
+      }
+      .modal .modal-xl {
+        max-width: 80%; 
+      }
     </style>
 </head>
 
@@ -170,12 +177,7 @@ Customized video production packages for NGOs and non-profit organizations in Da
                 <ul class="nav navbar-nav justify-content-end ">
                     
                 </ul>
-
-                
-
-                
                 <!-- end #nav -->
-
             </nav>
             <!-- end #nav-wrap -->
             <!--
@@ -203,16 +205,28 @@ Customized video production packages for NGOs and non-profit organizations in Da
 
     <!-- homepage hero
  ================================================== -->
- <section class="hero-section d-flex flex-column justify-content-end p-4" id="hero-section">
-  <div class="hero-content d-flex justify-content-between align-items-end ">
-    <div id="image-title" class="h1 font-weight-semibold">Image Title</div>
-    <div id="image-number" class="h3">1/4</div>
-    <button id="trailer-btn" class="play-button mb-10"><i class="fa-solid fa-play"></i></button>
+ <section class="hero-section d-flex flex-column justify-content-between p-4" id="hero-section">
+  <div class="d-flex flex-column justify-content-center align-items-start flex-grow-1 px-5">
+    <h1 class="hero-heading mb-4 px-5">Telling Africa Stories</h1>
+    
+  </div>
+  <div class="hero-content d-flex justify-content-between align-items-end">
+    <div class="d-flex flex-column align-items-start">
+      
+      <div id="image-title" class="h2 font-weight-bold">Project Title</div>
+      <div id="project-list" class="d-flex">
+        <a href="#" class="text-white project-number" data-index="0">1</a>
+        <a href="#" class="text-white project-number" data-index="1">2</a>
+        <a href="#" class="text-white project-number" data-index="2">3</a>
+        <a href="#" class="text-white project-number" data-index="3">4</a>
+      </div>
+    </div>
+    <button id="trailer-btn" class="play-button mb-4"><i class="fa-solid fa-play"></i></button>
   </div>
 </section>
 
 <div id="trailer-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="trailerModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="trailerModalLabel">Trailer Preview</h5>
@@ -221,10 +235,9 @@ Customized video production packages for NGOs and non-profit organizations in Da
         </button>
       </div>
       <div class="modal-body">
-        <video id="trailer-video" controls class="w-100">
-          <source src="video1.mp4" type="video/mp4">
-          
-        </video>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe id="trailer-video" class="embed-responsive-item" src="" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -439,9 +452,9 @@ PARTNERS/WHO WE HAVE WORKED WITH
 
 <script>
   const images = [
-    {title: "Amorette", number: "1/3", bg: "url('./experiences/amorette/images/thumbnail/thumb.jpg')", video: "video1.mp4"},
-    {title: "Canso Africa", number: "2/3", bg: "url('./experiences/canso-africa-conference-2019/images/thumbnail/canso-africa-conference-thumb.png')", video: "video2.mp4"},
-    {title: "Great Diana Story", number: "3/3", bg: "url('./experiences/great-diana-story/images/thumbnail/thumb.png')", video: "video3.mp4"},
+    {title: "Amorette", number: "1", bg: "url('./experiences/amorette/images/thumbnail/thumb.jpg')", video: "https://player.vimeo.com/video/953133765?h=9150c0eff2"},
+    {title: "Canso Africa", number: "2", bg: "url('./experiences/canso-africa-conference-2019/images/thumbnail/canso-africa-conference-thumb.png')", video: "video2.mp4"},
+    {title: "Great Diana Story", number: "3", bg: "url('./experiences/great-diana-story/images/thumbnail/thumb.png')", video: "video3.mp4"},
   ];
   
   let currentIndex = 0;
@@ -449,7 +462,7 @@ PARTNERS/WHO WE HAVE WORKED WITH
   function updateHeroSection() {
     const hero = document.getElementById('hero-section');
     const title = document.getElementById('image-title');
-    const number = document.getElementById('image-number');
+    const number = document.getElementById('project-number');
     const trailerVideo = document.getElementById('trailer-video');
 
     hero.style.backgroundImage = images[currentIndex].bg;
@@ -459,7 +472,18 @@ PARTNERS/WHO WE HAVE WORKED WITH
   }
 
   document.getElementById('trailer-btn').addEventListener('click', () => {
+    const currentProject = images[currentIndex];
+    const trailerVideo = document.getElementById('trailer-video');
+    trailerVideo.src = currentProject.video;
     $('#trailer-modal').modal('show');
+  });
+
+  document.querySelectorAll('.project-number').forEach(element => {
+    element.addEventListener('click', (event) => {
+      event.preventDefault();
+      currentIndex = parseInt(event.target.getAttribute('data-index'));
+      updateHeroSection();
+    });
   });
 
   setInterval(() => {
