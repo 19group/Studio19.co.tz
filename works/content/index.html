@@ -58,6 +58,7 @@ Customized video production packages for NGOs and non-profit organizations in Da
 
 
 
+
     <!-- favicons
  ================================================== -->
     <link rel="shortcut icon" href="favicon.png">
@@ -75,7 +76,6 @@ Customized video production packages for NGOs and non-profit organizations in Da
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7JWYS7S0P1"></script>
     <script>
@@ -88,6 +88,47 @@ Customized video production packages for NGOs and non-profit organizations in Da
 
         gtag('config', 'G-7JWYS7S0P1');
     </script>
+
+    <style>
+      .hero-section {
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        color: white;
+      }
+      .hero-content {
+        position: absolute;
+        bottom: -10%;
+        left: 5%;
+        right: 5%;
+      }
+      .hero-text {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .play-button {
+        width: 120px;
+        height: 120px;
+        background-color: transparent;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+      }
+      .play-button:hover {
+        transform: scale(1.1);
+      }
+      .play-button:active {
+        transform: scale(0.9);
+      }
+      
+    </style>
 </head>
 
 <body style="max-width: 1700px;margin: 0 auto;">
@@ -162,13 +203,33 @@ Customized video production packages for NGOs and non-profit organizations in Da
 
     <!-- homepage hero
  ================================================== -->
-    <section id="hero">
-        <video width="1920" height="1080" poster="images/videoBg.jpg" controls>
-      <source
-        src="https://player.vimeo.com/external/336582700.hd.mp4?s=76179007cda9a68e6c6e6f4e8f8e8d16dc18f4d6&profile_id=175"
-        type="video/mp4">
-    </video>
-    </section>
+ <section class="hero-section d-flex flex-column justify-content-end p-4" id="hero-section">
+  <div class="hero-content d-flex justify-content-between align-items-end ">
+    <div id="image-title" class="h1 font-weight-semibold">Image Title</div>
+    <div id="image-number" class="h3">1/4</div>
+    <button id="trailer-btn" class="play-button mb-10"><i class="fa-solid fa-play"></i></button>
+  </div>
+</section>
+
+<div id="trailer-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="trailerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="trailerModalLabel">Trailer Preview</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <video id="trailer-video" controls class="w-100">
+          <source src="video1.mp4" type="video/mp4">
+          
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!--==============================
 Documentary Services
@@ -472,6 +533,39 @@ PARTNERS/WHO WE HAVE WORKED WITH
     
     <!-- end footer -->
 
+<script>
+  const images = [
+    {title: "Amorette", number: "1/3", bg: "url('./experiences/amorette/images/thumbnail/thumb.jpg')", video: "video1.mp4"},
+    {title: "Canso Africa", number: "2/3", bg: "url('./experiences/canso-africa-conference-2019/images/thumbnail/canso-africa-conference-thumb.png')", video: "video2.mp4"},
+    {title: "Great Diana Story", number: "3/3", bg: "url('./experiences/great-diana-story/images/thumbnail/thumb.png')", video: "video3.mp4"},
+  ];
+  
+  let currentIndex = 0;
+
+  function updateHeroSection() {
+    const hero = document.getElementById('hero-section');
+    const title = document.getElementById('image-title');
+    const number = document.getElementById('image-number');
+    const trailerVideo = document.getElementById('trailer-video');
+
+    hero.style.backgroundImage = images[currentIndex].bg;
+    title.textContent = images[currentIndex].title;
+    number.textContent = images[currentIndex].number;
+    trailerVideo.src = images[currentIndex].video;
+  }
+
+  document.getElementById('trailer-btn').addEventListener('click', () => {
+    $('#trailer-modal').modal('show');
+  });
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateHeroSection();
+  }, 5000);
+
+  updateHeroSection();
+</script>
+
     <!-- Java Script
  ================================================== -->
     <script src="js/jquery-1.11.3.min.js"></script>
@@ -488,7 +582,10 @@ PARTNERS/WHO WE HAVE WORKED WITH
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
     
 </body>
 
