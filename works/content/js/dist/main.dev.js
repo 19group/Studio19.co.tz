@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     title: "Studio 19 Intro",
     number: "1",
     bg: "url('images/videoBg.jpg')",
-    video: "https://player.vimeo.com/video/951080803?h=e1392ad1aa"
+    video: "https://player.vimeo.com/external/336582700.hd.mp4?s=76179007cda9a68e6c6e6f4e8f8e8d16dc18f4d6&profile_id=175"
   }, {
     title: "Education Documentaries",
     number: "2",

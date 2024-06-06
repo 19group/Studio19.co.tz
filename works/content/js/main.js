@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     /* New Hero Section Code */
     const images = [
-        { title: "Studio 19 Intro", number: "1", bg: "url('images/videoBg.jpg')", video: "https://player.vimeo.com/video/951080803?h=e1392ad1aa" },
+        { title: "Studio 19 Intro", number: "1", bg: "url('images/videoBg.jpg')", video: "https://player.vimeo.com/external/336582700.hd.mp4?s=76179007cda9a68e6c6e6f4e8f8e8d16dc18f4d6&profile_id=175" },
         { title: "Education Documentaries", number: "2", bg: "url('images/unicef-thumbnail.jpg')", video: "https://player.vimeo.com/video/951113503?h=8534d5225e" },
         { title: "Agriculture Documetnaries", number: "3", bg: "url('images/agriculture-thumbnail.png')", video: "https://player.vimeo.com/video/953133765?h=9150c0eff2" },
         { title: "Education Documentaries", number: "4", bg: "url('images/school-thumbnail.jpg')", video: "https://player.vimeo.com/video/951080803?h=e1392ad1aa" },
