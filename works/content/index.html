@@ -207,7 +207,7 @@ Customized video production packages for NGOs and non-profit organizations in Da
  ================================================== -->
  <section class="hero-section d-flex flex-column justify-content-between p-4" id="hero-section">
   <div class="d-flex flex-column justify-content-center align-items-start flex-grow-1 px-5">
-    <h1 class="hero-heading mb-4 px-5">Telling Africa Stories</h1>
+    <h1 class="hero-heading mb-4 px-5"></h1>
     
   </div>
   <div class="hero-content d-flex justify-content-between align-items-end">
@@ -422,13 +422,43 @@ PARTNERS/WHO WE HAVE WORKED WITH
                       <p class="lead">
                         At Studio 19, we believe in the power of transformative stories. Share your project details with us, and let's create something extraordinary together. Our dedicated team is ready to collaborate and bring your vision to life.
                       </p>
-                      <a href="contact.html" class="btn--cta btn--primary">Let's Work Together</a>
+                      <div class="brief-button" id="openFormBtn" >
+                        <img  alt="call-to-action" src="../../../images/background/CTA-border.webp" width="632" height="281">
+                          <div class="brief-button-init">
+                              <h1 style="color:#fff">Let's Work Together</h1>
+                          </div>
+                    </div> 
                   </div>
 
               </div>
           </div>
 
       </section> <!-- end s-cta -->
+      
+    <div id="formContainer" class="sidebar">
+                
+      <span id="closeFormBtn" class="close-btn">&times;</span>
+    
+    <div class="contact-form-header">
+     <h3>Lets tell stories of impact together</h3>
+        <p>Leave your details and we’ll get in touch with you</p>
+    </div>
+    <form id="briefForm" class="p-3">
+      <div class="form-group">
+        <label for="Fullname" ></label>
+        <input type="text" class="form-control" id="name" placeholder="Full Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email" ></label>
+        <input type="email" class="form-control" id="email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Tell Us How you would Like us to impact your story</label>
+        <textarea class="form-control" id="message" rows="4"></textarea>
+      </div>
+      <button type="submit" class="subscribe-button">Send</button>
+    </form>
+    </div>
 
 
     <div class="whatsapp-icon">
@@ -436,8 +466,6 @@ PARTNERS/WHO WE HAVE WORKED WITH
           <img src="images/Whatsapp-Icon.png" alt="WhatsApp Chat">
         </a>
     </div>
-    
-
 
     <!-- Footer
  ================================================== -->
@@ -449,50 +477,6 @@ PARTNERS/WHO WE HAVE WORKED WITH
     </script>
     
     <!-- end footer -->
-
-<script>
-  const images = [
-    {title: "Amorette", number: "1", bg: "url('./experiences/amorette/images/thumbnail/thumb.jpg')", video: "https://player.vimeo.com/video/953133765?h=9150c0eff2"},
-    {title: "Canso Africa", number: "2", bg: "url('./experiences/canso-africa-conference-2019/images/thumbnail/canso-africa-conference-thumb.png')", video: "video2.mp4"},
-    {title: "Great Diana Story", number: "3", bg: "url('./experiences/great-diana-story/images/thumbnail/thumb.png')", video: "video3.mp4"},
-  ];
-  
-  let currentIndex = 0;
-
-  function updateHeroSection() {
-    const hero = document.getElementById('hero-section');
-    const title = document.getElementById('image-title');
-    const number = document.getElementById('project-number');
-    const trailerVideo = document.getElementById('trailer-video');
-
-    hero.style.backgroundImage = images[currentIndex].bg;
-    title.textContent = images[currentIndex].title;
-    number.textContent = images[currentIndex].number;
-    trailerVideo.src = images[currentIndex].video;
-  }
-
-  document.getElementById('trailer-btn').addEventListener('click', () => {
-    const currentProject = images[currentIndex];
-    const trailerVideo = document.getElementById('trailer-video');
-    trailerVideo.src = currentProject.video;
-    $('#trailer-modal').modal('show');
-  });
-
-  document.querySelectorAll('.project-number').forEach(element => {
-    element.addEventListener('click', (event) => {
-      event.preventDefault();
-      currentIndex = parseInt(event.target.getAttribute('data-index'));
-      updateHeroSection();
-    });
-  });
-
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % images.length;
-    updateHeroSection();
-  }, 5000);
-
-  updateHeroSection();
-</script>
 
     <!-- Java Script
  ================================================== -->

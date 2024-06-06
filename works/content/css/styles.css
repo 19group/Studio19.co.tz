@@ -629,4 +629,152 @@ ol[type="1"] > li:not(:last-child) {
 .site_logo img {
   height: 70px;
   width: 70px;
+}
+
+.brief {
+  cursor: pointer;
+  width: 100%;
+  height: 200px;
+}
+.brief .brief-button {
+  position: absolute;
+  right: 25%;
+  left: 25%;
+}
+.brief .brief-button .brief-button-init {
+  position: absolute;
+  right: 25%;
+  left: 25%;
+  top: 125px;
+  cursor: pointer;
+}
+.brief .brief-button .brief-button-init h1 {
+  color: #09141f;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Initially hidden */
+  width: 40%;
+  height: 100%;
+  background-color: #f4f4f4;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  padding: 20px;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none; /* Hide initially */
+}
+
+.contact-form-header {
+  padding: 20px 0 0 0;
+  margin: 30px 0 0 0;
+}
+.contact-form-header h3 {
+  color: #eaa708;
+}
+
+.sidebar.open {
+  right: 0; /* Revealed when open */
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 0;
+  margin: 10px 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  color: #eaa708;
+  font-size: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #999;
+}
+
+.close-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 767px), only screen and (max-device-width: 767px) {
+  .briefsection {
+    min-height: 230px;
+  }
+  .sidebar {
+    width: 100%;
+  }
+  .brief {
+    height: 0;
+  }
+  .brief .brief-container {
+    padding: 20px 0;
+  }
+  .brief .brief-container .brief-button {
+    top: 0;
+    left: 0;
+    position: relative;
+  }
+  .brief .brief-container .brief-button .brief-button-init {
+    top: 43%;
+  }
+  .brief .brief-container .brief-button .brief-button-init h1 {
+    font-size: 6vw;
+  }
+}
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .briefsection {
+    min-height: 340px;
+  }
+  .brief {
+    height: 0;
+  }
+  .brief .brief-container {
+    padding: 20px 140px;
+  }
+  .brief .brief-container .brief-button {
+    top: 0;
+    left: 0;
+    position: relative;
+  }
+  .brief .brief-container .brief-button .brief-button-init {
+    top: 43%;
+  }
+  .brief .brief-container .brief-button .brief-button-init h1 {
+    font-size: 4vw;
+  }
+}
+.brief-button {
+  position: absolute;
+  right: 25%;
+  left: 25%;
+}
+.brief-button .brief-button-init {
+  position: absolute;
+  right: 25%;
+  left: 25%;
+  top: 60px;
+  cursor: pointer;
+}
+.brief-button .brief-button-init h1 {
+  color: #09141f;
+}
+
+.sidebar {
+  z-index: 650 !important;
 }/*# sourceMappingURL=styles.css.map */
