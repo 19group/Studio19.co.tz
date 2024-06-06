@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }, {
     title: "Agriculture Documetnaries",
     number: "3",
-    bg: "url('images/agriculture-thumbnail.png')",
+    bg: "url('images/agriculture-thumbnail.jpg')",
     video: "https://player.vimeo.com/video/953133765?h=9150c0eff2"
   }, {
     title: "Education Documentaries",
