@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     video: "https://player.vimeo.com/video/951080803?h=e1392ad1aa"
   }];
   var currentIndex = 0;
-  updateHeroSection();
+  var currentIndexOne = 0;
 
   function updateHeroSection() {
     var hero = document.getElementById('hero-section');
