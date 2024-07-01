@@ -291,10 +291,9 @@ function labnolIframe() {
       formContainer.classList.remove('open');
       briefForm.reset();
     });
-  });
-  document.getElementById("mc-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    var email = document.getElementById("mc-email").value;
-    subscribe(email);
-  });
+  }); // document.getElementById("mc-form").addEventListener("submit", function(event) {
+  //     event.preventDefault();
+  //     var email = document.getElementById("mc-email").value;
+  //     subscribe(email);
+  // });
 })(jQuery);

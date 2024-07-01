@@ -291,10 +291,10 @@ function labnolIframe() {
         });
     });
 
-    document.getElementById("mc-form").addEventListener("submit", function(event) {
-        event.preventDefault();
-        var email = document.getElementById("mc-email").value;
-        subscribe(email);
-    });
+    // document.getElementById("mc-form").addEventListener("submit", function(event) {
+    //     event.preventDefault();
+    //     var email = document.getElementById("mc-email").value;
+    //     subscribe(email);
+    // });
 
 })(jQuery);
