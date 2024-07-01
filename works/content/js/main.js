@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     ];
 
     let currentIndex = 0;
+    let currentIndexOne = 0;
 
     function updateHeroSection() {
         const hero = document.getElementById('hero-section');
