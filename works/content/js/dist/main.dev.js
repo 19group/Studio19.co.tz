@@ -27,14 +27,15 @@ document.addEventListener("DOMContentLoaded", function () {
     video: "https://player.vimeo.com/video/951080803?h=e1392ad1aa"
   }];
   var currentIndex = 0;
-  var currentIndexOne = 0;
 
   function updateHeroSection() {
     var hero = document.getElementById('hero-section');
     var title = document.getElementById('image-title');
+    var number = document.getElementById('project-number');
     var trailerVideo = document.getElementById('trailer-video');
     hero.style.backgroundImage = images[currentIndex].bg;
     title.textContent = images[currentIndex].title;
+    number.textContent = images[currentIndex].number;
     trailerVideo.src = images[currentIndex].video;
   }
 
@@ -44,11 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
     trailerVideo.src = currentProject.video;
     $('#trailer-modal').modal('show');
   });
-  var projectNumbers = document.querySelectorAll('.project-number');
-  projectNumbers.forEach(function (number, index) {
-    number.addEventListener('click', function (event) {
+  document.querySelectorAll('.project-number').forEach(function (element) {
+    element.addEventListener('click', function (event) {
       event.preventDefault();
-      currentIndex = index;
+      currentIndex = parseInt(event.target.getAttribute('data-index'));
       updateHeroSection();
     });
   });
@@ -291,16 +291,10 @@ function labnolIframe() {
       formContainer.classList.remove('open');
       briefForm.reset();
     });
-  }); // document.addEventListener("DOMContentLoaded", function() {
-  //     const form = document.getElementById("mc-form");
-  //     if (form) {
-  //         form.addEventListener("submit", function(event) {
-  //             event.preventDefault();
-  //             const email = document.getElementById("mc-email").value;
-  //             subscribe(email);
-  //         });
-  //     } else {
-  //         console.error("Form with ID 'mc-form' not found in the DOM.");
-  //     }
-  // });
+  });
+  document.getElementById("mc-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    var email = document.getElementById("mc-email").value;
+    subscribe(email);
+  });
 })(jQuery);
