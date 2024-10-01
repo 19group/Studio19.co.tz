@@ -12,4 +12,11 @@
 @import "../../../css/components/list";
 @import "../../../css/components/social";
 @import "../../../css/components/nav-logo";
+@import "../../../css/components/form-sidebar";
+@import "../../../css/components/form-sidebar-button";
 
+// Modifications
+//sidebar
+.sidebar{
+    z-index: 650 !important;
+}
