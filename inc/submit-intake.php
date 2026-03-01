@@ -4,9 +4,9 @@ header('Content-Type: application/json');
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+require __DIR__ . '/PHPMailer/src/Exception.php';
+require __DIR__ . '/PHPMailer/src/PHPMailer.php';
+require __DIR__ . '/PHPMailer/src/SMTP.php';
 
 // Only allow POST requests
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -49,7 +49,7 @@ try {
     $mail->Port       = 465;                   // TCP port to connect to
 
     // Recipients
-    $mail->setFrom('noreply@studio19.co.tz', 'Studio 19 Lead System');
+    $mail->setFrom('noreply@studio19.co.tz', 'Studio 19 Team');
     $mail->addAddress('brian@studio19.co.tz'); // Add a recipient
     
     // Add Reply-To so hitting "Reply" goes to the client who submitted it
