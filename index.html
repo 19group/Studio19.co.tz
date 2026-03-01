@@ -729,12 +729,46 @@
         closeSidebar();
     });
 
-    btnSubmit.addEventListener("click", () => {
+    btnSubmit.addEventListener("click", async () => {
       const err = validateForm();
       if (err) return showToast(err);
 
-      showToast("Submitted. (Preview mode — wire to your CRM in production)");
-      closeSidebar();
+      const originalText = btnSubmit.innerHTML;
+      btnSubmit.innerHTML = "Submitting...";
+      btnSubmit.disabled = true;
+
+      try {
+        const response = await fetch("inc/submit-intake.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name: fName.value,
+            email: fEmail.value,
+            objective: fObjective.value,
+            timeframe: fTimeframe.value,
+            budget: fBudget.value
+          }),
+        });
+
+        const result = await response.json();
+        showToast(result.message);
+
+        if (result.success) {
+          setTimeout(() => {
+            closeSidebar();
+            fName.value = "";
+            fEmail.value = "";
+            fObjective.value = "";
+            fTimeframe.value = "";
+            fBudget.value = "";
+          }, 2000);
+        }
+      } catch (error) {
+        showToast("Error connecting to server. Please try again later.");
+      } finally {
+        btnSubmit.innerHTML = originalText;
+        btnSubmit.disabled = false;
+      }
     });
 
 
