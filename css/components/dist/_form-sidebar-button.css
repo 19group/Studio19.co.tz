@@ -1,0 +1,15 @@
+.brief-button {
+  position: absolute;
+  right: 25%;
+  left: 25%;
+}
+.brief-button .brief-button-init {
+  position: absolute;
+  right: 25%;
+  left: 25%;
+  top: 60px;
+  cursor: pointer;
+}
+.brief-button .brief-button-init h1 {
+  color: #09141f;
+}

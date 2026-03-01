@@ -1,0 +1,47 @@
+.client-logo{
+    overflow: hidden;
+    position: relative;
+    // background: #09141f;
+    &-slide{
+        display:flex;
+        animation: slide 20s linear infinite;
+        align-items: center;
+        white-space: nowrap;
+        &:hover{
+            animation-play-state: paused;
+        }
+    }
+    &-image{
+        height:100%;
+    }
+    &:before{
+        content: "";
+        top: 0;
+        position: absolute;
+        width: 20%;
+        height: 100%;
+        z-index: 1;
+        left: 0;
+        background: linear-gradient(to left, rgba(255,255,255,0), $color_white);
+   
+    }
+    &:after{
+        content: "";
+        top: 0;
+        right: 0;
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0), $color_white);
+    z-index: 3;
+    }
+}
+
+@keyframes slide {
+   from{
+    transform: translatex(0);
+   }
+   to{
+    transform: translatex(-100%);
+   }
+}

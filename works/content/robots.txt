@@ -1,0 +1,26 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /config/
+Disallow: /includes/
+Disallow: /error/
+Disallow: /logs/
+Disallow: /scripts/
+Disallow: /templates/
+Disallow: /tmp/
+Disallow: /uploads/
+Disallow: /vendor/
+Disallow: /README.md
+Disallow: /LICENSE.txt
+Disallow: /CONTRIBUTING.md
+Disallow: /CHANGELOG.md
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://www.studio19.co.tz/sitemap.xml

@@ -1,0 +1,11 @@
+.client-logo-row {
+  height: 50vh;
+}
+.client-logo-row ul {
+  height: 100px;
+  width: 100px;
+}
+.client-logo-row ul img {
+  height: 100px;
+  width: 100px;
+}

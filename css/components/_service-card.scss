@@ -1,0 +1,25 @@
+
+.card{
+    background: #18212a;
+    .card-top{
+        background: #eaa708; 
+        padding: 20px;
+        .card-img-top{
+            position: relative;
+            left:40%;
+            top:8%;
+            
+        }
+        .card-title{
+            text-align: center;
+        }
+        .card-icon{
+            height: 50px;
+            width: 50px;
+        }
+    }
+    .card-text{
+        color: #fff;
+    }
+    
+}

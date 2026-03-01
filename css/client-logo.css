@@ -1,0 +1,44 @@
+.client-logo {
+  overflow: hidden;
+  position: relative;
+}
+.client-logo .client-logo-slide {
+  display: flex;
+  animation: slide 20s linear infinite;
+  white-space: nowrap;
+}
+.client-logo .client-logo-slide:hover {
+  animation-play-state: paused;
+}
+.client-logo img {
+  height: 50%;
+}
+.client-logo:before {
+  content: "";
+  top: 0;
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  z-index: 1;
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #09141f);
+}
+.client-logo:after {
+  content: "";
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 250px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #09141f);
+  z-index: 3;
+}
+
+@keyframes slide {
+  from {
+    transform: translatex(0);
+  }
+  to {
+    transform: translatex(-100%);
+  }
+}/*# sourceMappingURL=client-logo.css.map */

@@ -1,0 +1,8 @@
+.row-t {
+  margin: -15px;
+}
+
+.col-t {
+  flex: unset;
+  padding: 15px;
+}

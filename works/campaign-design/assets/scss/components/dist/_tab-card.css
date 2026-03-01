@@ -1,0 +1,98 @@
+.tab {
+  position: relative;
+  margin: 65px 10px 40px 10px;
+}
+.tab .tab-navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+.tab .tab-navigation .tab-menu {
+  color: aquamarine;
+  list-style: none;
+  background: blue;
+  padding: 10px;
+  white-space: nowrap;
+  border-bottom: 1px solid #ccc;
+  border-radius: 50px;
+  box-shadow: burlywood;
+  overflow-x: hidden;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.tab .tab-navigation .tab-menu::-webkit-scrollbar {
+  display: none;
+}
+.tab .tab-navigation .tab-menu .tab-btn {
+  color: black;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0 2px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+  transition: 0.3s ease;
+}
+.tab .tab-navigation .tab-menu .tab-btn:hover {
+  background: #349a62;
+}
+.tab .tab-navigation .tab-menu .active {
+  background: aquamarine;
+}
+
+.tab-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 10;
+  height: 100vh;
+}
+.tab-content .tab {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  max-width: 1100px;
+  padding: 15px 50px;
+  transform: translateX(25px);
+  opacity: 0;
+  pointer-events: none;
+}
+.tab-content .tab .roow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  gap: 30px;
+}
+.tab-content .tab .roow .left-column .img-card {
+  position: relative;
+  width: 450px;
+  max-width: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tab-content .tab .roow .left-column .img-card img {
+  width: 100%;
+}
+.tab-content .tab .roow .right-column {
+  max-width: 800px;
+}
+.tab-content .active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: 1s ease;
+}

@@ -1,0 +1,52 @@
+/* 2.4 - Decorations Images & Shapes - Start
+================================================== */
+.decoration_wrap {
+  z-index: 1;
+  position: relative;
+}
+.decoration_wrap .deco_item {
+  z-index: -1;
+  position: absolute;
+}
+.decoration_wrap .overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  position: absolute;
+}
+.decoration_wrap .half_bg_top {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+.portfolio_decoration_wrap {
+  z-index: 1;
+  position: relative;
+}
+.portfolio_decoration_wrap .deco_item {
+  z-index: -1;
+  position: absolute;
+}
+.portfolio_decoration_wrap .overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  position: absolute;
+}
+.portfolio_decoration_wrap .half_bg_top {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+/* 2.4 - Decorations Images & Shapes - End
+================================================== */

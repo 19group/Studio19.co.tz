@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050509" />
+    <title>Local Production Support | Studio 19</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: "#09141f",
+                        brand: "#F2B51D",
+                        panel: "rgba(255,255,255,0.06)",
+                        border: "rgba(255,255,255,0.12)",
+                        text: "rgba(255,255,255,0.92)",
+                        muted: "rgba(255,255,255,0.70)",
+                        muted2: "rgba(255,255,255,0.55)",
+                        muted3: "rgba(255,255,255,0.40)",
+                    },
+                    boxShadow: {
+                        soft: "0 0 0 1px rgba(255,255,255,0.08), 0 18px 55px rgba(0,0,0,0.55)",
+                    },
+                    borderRadius: {
+                        xl2: "24px",
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .noise {
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+            opacity: 0.18;
+            mix-blend-mode: soft-light;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .bgGlow {
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            min-height: 100%;
+            background:
+                radial-gradient(circle at 18% 20%,
+                    rgba(242, 181, 29, 0.12),
+                    transparent 38%),
+                radial-gradient(circle at 76% 26%,
+                    rgba(255, 255, 255, 0.08),
+                    transparent 40%),
+                radial-gradient(circle at 55% 70%,
+                    rgba(255, 255, 255, 0.05),
+                    transparent 45%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .heroText {
+            text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+        }
+
+        .btnPrimary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(242, 181, 29, 0.4);
+            background-color: #F2B51D;
+            padding: 0.75rem 1rem;
+            font-size: 13px;
+            font-weight: 800;
+            color: black;
+            box-shadow: 0 8px 24px rgba(242, 181, 29, 0.35);
+            transition: all 0.2s;
+        }
+
+        .btnPrimary:hover {
+            transform: translateY(-2px);
+            background-color: rgba(242, 181, 29, 0.9);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-bg text-text font-sans overflow-x-hidden">
+    <!-- Top Bar -->
+    <div class="relative z-10">
+        <div class="max-w-[1140px] mx-auto px-[18px]">
+            <div class="flex items-center justify-between py-5">
+                <a href="../index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+                    <div class="w-11 h-11 rounded-2xl bg-white/5 border border-border grid place-items-center">
+                        🌍
+                    </div>
+                    <div>
+                        <div class="text-sm font-extrabold text-white">
+                            Studio 19 | Production Support
+                        </div>
+                        <div class="text-xs text-brand mt-0.5">
+                            ← Back to Home
+                        </div>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center gap-4">
+                    <a class="text-[13px] text-muted2 hover:text-white" href="#services">Our Logistics</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative z-10 flex items-center overflow-hidden border-b border-border">
+        <div class="bgGlow"></div>
+        <div class="noise"></div>
+        <div class="max-w-[1140px] mx-auto px-[18px] py-10 lg:py-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="flex flex-col relative z-20">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-bold w-fit mb-5">
+                        🌍 Fixers & Production Management
+                    </div>
+                    <h1 class="text-[clamp(28px,3vw,44px)] leading-[1.1] font-extrabold text-white heroText">
+                        Seamless execution from <br />
+                        <span class="text-white/80">permits to wrap.</span>
+                    </h1>
+
+                    <p class="mt-4 text-[16px] leading-relaxed text-white/80 max-w-[500px]">
+                        For international crews filming in Tanzania and East Africa. Let us handle the friction of
+                        regional productions so you can focus entirely on your creative output.
+                    </p>
+
+                    <div class="mt-8 flex gap-4">
+                        <button class="btnPrimary px-6 py-3 text-sm" onclick="window.location.href='../index.html'">
+                            Request Support →
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative z-20 w-full max-w-[440px] mx-auto lg:mr-0 hidden lg:block">
+                    <div
+                        class="rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative aspect-[4/5] lg:aspect-auto hd:h-[400px]">
+                        <img src="../portfolio/sbc/16-days/images/impact1.webp" alt="Production Crew On Location"
+                            class="w-full h-full object-cover transform hover:scale-105 transition duration-700" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Productions We've Supported Section -->
+    <section id="proof" class="relative z-10 py-24 bg-[#09141f]">
+        <div class="max-w-[1140px] mx-auto px-[18px]">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div>
+                    <div class="text-[11px] tracking-[0.22em] text-brand font-extrabold mb-3">ON THE GROUND</div>
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-white">Selected Productions We've Supported.
+                    </h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Production 1 -->
+                <article
+                    class="group rounded-[20px] overflow-hidden bg-white/5 border border-white/10 hover:border-brand/30 transition duration-500 flex flex-col cursor-pointer">
+                    <div class="relative w-full h-48 overflow-hidden">
+                        <div
+                            class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition duration-500 z-10">
+                        </div>
+                        <img src="../portfolio/sbc/16-days/images/impact1.webp" alt="16 Days of Activism Shoot"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3
+                            class="text-base font-extrabold text-white mb-2 group-hover:text-brand transition duration-300">
+                            16 Days of Activism</h3>
+                        <p class="text-[13px] text-muted2 leading-relaxed mb-4 flex-grow line-clamp-3">
+                            Full logistical support, including remote location scouting and rigorous permit compliance.
+                        </p>
+                        <div class="mt-auto">
+                            <span
+                                class="inline-flex items-center gap-2 text-[10px] tracking-widest font-extrabold text-white/40">
+                                DOC & CAMPAIGN
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Production 2 -->
+                <article
+                    class="group rounded-[20px] overflow-hidden bg-white/5 border border-white/10 hover:border-brand/30 transition duration-500 flex flex-col cursor-pointer">
+                    <div class="relative w-full h-48 overflow-hidden bg-[#0d1c29]">
+                        <img src="../portfolio/sbc/youth-financial/images/impact3.webp"
+                            alt="Regional Financial Doc"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80" />
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3
+                            class="text-base font-extrabold text-white mb-2 group-hover:text-brand transition duration-300">
+                            Regional Finance Doc</h3>
+                        <p class="text-[13px] text-muted2 leading-relaxed mb-4 flex-grow line-clamp-3">
+                            Multi-country production coordination handling cross-border gear movement.
+                        </p>
+                        <div class="mt-auto">
+                            <span
+                                class="inline-flex items-center gap-2 text-[10px] tracking-widest font-extrabold text-white/40">
+                                DOCUMENTARY
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Production 3 -->
+                <article
+                    class="group rounded-[20px] overflow-hidden bg-white/5 border border-white/10 hover:border-brand/30 transition duration-500 flex flex-col cursor-pointer">
+                    <div class="relative w-full h-48 overflow-hidden bg-[#0a1520] grid place-items-center">
+                        <div class="text-4xl opacity-50">🦅</div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3
+                            class="text-base font-extrabold text-white mb-2 group-hover:text-brand transition duration-300">
+                            Wildlife Feature</h3>
+                        <p class="text-[13px] text-muted2 leading-relaxed mb-4 flex-grow line-clamp-3">
+                            Specialized remote camp logistics, drone permits, and 4x4 off-road fleet management.
+                        </p>
+                        <div class="mt-auto">
+                            <span
+                                class="inline-flex items-center gap-2 text-[10px] tracking-widest font-extrabold text-white/40">
+                                NATURAL HISTORY
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Production 4 -->
+                <article
+                    class="group rounded-[20px] overflow-hidden bg-white/5 border border-white/10 hover:border-brand/30 transition duration-500 flex flex-col cursor-pointer">
+                    <div class="relative w-full h-48 overflow-hidden bg-[#0a1520] grid place-items-center">
+                        <div class="text-4xl opacity-50">📰</div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3
+                            class="text-base font-extrabold text-white mb-2 group-hover:text-brand transition duration-300">
+                            Breaking News Stringers</h3>
+                        <p class="text-[13px] text-muted2 leading-relaxed mb-4 flex-grow line-clamp-3">
+                            Rapid-response accreditation, fixer deployment, and fast-turnaround translation services.
+                        </p>
+                        <div class="mt-auto">
+                            <span
+                                class="inline-flex items-center gap-2 text-[10px] tracking-widest font-extrabold text-white/40">
+                                BROADCAST NEWS
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Production 5 -->
+                <article
+                    class="group rounded-[20px] overflow-hidden bg-white/5 border border-white/10 hover:border-brand/30 transition duration-500 flex flex-col cursor-pointer">
+                    <div class="relative w-full h-48 overflow-hidden bg-[#0a1520] grid place-items-center">
+                        <div class="text-4xl opacity-50">🎥</div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3
+                            class="text-base font-extrabold text-white mb-2 group-hover:text-brand transition duration-300">
+                            Brand Commercial</h3>
+                        <p class="text-[13px] text-muted2 leading-relaxed mb-4 flex-grow line-clamp-3">
+                            Casting, large-scale location holds, and specialized lighting rental sourcing in-country.
+                        </p>
+                        <div class="mt-auto">
+                            <span
+                                class="inline-flex items-center gap-2 text-[10px] tracking-widest font-extrabold text-white/40">
+                                TVC
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Production 6 -->
+                <article
+                    class="group rounded-[20px] overflow-hidden bg-white/5 border border-white/10 hover:border-brand/30 transition duration-500 flex flex-col cursor-pointer">
+                    <div class="relative w-full h-48 overflow-hidden bg-[#0d1c29]">
+                        <img src="../portfolio/sbc/shtuka/images/impact.png" alt="Shtuka Campaign Production"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-700 opacity-80" />
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3
+                            class="text-base font-extrabold text-white mb-2 group-hover:text-brand transition duration-300">
+                            National Awareness Film</h3>
+                        <p class="text-[13px] text-muted2 leading-relaxed mb-4 flex-grow line-clamp-3">
+                            Multi-city roadshow styling, high-volume extra casting, and municipal coordination.
+                        </p>
+                        <div class="mt-auto">
+                            <span
+                                class="inline-flex items-center gap-2 text-[10px] tracking-widest font-extrabold text-white/40">
+                                NATIONWIDE ENGAGEMENT
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Production 7 -->
+                <article
+                    class="group rounded-[20px] overflow-hidden bg-white/5 border border-white/10 hover:border-brand/30 transition duration-500 flex flex-col cursor-pointer">
+                    <div class="relative w-full h-48 overflow-hidden bg-[#0a1520] grid place-items-center">
+                        <div class="text-4xl opacity-50">⚓</div>
+                    </div>
+                    <div class="p-5 flex-grow flex flex-col">
+                        <h3
+                            class="text-base font-extrabold text-white mb-2 group-hover:text-brand transition duration-300">
+                            Coastal Conservation</h3>
+                        <p class="text-[13px] text-muted2 leading-relaxed mb-4 flex-grow line-clamp-3">
+                            Marine filming permits, boat chartering, and underwater housing logistics in Zanzibar.
+                        </p>
+                        <div class="mt-auto">
+                            <span
+                                class="inline-flex items-center gap-2 text-[10px] tracking-widest font-extrabold text-white/40">
+                                IMPACT DOC
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Production 8 (Placeholder) -->
+                <article
+                    class="group rounded-[20px] overflow-hidden bg-white/5 border border-dashed border-white/10 hover:border-brand/30 transition duration-500 flex flex-col items-center justify-center p-5 text-center bg-gradient-to-br from-white/5 flex-grow to-transparent">
+                    <div
+                        class="w-12 h-12 rounded-full bg-white/5 border border-white/10 grid place-items-center text-xl mb-3">
+                        🌍
+                    </div>
+                    <h3 class="text-sm font-extrabold text-white mb-1">Global Media Network</h3>
+                    <p class="text-xs text-muted2 max-w-sm">
+                        Ongoing support for international broadcasters across East Africa. <br />
+                        <span class="opacity-60">*Under NDA</span>
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services Matrix -->
+    <section id="services" class="relative z-10 py-24 bg-gradient-to-b from-bg to-[#0d1c29]">
+        <div class="max-w-[1140px] mx-auto px-[18px]">
+            <div class="text-center mb-16">
+                <div class="text-[11px] tracking-[0.22em] text-brand font-extrabold mb-3">WHAT WE HANDLE</div>
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-white">Full-Stack Local Fixer Services</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[900px] mx-auto">
+                <div
+                    class="flex items-start gap-5 p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-brand/40 transition">
+                    <div class="text-3xl bg-black/40 w-12 h-12 rounded-full grid place-items-center flex-shrink-0">📑
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-extrabold text-white mb-2">Permits & Compliance</h3>
+                        <p class="text-sm text-muted2 leading-relaxed">
+                            Navigating local journalism boards, filming boards, drones, and location permits. We ensure
+                            you are fully compliant and immune from red tape delays before you even land.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="flex items-start gap-5 p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-brand/40 transition">
+                    <div class="text-3xl bg-black/40 w-12 h-12 rounded-full grid place-items-center flex-shrink-0">🎬
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-extrabold text-white mb-2">Vetted Local Crew</h3>
+                        <p class="text-sm text-muted2 leading-relaxed">
+                            Need an extra AC, a local DIT, sound operator, or grip team? We hire pre-vetted, highly
+                            professional technical crews to integrate seamlessly with your core team.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="flex items-start gap-5 p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-brand/40 transition">
+                    <div class="text-3xl bg-black/40 w-12 h-12 rounded-full grid place-items-center flex-shrink-0">🚙
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-extrabold text-white mb-2">Logistics & Accommodation</h3>
+                        <p class="text-sm text-muted2 leading-relaxed">
+                            Reliable 4x4 vehicles for remote shoots, comfortable accommodation handling, and robust
+                            catering designed for long, demanding shoot days.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="flex items-start gap-5 p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-brand/40 transition">
+                    <div class="text-3xl bg-black/40 w-12 h-12 rounded-full grid place-items-center flex-shrink-0">🎥
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-extrabold text-white mb-2">Equipment Sourcing</h3>
+                        <p class="text-sm text-muted2 leading-relaxed">
+                            Fill gaps in your gear cache without paying excess baggage fees. We source standard
+                            lighting, grip gear, and camera support from trusted regional rental houses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-[#0a1520] relative border-t border-white/10">
+        <div class="max-w-[800px] mx-auto px-[18px] relative z-10 text-center">
+            <h2 class="text-[clamp(32px,3vw,44px)] leading-tight font-extrabold text-white mb-6">
+                Filming soon?
+            </h2>
+            <p class="text-[17px] text-muted2 mb-10 max-w-[600px] mx-auto">
+                Share your shoot dates and locations via our quick intake system. We'll outline what's needed for
+                permits and provide a logistical ballpark.
+            </p>
+            <button class="btnPrimary px-8 py-4" onclick="window.location.href='../index.html'">
+                Logistics Intake →
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer block -->
+    <footer class="py-8 border-t border-border text-center">
+        <p class="text-xs text-muted3">© 2026 Studio 19. Telling Africa's Stories.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+.first-text{
+  white-space: nowrap; /* Prevents text from wrapping */ 
+  }
+
+.sec-text{
+  overflow: hidden;
+  position: relative; 
+  animation: 
+  typing 2s steps(11);
+  border-right: 2px solid #000; /* Creates the cursor effect */
+  width: 100%;
+
+}
+ 

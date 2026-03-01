@@ -1,0 +1,22 @@
+@import "components/client-logo";
+@import "components/team-section";
+@import "components/testimonial";
+@import "components/whatsapp";
+@import "components/work-service-section";
+@import "components/responsive";
+@import "components/selected-work";
+@import "components/experiences";
+@import "components/video-player";
+// @import "../../components/selected-work";
+@import "../../../css/components/footer";
+@import "../../../css/components/list";
+@import "../../../css/components/social";
+@import "../../../css/components/nav-logo";
+@import "../../../css/components/form-sidebar";
+@import "../../../css/components/form-sidebar-button";
+
+// Modifications
+//sidebar
+.sidebar{
+    z-index: 650 !important;
+}

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio 19 | MIE: China Trade Week</title>
+
+    <!-- Meta tags for SEO & Social Sharing -->
+    <meta name="description"
+        content="A targeted financial literacy campaign driving adoption and healthy financial habits among youth by Studio 19.">
+    <meta property="og:title" content="Studio 19 | Youth Financial Inclusion Campaign">
+    <meta property="og:description"
+        content="Learn how we drove behavior change in East African youth financial habits.">
+    <meta property="og:image" content="../portfolio/sbc/youth-financial/images/impact3.webp">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                    },
+                    colors: {
+                        bg: '#040b12',
+                        brand: '#F2B51D',
+                        border: 'rgba(255, 255, 255, 0.08)',
+                        text: '#ffffff',
+                        muted: '#a3a3a3',
+                        muted2: '#8b9bb4',
+                        muted3: '#526075',
+                        /* Light mode specific tokens */
+                        lightBg: '#fafafa',
+                        lightCard: '#ffffff',
+                        lightBorder: 'rgba(0, 0, 0, 0.08)',
+                        lightText: '#111827',
+                        lightMuted: '#4b5563',
+                        lightMuted2: '#6b7280'
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .noise {
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.025;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        .bgGlow {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 500px;
+            background: radial-gradient(circle at top, rgba(242, 181, 29, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Fluid Typography for Headers */
+        .heroText {
+            font-size: clamp(36px, 6vw, 64px);
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+        }
+
+        .sectionText {
+            font-size: clamp(28px, 4vw, 42px);
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+        }
+
+        /* Base Buttons */
+        .btnPrimary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(242, 181, 29, 0.4);
+            background-color: #F2B51D;
+            padding: 0.75rem 1.5rem;
+            font-size: 13px;
+            font-weight: 800;
+            color: black;
+            box-shadow: 0 8px 24px rgba(242, 181, 29, 0.35);
+            transition: all 0.2s;
+        }
+
+        .btnPrimary:hover {
+            transform: translateY(-2px);
+            background-color: rgba(242, 181, 29, 0.9);
+        }
+
+        .glass-panel-light {
+            background: rgba(255, 255, 255, 1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+
+        .glass-panel-light:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+    
+
+
+    </style>
+    <link rel="stylesheet" href="../../../../css/client-partnership.css">
+</head>
+
+<body class="min-h-screen bg-lightBg font-sans overflow-x-hidden text-lightText">
+    <!-- Top Bar (Dark) -->
+    <div class="relative z-50 bg-bg/90 backdrop-blur-md border-b border-white/5 sticky top-0">
+        <div class="max-w-[1140px] mx-auto px-[18px]">
+            <div class="flex items-center justify-between py-4">
+                <a href="../../../../services/sbc.html" class="flex items-center gap-3 hover:opacity-80 transition group">
+                    <div
+                        class="w-10 h-10 rounded-full bg-white/5 border border-white/10 grid place-items-center group-hover:bg-brand/10 group-hover:text-brand transition">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                            class="text-white group-hover:text-brand transition">
+                            <path d="M12.6667 8H3.33333M3.33333 8L8 12.6667M3.33333 8L8 3.33333" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="text-[13px] font-extrabold text-white">Back to SBC & Campaigns</div>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex">
+                    <a href="../../../../index.html"
+                        class="px-4 py-2 rounded-full border border-white/10 text-white hover:border-brand/50 text-[12px] font-extrabold transition hover:text-brand">START
+                        INTAKE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Header (Dark, Immersive) -->
+    <header
+        class="relative z-10 min-h-[60vh] lg:min-h-[70vh] flex flex-col justify-end pb-16 pt-32 overflow-hidden bg-bg">
+        <!-- Hero Background Image (Fluid full width) -->
+        <div class="absolute inset-0 z-0">
+            <img src="../../assets/images/course/china_trade_week.png" alt="Youth Financial Inclusion"
+                class="w-full h-full object-cover opacity-40 object-top mix-blend-luminosity">
+            <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/70 to-transparent"></div>
+        </div>
+
+        <div class="noise"></div>
+        <div class="bgGlow"></div>
+
+        <div class="max-w-[1140px] mx-auto px-[18px] w-full relative z-20">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-8"><div class="max-w-3xl">
+                
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/10 border border-brand/20 text-brand text-[11px] font-bold w-fit mb-5 uppercase tracking-widest">
+
+                    Digital Campaign & Field Activation
+                </div>
+                <h1 class="heroText font-extrabold text-white mb-6">
+                    MIE: China Trade Week
+                </h1>
+                <p class="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl font-light">
+                    A targeted financial literacy movement designed to drive adoption, instill healthy financial habits,
+                    and unlock structural economic participation among East African youth.
+                </p>
+            </div>
+            <!-- Client / Partnership Logo (Right Aligned) -->
+            <div class="hidden md:flex justify-end lg:pr-8 pb-4">
+                <img src="images/partnerlogo.png" alt="Client Partnership" class="client-partnership" onerror="this.style.display='none'">
+            </div>
+            <!-- Mobile Logo -->
+            <div class="md:hidden mt-6 mb-2">
+                <img src="images/partnerlogo.png" alt="Client Partnership" class="client-partnership" onerror="this.style.display='none'">
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <!-- Project Metrics / At a Glance (Light) -->
+    <section class="relative z-10 py-12 border-b border-lightBorder bg-white">
+        <div class="max-w-[1140px] mx-auto px-[18px]">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 divide-x-0 md:divide-x divide-lightBorder">
+                <div class="md:px-4 pl-0">
+                    <p class="text-[11px] font-extrabold text-brand tracking-widest mb-1">CLIENT</p>
+                    <p class="text-[15px] text-lightText font-bold">MIE Groups</p>
+                </div>
+                <div class="md:px-4">
+                    <p class="text-[11px] font-extrabold text-brand tracking-widest mb-1">OUR ROLE</p>
+                    <p class="text-[15px] text-lightText font-bold">B2B Trade Engagement</p>
+                </div>
+                <div class="md:px-4">
+                    <p class="text-[11px] font-extrabold text-brand tracking-widest mb-1">CORE METRIC</p>
+                    <p class="text-[15px] text-lightText font-bold">B2B Event Attendance</p>
+                </div>
+                <div class="md:px-4">
+                    <p class="text-[11px] font-extrabold text-brand tracking-widest mb-1">AUDIENCE</p>
+                    <p class="text-[15px] text-lightText font-bold">Tanzanian Enterprise</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Challenge & The Approach (Light) -->
+    <section class="relative z-10 py-24 bg-lightBg">
+        <div class="max-w-[1140px] mx-auto px-[18px]">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <!-- Challenge (Sticky) -->
+                <div class="lg:col-span-5">
+                    <div class="sticky top-32">
+                        <div
+                            class="w-12 h-12 rounded-2xl bg-brand/10 border border-brand/20 grid place-items-center text-xl mb-6">
+                            🎯
+                        </div>
+                        <h2 class="sectionText font-extrabold text-lightText mb-6">The Challenge</h2>
+                        <p class="text-[16px] text-lightMuted leading-relaxed mb-6">
+                            Youth represent the largest demographic in East Africa, yet formal financial inclusion
+                            remains disproportionately low. Traditional banking communications felt rigid, intimidating,
+                            and disconnected from the cultural reality of young income earners and students.
+                        </p>
+                        <p class="text-[16px] text-lightMuted leading-relaxed">
+                            The mandate was to decode financial jargon into aspirational, highly relatable content that
+                            bridged the trust deficit between young people and formal banking institutions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Approach (Scrolling content) -->
+                <div class="lg:col-span-7 lg:pl-12 lg:border-l border-lightBorder">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-black/5 border border-black/10 grid place-items-center text-xl mb-6 text-black">
+                        ⚡
+                    </div>
+                    <h2 class="text-3xl font-extrabold text-lightText mb-8">The Strategy: "IBUA!"</h2>
+
+                    <div class="space-y-8">
+                        <!-- Strategic Pillar -->
+                        <div class="glass-panel-light p-8 rounded-[24px]">
+                            <h3 class="text-[18px] font-extrabold text-lightText mb-3 flex items-center gap-3">
+                                <span class="text-brand">01 //</span> Behavioural Decoding
+                            </h3>
+                            <p class="text-[15px] text-lightMuted leading-relaxed">
+                                We bypassed standard "save your money" lectures. Instead, we framed formal financial
+                                tools as entirely foundational to youth independence, side-hustle growth, and digital
+                                freedom.
+                            </p>
+                        </div>
+
+                        <!-- Strategic Pillar -->
+                        <div class="glass-panel-light p-8 rounded-[24px]">
+                            <h3 class="text-[18px] font-extrabold text-lightText mb-3 flex items-center gap-3">
+                                <span class="text-brand">02 //</span> Hyper-Local Activation
+                            </h3>
+                            <p class="text-[15px] text-lightMuted leading-relaxed">
+                                Deploying field teams directly to university campuses and youth congregation zones. We
+                                utilized interactive engagement models (like the "IBUA! photo frames") to make
+                                participation feel social and viral.
+                            </p>
+                        </div>
+
+                        <!-- Strategic Pillar -->
+                        <div class="glass-panel-light p-8 rounded-[24px]">
+                            <h3 class="text-[18px] font-extrabold text-lightText mb-3 flex items-center gap-3">
+                                <span class="text-brand">03 //</span> Frictionless Onboarding
+                            </h3>
+                            <p class="text-[15px] text-lightMuted leading-relaxed">
+                                Awareness is useless without conversion. We worked with mobile banking partners and
+                                client agents on the ground to ensure that the moment a young person was engaged, they
+                                could open a tier-1 wallet or account in under 3 minutes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expanded Visual Evidence / Gallery (Dark - Cinematic) -->
+    <section class="relative z-10 py-24 bg-bg text-white">
+        <div class="max-w-[1140px] mx-auto px-[18px]">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+                <div>
+                    <div class="text-[11px] tracking-[0.22em] text-brand font-extrabold mb-3">CAMPAIGN VISUALS</div>
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-white">Creating a Movement.</h2>
+                </div>
+            </div>
+
+            <!-- Multi-Image Grid Gallery -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+                <!-- Large Main Image -->
+                <div
+                    class="md:col-span-8 rounded-[32px] overflow-hidden bg-white/5 border border-white/10 relative group h-[400px] md:h-[600px]">
+                    <img src="../../assets/images/course/china_trade_week.png" alt="Youth engagement field work"
+                        class="w-full h-full object-cover group-hover:scale-105 transition duration-1000">
+                    <div
+                        class="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
+                        <p class="text-white font-bold text-lg">Viral social participation frameworks ("IBUA!" photo
+                            frames).</p>
+                    </div>
+                </div>
+
+                <!-- Secondary Images Stack -->
+                <div class="md:col-span-4 grid grid-cols-1 gap-6">
+                    <div
+                        class="rounded-[24px] overflow-hidden bg-white/5 border border-white/10 relative group h-[200px] md:h-[288px]">
+                        <img src="../../assets/images/course/china_trade_week.png" alt="Field activation setup"
+                            class="w-full h-full object-cover group-hover:scale-105 transition duration-1000 mix-blend-luminosity hover:mix-blend-normal">
+                    </div>
+                    <div
+                        class="rounded-[24px] overflow-hidden bg-brand border border-white/10 relative group h-[200px] md:h-[288px] flex items-center justify-center p-8 text-center text-black">
+                        <!-- We can use a solid color block with text as a varied "visual" or placeholder for more collateral -->
+                        <div>
+                            <div class="text-[48px] font-extrabold leading-none mb-3">15+</div>
+                            <p class="text-sm font-bold opacity-80 uppercase tracking-widest">Universities<br>Activated
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Impact (Light) -->
+    <section class="relative z-10 py-24 bg-white border-b border-lightBorder">
+        <div class="max-w-[1140px] mx-auto px-[18px]">
+            <div class="text-center mb-16 max-w-2xl mx-auto">
+                <div class="text-[11px] tracking-[0.22em] text-brand font-extrabold mb-3">THE RESULTS</div>
+                <h2 class="sectionText font-extrabold text-lightText mb-6">Outputs that translate to real economic
+                    empowerment.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Impact Stat -->
+                <div class="text-center p-8 rounded-3xl bg-lightBg border border-lightBorder">
+                    <div class="text-[64px] font-extrabold text-brand leading-none mb-4">5k+</div>
+                    <div class="text-[15px] text-lightText font-bold mb-2">Verified B2B Attendees</div>
+                    <p class="text-[13px] text-lightMuted">Across targeted digital channels addressing core youth
+                        demographics.</p>
+                </div>
+
+                <!-- Impact Stat -->
+                <div class="text-center p-8 rounded-3xl bg-lightBg border border-lightBorder">
+                    <div class="text-[64px] font-extrabold text-brand leading-none mb-4">$10M+</div>
+                    <div class="text-[15px] text-lightText font-bold mb-2">In Deal Flow Initiated</div>
+                    <p class="text-[13px] text-lightMuted">High virality coefficient indicating message resonance.</p>
+                </div>
+
+                <!-- Impact Stat -->
+                <div class="text-center p-8 rounded-3xl bg-lightBg border border-lightBorder">
+                    <div class="text-[64px] font-extrabold text-brand leading-none mb-4">Scale</div>
+                    <div class="text-[15px] text-lightText font-bold mb-2">Largest Post-Covid Expo</div>
+                    <p class="text-[13px] text-lightMuted">Measurable transition in Knowledge, Attitudes, and Practices
+                        towards formal banking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Campaign Materials Accordion -->
+    <section class="relative z-10 py-16 bg-lightBg border-b border-lightBorder">
+        <div class="max-w-[800px] mx-auto px-[18px]">
+            <details class="group bg-white rounded-3xl border border-lightBorder shadow-sm overflow-hidden transition-all duration-300 open:shadow-md">
+                <summary class="flex items-center justify-between cursor-pointer p-6 list-none font-extrabold text-lg text-lightText hover:text-brand transition-colors">
+                    <span class="flex items-center gap-3">
+                        <svg class="w-6 h-6 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        View Campaign Materials
+                    </span>
+                    <span class="transition group-open:rotate-180">
+                        <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                    </span>
+                </summary>
+                <div class="p-6 pt-0 text-lightMuted border-t border-lightBorder/50 mt-2">
+                    <p class="mb-6 text-[15px]">Explore the tangible outputs and creative collateral developed for this campaign.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Placeholder Video / Asset Block -->
+                        <div class="aspect-video bg-gray-100 rounded-2xl border border-lightBorder flex flex-col items-center justify-center relative group overflow-hidden cursor-pointer hover:border-brand/50 transition duration-300">
+                            <div class="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-brand group-hover:scale-110 transition duration-300 z-10">
+                                <svg class="w-5 h-5 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M8 5v10l7-5-7-5z"/></svg>
+                            </div>
+                            <p class="absolute bottom-4 left-4 text-xs font-bold text-gray-500 z-10 bg-white/90 px-2 py-1 rounded">Primary TVC</p>
+                        </div>
+
+                        <!-- Placeholder Document / Asset Block -->
+                        <div class="aspect-video bg-gray-100 rounded-2xl border border-lightBorder flex flex-col items-center justify-center relative group overflow-hidden cursor-pointer hover:border-brand/50 transition duration-300">
+                            <div class="w-12 h-12 rounded-full bg-white shadow-lg flex items-center justify-center text-brand group-hover:scale-110 transition duration-300 z-10">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                            </div>
+                            <p class="absolute bottom-4 left-4 text-xs font-bold text-gray-500 z-10 bg-white/90 px-2 py-1 rounded">Research Report.pdf</p>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- Universal CTA Section (Brand Color) -->
+    <section class="py-24 bg-brand relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/5"></div>
+        <div class="max-w-[800px] mx-auto px-[18px] relative z-10 text-center">
+            <h2 class="text-[clamp(32px,3vw,44px)] leading-tight font-extrabold text-black mb-6">
+                Ready for similar results?
+            </h2>
+            <p class="text-[17px] text-black/80 mb-10 max-w-[600px] mx-auto">
+                Start our hyper-focused SBC intake process. Tell us your objective, audience, and timeline, and we’ll
+                propose a field-ready strategy.
+            </p>
+            <button
+                class="inline-flex items-center justify-center gap-2 rounded-2xl border border-black/20 bg-black px-8 py-5 text-[15px] font-extrabold text-white hover:-translate-y-1 shadow-lg hover:shadow-xl transition duration-300"
+                onclick="window.location.href='../../../../index.html'">
+                Submit a Campaign Brief →
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer block (Dark) -->
+    <footer class="py-8 border-t border-white/5 bg-bg relative z-10 text-center">
+        <p class="text-xs text-muted3">© 2026 Studio 19. Telling Africa's Stories.</p>
+    </footer>
+
+</body>
+
+</html>
