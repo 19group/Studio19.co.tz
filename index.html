@@ -505,17 +505,13 @@
           </select>
         </div>
 
-        <div class="rounded-xl border border-brand/20 bg-brand/5 p-4 mt-2" id="routeCard">
-          <b id="routeTitle" class="block text-[13px] text-brand"></b>
-          <span class="block mt-1 text-xs text-brand/80 leading-relaxed" id="routeNote"></span>
-        </div>
       </div>
 
       <div class="mt-8">
         <button id="btnSubmit"
           class="w-full flex items-center justify-center rounded-xl bg-brand px-4 py-4 text-[14px] font-extrabold text-black shadow-[0_8px_24px_rgba(242,181,29,0.35)] hover:-translate-y-0.5 hover:bg-brand/90 transition"
           type="button">
-          Let's Build Together →
+          Tell Us About Your Project
         </button>
       </div>
     </div>
@@ -599,41 +595,6 @@
       });
     }
 
-    // Lead scoring/routing
-    function scoreLead({ budget, timeframe, objective }) {
-      let score = 0;
-      if (budget === "20-50" || budget === "50+") score += 2;
-      if (
-        timeframe === "asap" ||
-        timeframe === "1mo" ||
-        timeframe === "3mo"
-      )
-        score += 1;
-      if ((objective || "").trim().length >= 20) score += 2;
-      return score;
-    }
-
-    function routeLead(score) {
-      if (score >= 4) {
-        return {
-          title: `You’re a strong fit. (${score}/5)`,
-          note: "We’ll reply with a proposed plan + next steps. If it’s urgent, we’ll prioritize a rapid kickoff.",
-          next: "Request a 30-min Call",
-        };
-      }
-      if (score >= 2) {
-        return {
-          title: `Potential fit. (${score}/5)`,
-          note: "We’ll review your brief and suggest the fastest path to clarity (scope, timeline, and realistic budget band).",
-          next: "Send Brief for Review",
-        };
-      }
-      return {
-        title: `Start with a lightweight scope. (${score}/5)`,
-        note: "We’ll send a quick checklist and recommend the best path (DIY, partial support, or full service).",
-        next: "Get the Scope Checklist",
-      };
-    }
 
     // Toast
     let toastTimer = null;
@@ -662,8 +623,6 @@
 
     const sideTitle = $("#sideTitle");
     const sideSub = $("#sideSub");
-    const routeTitle = $("#routeTitle");
-    const routeNote = $("#routeNote");
 
     const btnSubmit = $("#btnSubmit");
 
@@ -671,16 +630,6 @@
       document.body.style.overflow = locked ? "hidden" : "";
     }
 
-    function updateRouteInfo() {
-      const leadScore = scoreLead({
-        budget: fBudget.value,
-        timeframe: fTimeframe.value,
-        objective: fObjective.value,
-      });
-      const r = routeLead(leadScore);
-      routeTitle.textContent = r.title;
-      routeNote.textContent = `${r.note} Next step: ${r.next}.`;
-    }
 
     function validateForm() {
       if (!fName.value.trim()) return "Please enter your name.";
@@ -696,7 +645,6 @@
       setBodyScrollLocked(true);
       currentAvatar = avatarKey;
 
-      updateRouteInfo();
       requestAnimationFrame(() => fName.focus());
     }
 
@@ -791,14 +739,9 @@
 
 
 
-    [fBudget, fTimeframe, fObjective].forEach(el => {
-      el.addEventListener("input", updateRouteInfo);
-    });
-
     // Init
     renderAvatars();
     applyButtonClasses();
-    updateRouteInfo();
   </script>
 </body>
 
