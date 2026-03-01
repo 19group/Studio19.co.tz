@@ -24,13 +24,13 @@ if (!$data) {
 }
 
 $name = trim(stripslashes($data['name'] ?? ''));
-$email = trim(stripslashes($data['email'] ?? ''));
+$fromemail = trim(stripslashes($data['email'] ?? ''));
 $objective = trim(stripslashes($data['objective'] ?? ''));
 $timeframe = trim(stripslashes($data['timeframe'] ?? ''));
 $budget = trim(stripslashes($data['budget'] ?? 'Not specified'));
 
 // Basic Server-Side Validation
-if (empty($name) || empty($email) || empty($objective) || empty($timeframe)) {
+if (empty($name) || empty($fromemail) || empty($objective) || empty($timeframe)) {
     echo json_encode(['success' => false, 'message' => 'Please fill out all required fields.']);
     exit;
 }
@@ -41,7 +41,7 @@ try {
     // Server settings
     $mail->SMTPDebug = 0;                      // Disable verbose debug output for production
     $mail->isSMTP();                           // Send using SMTP
-    $mail->Host       = 'studio19.co.tz';      // Set the SMTP server to send through
+    $mail->Host       = "mail.studio19.co.tz";      // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                  // Enable SMTP authentication
     $mail->Username   = 'noreply@studio19.co.tz'; // SMTP username
     $mail->Password   = 'Noreply@stud1019';    // SMTP password
@@ -53,7 +53,7 @@ try {
     $mail->addAddress('brian@studio19.co.tz'); // Add a recipient
     
     // Add Reply-To so hitting "Reply" goes to the client who submitted it
-    $mail->addReplyTo($email, $name);
+    $mail->addReplyTo($fromemail, $name);
 
     // Content
     $mail->isHTML(true); // Set email format to HTML
@@ -62,7 +62,7 @@ try {
     // Email Body Construction
     $body = "<h2>New Lead Intake Form Submission</h2>";
     $body .= "<p><strong>Name:</strong> {$name}</p>";
-    $body .= "<p><strong>Email/Contact:</strong> {$email}</p>";
+    $body .= "<p><strong>Email/Contact:</strong> {$fromemail}</p>";
     $body .= "<p><strong>Timeframe:</strong> {$timeframe}</p>";
     $body .= "<p><strong>Estimated Budget:</strong> {$budget}</p>";
     $body .= "<h3>Project Objective:</h3>";
