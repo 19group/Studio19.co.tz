@@ -444,101 +444,78 @@
     class="sidebar fixed top-0 transition-[right] duration-200 ease-out w-[460px] max-w-[92vw] h-screen bg-[#0e1a24] border-l border-white/10 shadow-soft z-[60] flex flex-col">
     <div class="p-5 border-b border-white/10 flex items-start justify-between gap-3">
       <div>
-        <h4 id="sideTitle" class="m-0 text-base font-extrabold">
-          Lead Intake
+        <h4 id="sideTitle" class="m-0 text-[18px] font-extrabold text-white">
+          Let’s Build Something Powerful.
         </h4>
-        <p id="sideSub" class="mt-1 text-xs text-muted3 leading-relaxed">
-          Pick a path, answer 3–5 minutes, and we’ll respond with the best
-          next step.
+        <p id="sideSub" class="mt-1 text-[13px] text-muted3 leading-relaxed">
+          Tell us a little about what you need. We’ll recommend the best next step.
         </p>
       </div>
-      <button id="closeSidebar" class="w-10 h-10 rounded-2xl border border-white/10 bg-white/5 grid place-items-center"
+      <button id="closeSidebar"
+        class="w-10 h-10 rounded-2xl border border-white/10 bg-white/5 grid place-items-center hover:bg-white/10 transition"
         type="button" aria-label="Close">
         ✕
       </button>
     </div>
 
-    <div class="p-5 overflow-auto">
-
-      <!-- Step 0 -->
-      <div class="space-y-3" data-step="0">
+    <div class="p-5 overflow-auto pb-20">
+      <div class="space-y-6" data-step="0">
         <div class="field">
-          <div class="flex items-center justify-between gap-2">
-            <label class="text-[13px] font-extrabold">Your name</label>
-          </div>
-          <input id="fName" class="mt-2 w-full rounded-2xl border border-white/10 bg-black/35 px-3 py-3 text-[13px]"
+          <label class="block text-[13px] font-extrabold mb-2 text-white/90">1. Name</label>
+          <input id="fName"
+            class="w-full rounded-xl border border-white/10 bg-black/35 px-4 py-3.5 text-[14px] outline-none focus:border-brand/40 transition"
             placeholder="Full name" />
         </div>
 
         <div class="field">
-          <div class="flex items-center justify-between gap-2">
-            <label class="text-[13px] font-extrabold">Email</label><span class="text-[11px] text-muted3">or phone</span>
-          </div>
+          <label class="block text-[13px] font-extrabold mb-2 text-white/90">2. Email or WhatsApp</label>
           <input id="fEmail" type="text"
-            class="mt-2 w-full rounded-2xl border border-white/10 bg-black/35 px-3 py-3 text-[13px]"
+            class="w-full rounded-xl border border-white/10 bg-black/35 px-4 py-3.5 text-[14px] outline-none focus:border-brand/40 transition"
             placeholder="name@org.com or +255..." />
         </div>
 
         <div class="field">
-          <div class="flex items-center justify-between gap-2">
-            <label class="text-[13px] font-extrabold">Which path fits you?</label>
-          </div>
-          <select id="fAvatar" class="mt-2 w-full rounded-2xl border border-white/10 bg-black/35 px-3 py-3 text-[13px]">
-            <option value="">Select…</option>
-            <option value="sbc">SBC Strategist (Behaviour Change)</option>
-            <option value="global">
-              Global Partner (Production Support)
-            </option>
-            <option value="visibility">
-              Visibility Champion (Impact Film)
-            </option>
-          </select>
-        </div>
-        <div class="field">
-          <div class="flex items-center justify-between gap-2">
-            <label class="text-[13px] font-extrabold">In one sentence: what must happen?</label><span
-              class="text-[11px] text-muted3">be concrete</span>
-          </div>
-          <textarea id="fObjective" rows="3"
-            class="mt-2 w-full rounded-2xl border border-white/10 bg-black/35 px-3 py-3 text-[13px]"
-            placeholder="e.g., Increase sign-ups by X; execute a 6-day shoot; produce a flagship film for AGM…"></textarea>
+          <label class="block text-[13px] font-extrabold mb-2 text-white/90">3. What are you trying to achieve?</label>
+          <textarea id="fObjective" rows="4"
+            class="w-full rounded-xl border border-white/10 bg-black/35 px-4 py-3.5 text-[14px] outline-none focus:border-brand/40 transition resize-none placeholder-white/30"
+            placeholder="&quot;We’re launching a campaign...&quot;&#10;&quot;We need video production support...&quot;&#10;&quot;We want to increase signups by 30%...&quot;"></textarea>
         </div>
 
         <div class="field">
-          <div class="flex items-center justify-between gap-2">
-            <label class="text-[13px] font-extrabold">Budget band (ballpark)</label>
-          </div>
-          <select id="fBudget" class="mt-2 w-full rounded-2xl border border-white/10 bg-black/35 px-3 py-3 text-[13px]">
-            <option value="">Select…</option>
-            <option value="lt10">Under $10k</option>
-            <option value="10-25">$10k–$25k</option>
-            <option value="25-75">$25k–$75k</option>
-            <option value="75+">$75k+</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <div class="flex items-center justify-between gap-2">
-            <label class="text-[13px] font-extrabold">Timeframe</label>
-          </div>
+          <label class="block text-[13px] font-extrabold mb-2 text-white/90">4. When do you need this?</label>
           <select id="fTimeframe"
-            class="mt-2 w-full rounded-2xl border border-white/10 bg-black/35 px-3 py-3 text-[13px]">
-            <option value="">Select…</option>
-            <option value="urgent">0–4 weeks</option>
-            <option value="soon">1–3 months</option>
-            <option value="planned">3–6 months</option>
-            <option value="explore">Exploring</option>
+            class="w-full rounded-xl border border-white/10 bg-black/35 px-4 py-3.5 text-[14px] text-white outline-none focus:border-brand/40 transition appearance-none">
+            <option value="" disabled selected>Select timeframe…</option>
+            <option value="asap">ASAP</option>
+            <option value="1mo">Within 1 month</option>
+            <option value="3mo">1–3 months</option>
+            <option value="explore">Just exploring</option>
           </select>
         </div>
-        <div class="rounded-2xl border border-white/10 bg-black/30 p-3">
-          <b id="routeTitle" class="block text-[13px]"></b>
-          <span class="block mt-1 text-xs text-muted2 leading-relaxed" id="routeNote"></span>
+
+        <div class="field">
+          <label class="block text-[13px] font-extrabold mb-2 text-white/90">5. Estimated budget (optional)</label>
+          <select id="fBudget"
+            class="w-full rounded-xl border border-white/10 bg-black/35 px-4 py-3.5 text-[14px] text-white outline-none focus:border-brand/40 transition appearance-none">
+            <option value="" disabled selected>Select budget band…</option>
+            <option value="lt5">Under $5K</option>
+            <option value="5-20">$5K–$20K</option>
+            <option value="20-50">$20K–$50K</option>
+            <option value="50+">$50K+</option>
+          </select>
+        </div>
+
+        <div class="rounded-xl border border-brand/20 bg-brand/5 p-4 mt-2" id="routeCard">
+          <b id="routeTitle" class="block text-[13px] text-brand"></b>
+          <span class="block mt-1 text-xs text-brand/80 leading-relaxed" id="routeNote"></span>
         </div>
       </div>
 
-      <div class="mt-4 flex gap-2">
-        <button id="btnSubmit" class="btnPrimary flex-1" type="button">
-          Submit
+      <div class="mt-8">
+        <button id="btnSubmit"
+          class="w-full flex items-center justify-center rounded-xl bg-brand px-4 py-4 text-[14px] font-extrabold text-black shadow-[0_8px_24px_rgba(242,181,29,0.35)] hover:-translate-y-0.5 hover:bg-brand/90 transition"
+          type="button">
+          Let's Build Together →
         </button>
       </div>
     </div>
@@ -625,11 +602,11 @@
     // Lead scoring/routing
     function scoreLead({ budget, timeframe, objective }) {
       let score = 0;
-      if (budget === "25-75" || budget === "75+") score += 2;
+      if (budget === "20-50" || budget === "50+") score += 2;
       if (
-        timeframe === "urgent" ||
-        timeframe === "soon" ||
-        timeframe === "planned"
+        timeframe === "asap" ||
+        timeframe === "1mo" ||
+        timeframe === "3mo"
       )
         score += 1;
       if ((objective || "").trim().length >= 20) score += 2;
@@ -679,11 +656,9 @@
     // Form fields
     const fName = $("#fName");
     const fEmail = $("#fEmail");
-    const fAvatar = $("#fAvatar");
     const fBudget = $("#fBudget");
     const fTimeframe = $("#fTimeframe");
     const fObjective = $("#fObjective");
-    const fConsent = $("#fConsent");
 
     const sideTitle = $("#sideTitle");
     const sideSub = $("#sideSub");
@@ -707,43 +682,21 @@
       routeNote.textContent = `${r.note} Next step: ${r.next}.`;
     }
 
-    function applyAvatarMeta(avatarKey) {
-      const spec = AVATARS[avatarKey] || null;
-      if (!spec) {
-        sideTitle.textContent = "Lead Intake";
-        sideSub.textContent =
-          "Pick a path, answer 2 minutes, and we’ll respond with the best next step.";
-        return;
-      }
-      sideTitle.textContent = `${spec.name} Intake`;
-      sideSub.textContent = spec.oneLiner;
-    }
-
     function validateForm() {
       if (!fName.value.trim()) return "Please enter your name.";
-      if (!fEmail.value.trim()) return "Please provide email or phone.";
-      if (!fAvatar.value) return "Please select your path (avatar).";
-      if (fObjective.value.trim().length < 10)
-        return "Please write a clearer objective (10+ characters).";
-      if (!fBudget.value) return "Please select a budget band.";
+      if (!fEmail.value.trim()) return "Please provide email or WhatsApp.";
+      if (fObjective.value.trim().length < 5)
+        return "Please write a clearer objective.";
       if (!fTimeframe.value) return "Please select your timeframe.";
-      if (!fConsent.checked) return "Please tick consent to continue.";
       return "";
     }
 
     function openSidebar(avatarKey = "") {
       sidebar.classList.add("open");
       setBodyScrollLocked(true);
+      currentAvatar = avatarKey;
 
-      if (avatarKey) fAvatar.value = avatarKey;
-
-      const nextAvatar = fAvatar.value;
-      currentAvatar = nextAvatar;
-
-      applyAvatarMeta(currentAvatar);
-      fConsent.checked = false;
       updateRouteInfo();
-
       requestAnimationFrame(() => fName.focus());
     }
 
@@ -836,11 +789,7 @@
       closeSidebar();
     });
 
-    fAvatar.addEventListener("change", () => {
-      const next = fAvatar.value;
-      currentAvatar = next;
-      applyAvatarMeta(currentAvatar);
-    });
+
 
     [fBudget, fTimeframe, fObjective].forEach(el => {
       el.addEventListener("input", updateRouteInfo);
