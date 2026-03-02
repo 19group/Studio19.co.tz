@@ -299,6 +299,24 @@
         </h2>
       </div>
 
+      <script>
+        // Handle pre-filling from URL parameters (contextual cross-page routing)
+        document.addEventListener('DOMContentLoaded', () => {
+          const params = new URLSearchParams(window.location.search);
+          const sourceContext = params.get('source');
+          const fObjective = document.getElementById('fObjective');
+
+          if (sourceContext && fObjective) {
+            fObjective.value = `I am interested in discussing your work regarding ${sourceContext}. `;
+
+            // Programmatically trigger the contact sidebar
+            if (typeof openSidebar === 'function') {
+              openSidebar();
+            }
+          }
+        });
+      </script>
+
       <div
         class="mt-12 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-y-10 gap-x-8 items-center justify-items-center">
         <!-- Row 1 -->
@@ -739,6 +757,9 @@
       btnSubmit.disabled = true;
 
       try {
+        const params = new URLSearchParams(window.location.search);
+        const sourceContext = params.get('source') || 'Direct Home Page';
+
         const response = await fetch("/inc/submit-intake.php", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -747,7 +768,8 @@
             email: fEmail.value,
             objective: fObjective.value,
             timeframe: fTimeframe.value,
-            budget: fBudget.value
+            budget: fBudget.value,
+            source: sourceContext
           }),
         });
 
