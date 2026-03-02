@@ -15,3 +15,5 @@ index_01.html
 404.html
 works/content/experiences/js/dist/script.dev.js
 *.zip
+# Backend Credentials
+inc/config.php

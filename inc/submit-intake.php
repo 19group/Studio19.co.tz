@@ -8,6 +8,16 @@ require __DIR__ . '/PHPMailer/src/Exception.php';
 require __DIR__ . '/PHPMailer/src/PHPMailer.php';
 require __DIR__ . '/PHPMailer/src/SMTP.php';
 
+// Load secure configuration
+$configPath = __DIR__ . '/config.php';
+if (file_exists($configPath)) {
+    require_once $configPath;
+} else {
+    // Fallback or error if config doesn't exist on server
+    echo json_encode(['success' => false, 'message' => 'Server configuration missing.']);
+    exit;
+}
+
 // Only allow POST requests
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     echo json_encode(['success' => false, 'message' => 'Invalid request method.']);
@@ -43,8 +53,8 @@ try {
     $mail->isSMTP();                           // Send using SMTP
     $mail->Host       = "mail.studio19.co.tz";      // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                  // Enable SMTP authentication
-    $mail->Username   = 'noreply@studio19.co.tz'; // SMTP username
-    $mail->Password   = 'Noreply@stud1019';    // SMTP password
+    $mail->Username   = defined('SMTP_USERNAME') ? SMTP_USERNAME : 'noreply@studio19.co.tz';
+    $mail->Password   = defined('SMTP_PASSWORD') ? SMTP_PASSWORD : '';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Enable implicit TLS encryption
     $mail->Port       = 465;                   // TCP port to connect to
 
