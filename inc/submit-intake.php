@@ -51,7 +51,7 @@ try {
     // Server settings
     $mail->SMTPDebug = 0;                      // Disable verbose debug output for production
     $mail->isSMTP();                           // Send using SMTP
-    $mail->Host       = "mail.studio19.co.tz";      // Set the SMTP server to send through
+    $mail->Host       = defined('SMTP_HOST') ? SMTP_HOST : 'mail.studio19.co.tz'; // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                  // Enable SMTP authentication
     $mail->Username   = defined('SMTP_USERNAME') ? SMTP_USERNAME : 'noreply@studio19.co.tz';
     $mail->Password   = defined('SMTP_PASSWORD') ? SMTP_PASSWORD : '';
@@ -60,7 +60,8 @@ try {
 
     // Recipients
     $mail->setFrom($mail->Username, 'Studio 19 Team');
-    $mail->addAddress('brian@studio19.co.tz'); // Add a recipient
+    $toAddress = defined('SMTP_TO_ADDRESS') ? SMTP_TO_ADDRESS : 'brian@studio19.co.tz';
+    $mail->addAddress($toAddress); // Add a recipient
     
     // Add Reply-To so hitting "Reply" goes to the client who submitted it
     $mail->addReplyTo($fromemail, $name);
