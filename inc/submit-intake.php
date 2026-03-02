@@ -59,7 +59,7 @@ try {
     $mail->Port       = 465;                   // TCP port to connect to
 
     // Recipients
-    $mail->setFrom('noreply@studio19.co.tz', 'Studio 19 Team');
+    $mail->setFrom($mail->Username, 'Studio 19 Team');
     $mail->addAddress('brian@studio19.co.tz'); // Add a recipient
     
     // Add Reply-To so hitting "Reply" goes to the client who submitted it
