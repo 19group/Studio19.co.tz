@@ -53,14 +53,14 @@ try {
     $mail->isSMTP();                           // Send using SMTP
     $mail->Host       = defined('SMTP_HOST') ? SMTP_HOST : 'mail.studio19.co.tz'; // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                  // Enable SMTP authentication
-    $mail->Username   = defined('SMTP_USERNAME') ? SMTP_USERNAME : 'noreply@studio19.co.tz';
+    $mail->Username   = defined('SMTP_USERNAME') ? SMTP_USERNAME : 'norelpy@studio19.co.tz';
     $mail->Password   = defined('SMTP_PASSWORD') ? SMTP_PASSWORD : '';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Enable implicit TLS encryption
     $mail->Port       = 465;                   // TCP port to connect to
 
     // Recipients
     $mail->setFrom($mail->Username, 'Studio 19 Team');
-    $toAddress = defined('SMTP_TO_ADDRESS') ? SMTP_TO_ADDRESS : 'brian@studio19.co.tz';
+    $toAddress = defined('SMTP_TO_ADDRESS') ? SMTP_TO_ADDRESS : 'service@studio19.co.tz';
     $mail->addAddress($toAddress); // Add a recipient
     
     // Add Reply-To so hitting "Reply" goes to the client who submitted it
@@ -68,10 +68,10 @@ try {
 
     // Content
     $mail->isHTML(true); // Set email format to HTML
-    $mail->Subject = 'New Lead Submission: ' . $name;
+    $mail->Subject = 'New Enquiry (From Website): ' . $name;
     
     // Email Body Construction
-    $body = "<h2>New Lead Intake Form Submission</h2>";
+    $body = "<h2>New Enquiry (From Website)</h2>";
     $body .= "<p><strong>Name:</strong> {$name}</p>";
     $body .= "<p><strong>Email/Contact:</strong> {$fromemail}</p>";
     $body .= "<p><strong>Timeframe:</strong> {$timeframe}</p>";
