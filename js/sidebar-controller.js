@@ -15,12 +15,16 @@ window._sidebarRootPath = rootPath;
 
 // Global summon function
 window.summonForm = async function (sourceContext = "Direct Inquiry") {
+    // If sidebar logic hasn't been initialized, load it first
     if (!sidebarHtmlLoaded) {
         await loadSidebarHtml();
     }
 
+    // Try to open it if the function exists
     if (typeof window.openSidebar === 'function') {
         window.openSidebar(sourceContext);
+    } else {
+        console.error("openSidebar function not found. Sidebar logic might not have initialized correctly.");
     }
 }
 
@@ -28,7 +32,9 @@ async function loadSidebarHtml() {
     if (sidebarHtmlLoaded) return;
 
     try {
-        const fetchPath = `${window._sidebarRootPath}inc/sidebar.html`;
+        // Fallback root path if _sidebarRootPath is not set
+        const base = window._sidebarRootPath || './';
+        const fetchPath = `${base}inc/sidebar.html`.replace('//', '/');
 
         const response = await fetch(fetchPath);
         if (!response.ok) throw new Error("Failed to load sidebar HTML");
@@ -36,21 +42,34 @@ async function loadSidebarHtml() {
 
         // Inject into body
         const container = document.createElement("div");
+        container.id = "sidebar-container";
         container.innerHTML = html;
         document.body.appendChild(container);
 
         sidebarHtmlLoaded = true;
 
+        // Initialize the logic immediately after injection
         initSidebarLogic();
     } catch (error) {
         console.error("Sidebar loading error:", error);
-        alert("Could not load the contact form. Please try again later.");
+        // Silently fail if fetch fails instead of alerting unless it's a critical production environment
+        // alert("Could not load the contact form. Please try again later.");
     }
 }
 
 function initSidebarLogic() {
-    // Utility
+    // Define utility function for this scope
     const $ = (sel) => document.querySelector(sel);
+
+    const sidebar = $("#sidebar");
+    const fName = $("#fName");
+    const fEmail = $("#fEmail");
+    const fBudget = $("#fBudget");
+    const fTimeframe = $("#fTimeframe");
+    const fObjective = $("#fObjective");
+    const btnSubmit = $("#btnSubmit");
+
+    if (!sidebar) return; // Guard clause
 
     let toastTimer = null;
     function showToast(text) {
@@ -61,17 +80,9 @@ function initSidebarLogic() {
         if (toastTimer) window.clearTimeout(toastTimer);
         toastTimer = window.setTimeout(
             () => toast.classList.add("hidden"),
-            2600
+            3500
         );
     }
-
-    const sidebar = $("#sidebar");
-    const fName = $("#fName");
-    const fEmail = $("#fEmail");
-    const fBudget = $("#fBudget");
-    const fTimeframe = $("#fTimeframe");
-    const fObjective = $("#fObjective");
-    const btnSubmit = $("#btnSubmit");
 
     function setBodyScrollLocked(locked) {
         document.body.style.overflow = locked ? "hidden" : "";
@@ -91,58 +102,64 @@ function initSidebarLogic() {
         setBodyScrollLocked(false);
     }
 
-    $("#closeSidebar").addEventListener("click", window.closeSidebar);
+    const closeBtn = $("#closeSidebar");
+    if (closeBtn) {
+        closeBtn.addEventListener("click", window.closeSidebar);
+    }
+
     window.addEventListener("keydown", (ev) => {
         if (ev.key === "Escape" && sidebar && sidebar.classList.contains("open"))
             window.closeSidebar();
     });
 
-    btnSubmit.addEventListener("click", async () => {
-        const err = validateForm();
-        if (err) return showToast(err);
+    if (btnSubmit) {
+        btnSubmit.addEventListener("click", async () => {
+            const err = validateForm();
+            if (err) return showToast(err);
 
-        const originalText = btnSubmit.innerHTML;
-        btnSubmit.innerHTML = "Submitting...";
-        btnSubmit.disabled = true;
+            const originalText = btnSubmit.innerHTML;
+            btnSubmit.innerHTML = "Submitting...";
+            btnSubmit.disabled = true;
 
-        try {
-            const sourceContext = window._sidebarSourceContext || 'Direct Inquiry';
+            try {
+                const sourceContext = window._sidebarSourceContext || 'Direct Inquiry';
+                const base = window._sidebarRootPath || './';
+                const fetchPath = `${base}inc/submit-intake.php`.replace('//', '/');
 
-            const fetchPath = `${window._sidebarRootPath}inc/submit-intake.php`;
+                const response = await fetch(fetchPath, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        name: fName.value,
+                        email: fEmail.value,
+                        objective: fObjective.value,
+                        timeframe: fTimeframe.value,
+                        budget: fBudget.value,
+                        source: sourceContext
+                    }),
+                });
 
-            const response = await fetch(fetchPath, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    name: fName.value,
-                    email: fEmail.value,
-                    objective: fObjective.value,
-                    timeframe: fTimeframe.value,
-                    budget: fBudget.value,
-                    source: sourceContext
-                }),
-            });
+                const result = await response.json();
+                showToast(result.message);
 
-            const result = await response.json();
-            showToast(result.message);
-
-            if (result.success) {
-                setTimeout(() => {
-                    window.closeSidebar();
-                    fName.value = "";
-                    fEmail.value = "";
-                    fObjective.value = "";
-                    fTimeframe.value = "";
-                    fBudget.value = "";
-                }, 2000);
+                if (result.success) {
+                    setTimeout(() => {
+                        window.closeSidebar();
+                        fName.value = "";
+                        fEmail.value = "";
+                        fObjective.value = "";
+                        fTimeframe.value = "";
+                        fBudget.value = "";
+                    }, 2000);
+                }
+            } catch (error) {
+                showToast("Error connecting to server. Please try again later.");
+            } finally {
+                btnSubmit.innerHTML = originalText;
+                btnSubmit.disabled = false;
             }
-        } catch (error) {
-            showToast("Error connecting to server. Please try again later.");
-        } finally {
-            btnSubmit.innerHTML = originalText;
-            btnSubmit.disabled = false;
-        }
-    });
+        });
+    }
 
     window.openSidebar = function (sourceContext = "") {
         window._sidebarSourceContext = sourceContext || "Direct Inquiry";
