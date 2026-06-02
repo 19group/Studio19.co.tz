@@ -15,6 +15,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#050509" />
     <title>Local Production Support | Studio 19</title>
+    <meta name="description" content="Studio 19 provides full-stack local fixer and production support services for international crews filming in Tanzania and East Africa." />
+    <link rel="canonical" href="https://studio19.co.tz/services/production-support.html" />
+    <meta property="og:title" content="Local Production Support | Studio 19" />
+    <meta property="og:description" content="Studio 19 provides full-stack local fixer and production support services for international crews filming in Tanzania and East Africa." />
+    <meta property="og:image" content="https://studio19.co.tz/portfolio/campaigns/16-days/images/impact1.webp" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://studio19.co.tz/services/production-support.html" />
+    <meta name="twitter:card" content="summary_large_image" />
     <script src="../js/sidebar-controller.js" defer></script>
     <script src="../js/footer-controller.js" defer></script>
 
@@ -102,6 +110,26 @@
             transform: translateY(-2px);
             background-color: rgba(242, 181, 29, 0.9);
         }
+
+        .btnBase {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 0.75rem 1rem;
+            font-size: 13px;
+            font-weight: 800;
+            color: white;
+            transition: all 0.2s;
+        }
+
+        .btnBase:hover {
+            transform: translateY(-2px);
+            background-color: rgba(255, 255, 255, 0.1);
+        }
     </style>
 </head>
 
@@ -125,7 +153,9 @@
                     </div>
                 </a>
                 <div class="hidden lg:flex items-center gap-4">
+                    <a class="text-[13px] text-muted2 hover:text-white" href="#proof">Our Work</a>
                     <a class="text-[13px] text-muted2 hover:text-white" href="#services">Our Logistics</a>
+                    <a class="text-[13px] text-muted2 hover:text-white" href="../index.html">All Services</a>
                 </div>
             </div>
         </div>
@@ -152,17 +182,20 @@
                         regional productions so you can focus entirely on your creative output.
                     </p>
 
-                    <div class="mt-8 flex gap-4">
+                    <div class="mt-8 flex flex-wrap gap-4">
                         <button class="btnPrimary px-6 py-3 text-sm"
                             onclick="summonForm('Production Logistics')">
                             Get a Quote →
                         </button>
+                        <a href="#proof" class="btnBase px-6 py-3 text-sm">
+                            See Our Work ↓
+                        </a>
                     </div>
                 </div>
 
                 <div class="relative z-20 w-full max-w-[440px] mx-auto lg:mr-0 hidden lg:block">
                     <div
-                        class="rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative aspect-[4/5] lg:aspect-auto hd:h-[400px]">
+                        class="rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative aspect-[4/5] lg:aspect-[3/4]">
                         <img src="../portfolio/campaigns/16-days/images/impact1.webp" alt="Production Crew On Location"
                             class="w-full h-full object-cover transform hover:scale-105 transition duration-700" />
                     </div>
@@ -421,6 +454,23 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Organisations Section -->
+    <section class="relative z-10 bg-[#FFFDF8] py-20 lg:py-24">
+        <div class="max-w-[1140px] mx-auto px-[18px]">
+            <div class="text-center mb-16">
+                <div class="text-[11px] tracking-[0.22em] text-black/40 font-extrabold mb-4">PARTNERSHIPS OF TRUST</div>
+                <h2 class="text-3xl lg:text-[40px] font-extrabold text-black leading-tight">Organizations we have worked with</h2>
+            </div>
+            <div class="flex flex-wrap items-center justify-center gap-12 lg:gap-16">
+                <!-- Agha Khan Foundation logo needed: add to ../images/clients/agha-khan.webp -->
+                <img src="../images/clients/fsdt-logo.webp" alt="FSD Tanzania" class="h-20 w-auto max-w-[200px] object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300" />
+                <img src="../images/clients/world-bank.webp" alt="World Bank" class="h-20 w-auto max-w-[200px] object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300" />
+                <img src="../images/clients/Un-Women-logo.webp" alt="UN Women" class="h-20 w-auto max-w-[200px] object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300" />
+                <img src="../images/clients/unicef-for-every-child.webp" alt="UNICEF" class="h-20 w-auto max-w-[200px] object-contain grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition duration-300" />
             </div>
         </div>
     </section>
