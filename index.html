@@ -163,18 +163,15 @@
   </header>
 
   <!-- Fastest Way to Start -->
-  <section id="create" class="relative z-10 min-h-[78vh] flex items-center py-20 lg:py-24 bg-[#FFFDF8] text-black">
+  <section id="create" class="relative z-10 flex items-center py-10 lg:py-12 bg-[#FFFDF8] text-black">
     <div class="max-w-[1140px] mx-auto px-[18px] w-full">
-      <div class="flex flex-col items-start gap-4">
-        <div class="text-[11px] tracking-[0.22em] text-black/45 font-extrabold">
+      <div class="text-xs tracking-[0.14em] text-brand font-extrabold mb-3">OUR SERVICES</div>
+      <h2 class="text-[clamp(24px,2.8vw,36px)] leading-snug font-extrabold text-black mb-3">
+        How can we be of service?
+      </h2>
+      <p class="text-[15px] text-[#314565] mb-8 max-w-xl">Three things we do exceptionally well, for NGOs, brands, and international crews working in East Africa.</p>
 
-        </div>
-        <h2 class="text-[clamp(30px,3.3vw,44px)] leading-snug font-extrabold text-black">
-          How can we be of service?
-        </h2>
-      </div>
-
-      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8" id="avatarPick" data-theme="light">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5 items-start" id="avatarPick" data-theme="light">
         <!-- Avatar cards injected by JS -->
       </div>
     </div>
@@ -440,6 +437,7 @@
     const AVATARS = {
       sbc: {
         key: "sbc",
+        category: "SBC & CAMPAIGNS",
         emoji: `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2B51D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>`,
         image:
           "portfolio/campaigns/youth-financial/images/impact3.webp",
@@ -457,8 +455,9 @@
       },
       visibility: {
         key: "visibility",
+        category: "FILM & DOCUMENTARY",
         emoji: `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2B51D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>`,
-        image: "portfolio/campaigns/shtuka/images/impact.png",
+        image: "portfolio/content/images/UNICEF-THUMBNAIL.jpg",
         name: "Create an Impact Film / Documentary",
         oneLiner:
           "For brands, banks, and foundations that need boardroom-ready films.",
@@ -473,8 +472,9 @@
       },
       global: {
         key: "global",
+        category: "PRODUCTION SUPPORT",
         emoji: `<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F2B51D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 018 8c0 5.25-8 13-8 13S4 15.25 4 10a8 8 0 018-8z"/></svg>`,
-        image: "portfolio/campaigns/16-days/images/impact1.webp",
+        image: "images/ddc-mlanda-village.png",
         name: "Get Local Production Support",
         oneLiner:
           "For international crews filming in Tanzania & East Africa, from permits to wrap.",
@@ -521,37 +521,52 @@
           : "group relative w-full h-full rounded-[28px] border-[1px] bg-white/5 text-left shadow-soft transition-all duration-300 hover:-translate-y-2 hover:border-brand hover:bg-white/10 hover:shadow-[0_0_0_1px_rgba(255,255,255,0.06),0_24px_55px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col";
 
         const imageWrapper = `
-              <div class="w-full h-48 overflow-hidden relative">
+              <div class="w-full h-56 overflow-hidden relative">
                 <div class="absolute inset-0 bg-black/10 z-10 group-hover:bg-transparent transition-colors duration-300"></div>
                 <img src="${a.image}" alt="${a.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 will-change-transform" />
+                <div class="absolute bottom-0 inset-x-0 z-20 px-4 py-2.5 bg-black/55 backdrop-blur-md">
+                  <span class="text-[11px] font-extrabold tracking-widest text-brand">${a.category}</span>
+                </div>
               </div>
             `;
 
         const iconWrapper = isLight
-          ? "mb-5 inline-flex w-14 h-14 rounded-2xl bg-[#FEFAF0] border border-brand/30 shadow-sm items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300 absolute -top-7 right-6 z-20"
-          : "mb-5 inline-flex w-14 h-14 rounded-2xl bg-black/60 border border-white/20 shadow-[0_4px_12px_rgba(0,0,0,0.4)] items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300 absolute -top-7 right-6 z-20";
+          ? "inline-flex w-11 h-11 rounded-xl bg-[#FEFAF0] border border-brand/30 shadow-sm items-center justify-center group-hover:scale-110 transition-transform duration-300 absolute -top-5 right-5 z-20"
+          : "inline-flex w-11 h-11 rounded-xl bg-black/60 border border-white/20 shadow-[0_4px_12px_rgba(0,0,0,0.4)] items-center justify-center group-hover:scale-110 transition-transform duration-300 absolute -top-5 right-5 z-20";
 
         const titleClass = isLight
-          ? "text-xl font-extrabold text-[#0B1734] leading-snug group-hover:text-brand transition-colors duration-300"
-          : "text-xl font-extrabold text-white/95 leading-snug group-hover:text-brand transition-colors duration-300";
+          ? "text-[17px] font-extrabold text-[#0B1734] leading-snug group-hover:text-brand transition-colors duration-300"
+          : "text-[17px] font-extrabold text-white/95 leading-snug group-hover:text-brand transition-colors duration-300";
 
         const bodyClass = isLight
-          ? "mt-2 text-[14px] text-[#314565] leading-relaxed"
-          : "mt-2 text-[14px] text-muted2 leading-relaxed";
+          ? "mt-1.5 text-[13px] text-[#314565] leading-relaxed"
+          : "mt-1.5 text-[13px] text-muted2 leading-relaxed";
 
-        const arrowClass = isLight
-          ? "mt-6 ml-auto w-10 h-10 rounded-full border border-black/10 flex items-center justify-center text-[#0B1734] transition-all bg-transparent group-hover:bg-brand group-hover:border-brand group-hover:shadow-[0_8px_20px_rgba(242,181,29,0.4)]"
-          : "mt-6 ml-auto w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white transition-all bg-transparent group-hover:bg-brand group-hover:border-brand group-hover:text-black group-hover:shadow-[0_8px_20px_rgba(242,181,29,0.4)]";
+        const bulletClass = isLight ? "text-[#314565]" : "text-muted2";
+
+        const ctaClass = isLight
+          ? "mt-auto pt-4 flex items-center justify-between border-t border-black/8"
+          : "mt-auto pt-4 flex items-center justify-between border-t border-white/10";
+        const ctaTextClass = isLight
+          ? "text-[12px] font-extrabold tracking-wide text-[#0B1734] group-hover:text-brand transition-colors"
+          : "text-[12px] font-extrabold tracking-wide text-white/80 group-hover:text-brand transition-colors";
+        const ctaArrowClass = isLight
+          ? "text-[#0B1734] group-hover:text-brand group-hover:translate-x-1 transition-all"
+          : "text-white/80 group-hover:text-brand group-hover:translate-x-1 transition-all";
 
         btn.innerHTML = `
               <div class="flex flex-col h-full bg-transparent w-full">
                 ${imageWrapper}
-                <div class="p-6 relative flex flex-col flex-grow">
+                <div class="p-3 relative flex flex-col flex-grow">
                   <div class="${iconWrapper}">${a.emoji}</div>
-                  <div class="${titleClass} pr-6">${a.name}</div>
-                  <div class="${bodyClass} pr-2 flex-grow">${a.oneLiner}</div>
-                  <div class="${arrowClass} mt-auto shrink-0">
-                    <span class="text-lg group-hover:translate-x-1 transition-transform">→</span>
+                  <div class="${titleClass} mt-5 pr-4">${a.name}</div>
+                  <div class="${bodyClass} pr-2">${a.oneLiner}</div>
+                  <ul class="mt-2 space-y-1">
+                    ${a.bullets.map(b => `<li class="flex items-start gap-1.5 text-[13px] ${bulletClass}"><span class="text-brand mt-0.5 flex-shrink-0">›</span><span>${b}</span></li>`).join('')}
+                  </ul>
+                  <div class="${ctaClass} mt-3 shrink-0">
+                    <span class="${ctaTextClass}">Explore service</span>
+                    <span class="${ctaArrowClass}">→</span>
                   </div>
                 </div>
               </div>
