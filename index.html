@@ -557,9 +557,9 @@
         btn.innerHTML = `
               <div class="flex flex-col h-full bg-transparent w-full">
                 ${imageWrapper}
-                <div class="p-3 relative flex flex-col flex-grow">
+                <div class="p-5 relative flex flex-col flex-grow">
                   <div class="${iconWrapper}">${a.emoji}</div>
-                  <div class="${titleClass} mt-5 pr-4">${a.name}</div>
+                  <div class="${titleClass} mt-4 pr-4">${a.name}</div>
                   <div class="${bodyClass} pr-2">${a.oneLiner}</div>
                   <ul class="mt-2 space-y-1">
                     ${a.bullets.map(b => `<li class="flex items-start gap-1.5 text-[13px] ${bulletClass}"><span class="text-brand mt-0.5 flex-shrink-0">›</span><span>${b}</span></li>`).join('')}
