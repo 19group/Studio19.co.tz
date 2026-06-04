@@ -1796,7 +1796,7 @@ header .sound .equalizer .holder {
   position: absolute;
   left: 0;
   top: 0;
-  background: url(../images/background/hero-bg.png) center;
+  background: url(../images/background/hero-bg.webp) center;
   background-size: cover;
   z-index: 1;
 }
