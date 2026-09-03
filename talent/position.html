@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
 <!-- Google tag (gtag.js) -->
@@ -13,30 +13,36 @@
 </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#050509" />
+    <meta name="theme-color" content="#fafafa" />
     <title id="pageTitle">Talent &amp; Freelance Opportunities | Studio 19</title>
     <meta id="metaDescription" name="description" content="Open positions and freelance opportunities at Studio 19." />
     <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
     <script src="/js/sidebar-controller.js" defer></script>
     <script src="/js/footer-controller.js" defer></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: { sans: ['Manrope', 'sans-serif'] },
                     colors: {
-                        bg: "#09141f",
-                        brand: "#F2B51D",
-                        panel: "rgba(255,255,255,0.06)",
-                        border: "rgba(255,255,255,0.12)",
-                        text: "rgba(255,255,255,0.92)",
-                        muted: "rgba(255,255,255,0.70)",
-                        muted2: "rgba(255,255,255,0.55)",
-                        muted3: "rgba(255,255,255,0.40)",
-                    },
-                    boxShadow: {
-                        soft: "0 0 0 1px rgba(255,255,255,0.08), 0 18px 55px rgba(0,0,0,0.55)",
+                        bg: '#040b12',
+                        brand: '#F2B51D',
+                        border: 'rgba(255, 255, 255, 0.08)',
+                        text: '#ffffff',
+                        muted: '#a3a3a3',
+                        muted2: '#8b9bb4',
+                        muted3: '#526075',
+                        lightBg: '#fafafa',
+                        lightCard: '#ffffff',
+                        lightBorder: 'rgba(0, 0, 0, 0.08)',
+                        lightText: '#111827',
+                        lightMuted: '#4b5563',
+                        lightMuted2: '#6b7280',
                     },
                 },
             },
@@ -44,196 +50,209 @@
     </script>
 
     <style>
-        html { scroll-behavior: smooth; }
-
         .noise {
-            position: absolute; inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
-            opacity: 0.18; mix-blend-mode: soft-light; pointer-events: none; z-index: 1;
+            position: fixed; inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.025; pointer-events: none; z-index: 50;
         }
         .bgGlow {
-            position: absolute; inset: 0; height: 100%; min-height: 100%;
-            background:
-                radial-gradient(circle at 18% 20%, rgba(242, 181, 29, 0.12), transparent 38%),
-                radial-gradient(circle at 76% 26%, rgba(255, 255, 255, 0.08), transparent 40%);
+            position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+            width: 100vw; height: 500px;
+            background: radial-gradient(circle at top, rgba(242, 181, 29, 0.15) 0%, transparent 70%);
             pointer-events: none; z-index: 0;
         }
-        .heroText { text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45); }
+        .heroText { font-size: clamp(28px, 5vw, 48px); line-height: 1.1; letter-spacing: -0.02em; }
+
+        .badge-light {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.02em; border: 1px solid rgba(255,255,255,0.16); color: rgba(255,255,255,0.85);
+            background: rgba(255,255,255,0.06);
+        }
+        .badge-urgent { color: #F2B51D; border-color: rgba(242,181,29,0.4); background: rgba(242,181,29,0.12); }
+
+        .glass-panel-light {
+            background: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+        }
 
         .btnPrimary {
             display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
-            border-radius: 1rem; border: 1px solid rgba(242, 181, 29, 0.4);
-            background-color: #F2B51D; padding: 0.9rem 1.4rem; font-size: 14px; font-weight: 800;
-            color: black; box-shadow: 0 8px 24px rgba(242, 181, 29, 0.35); transition: all 0.2s; cursor: pointer;
-            border-width: 0;
+            border-radius: 1rem; border: 0; background-color: #F2B51D; padding: 0.9rem 1.4rem;
+            font-size: 14px; font-weight: 800; color: black; box-shadow: 0 8px 24px rgba(242, 181, 29, 0.3);
+            transition: all 0.2s; cursor: pointer;
         }
         .btnPrimary:hover { transform: translateY(-2px); background-color: rgba(242, 181, 29, 0.9); }
         .btnPrimary:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 
-        .btnBase {
+        .btnGhost {
             display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
-            border-radius: 1rem; border: 1px solid rgba(255, 255, 255, 0.1);
-            background-color: rgba(255, 255, 255, 0.05); padding: 0.75rem 1rem; font-size: 13px;
-            font-weight: 800; color: white; transition: all 0.2s;
+            border-radius: 999px; border: 1px solid rgba(255,255,255,0.16); background: transparent;
+            padding: 0.5rem 1rem; font-size: 12px; font-weight: 800; color: white; transition: all 0.2s;
         }
-        .btnBase:hover { transform: translateY(-2px); background-color: rgba(255, 255, 255, 0.1); }
+        .btnGhost:hover { border-color: rgba(242,181,29,0.5); color: #F2B51D; }
 
-        .badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            padding: 5px 10px; border-radius: 999px; font-size: 11px; font-weight: 800;
-            letter-spacing: 0.02em; border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.75);
-            background: rgba(255,255,255,0.05);
-        }
-        .badge-urgent { color: #F2B51D; border-color: rgba(242,181,29,0.4); background: rgba(242,181,29,0.1); }
-
-        .position-body h2 { font-size: 20px; font-weight: 800; color: white; margin: 32px 0 12px; }
+        .position-body h2 { font-size: 20px; font-weight: 800; color: #111827; margin: 32px 0 12px; }
         .position-body h2:first-child { margin-top: 0; }
-        .position-body h3 { font-size: 16px; font-weight: 800; color: #F2B51D; margin: 0 0 10px; }
-        .position-body p { color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 14px; }
-        .position-body p.note { font-style: italic; color: rgba(255,255,255,0.45); font-size: 13px; }
-        .position-body ul, .position-body ol { color: rgba(255,255,255,0.7); line-height: 1.7; margin: 0 0 14px; padding-left: 22px; }
+        .position-body h3 { font-size: 16px; font-weight: 800; color: #b8860f; margin: 0 0 10px; }
+        .position-body p { color: #4b5563; line-height: 1.7; margin-bottom: 14px; }
+        .position-body p.note { font-style: italic; color: #9ca3af; font-size: 13px; }
+        .position-body ul, .position-body ol { color: #4b5563; line-height: 1.7; margin: 0 0 14px; padding-left: 22px; }
         .position-body li { margin-bottom: 6px; }
         .position-body ul { list-style: disc; }
         .position-body ol { list-style: decimal; }
-        .position-body code { background: rgba(255,255,255,0.08); padding: 2px 6px; border-radius: 6px; font-size: 13px; }
+        .position-body code { background: rgba(0,0,0,0.06); padding: 2px 6px; border-radius: 6px; font-size: 13px; }
         .position-body .scenario-block {
-            background: rgba(242,181,29,0.06); border: 1px solid rgba(242,181,29,0.2);
+            background: rgba(242,181,29,0.06); border: 1px solid rgba(242,181,29,0.25);
             border-radius: 16px; padding: 20px 24px; margin: 20px 0;
         }
-        .position-body .scenario-block p, .position-body .scenario-block ol { color: rgba(255,255,255,0.78); }
+        .position-body .scenario-block p, .position-body .scenario-block ol { color: #52483a; }
 
-        .meta-chip { padding: 10px 14px; border-radius: 12px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); }
-        .meta-chip .label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.4); font-weight: 800; }
-        .meta-chip .value { font-size: 13px; color: white; font-weight: 700; margin-top: 2px; }
+        .meta-chip { text-align: center; }
+        .meta-chip .label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: #9ca3af; font-weight: 800; }
+        .meta-chip .value { font-size: 14px; color: #111827; font-weight: 700; margin-top: 4px; }
 
-        .field label { display: block; font-size: 13px; font-weight: 800; margin-bottom: 8px; color: rgba(255,255,255,0.9); }
+        .field label { display: block; font-size: 13px; font-weight: 800; margin-bottom: 8px; color: #111827; }
         .field input[type=text], .field input[type=email], .field input[type=tel], .field input[type=url] {
-            width: 100%; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);
-            background: rgba(0,0,0,0.35); padding: 14px 16px; font-size: 14px; color: white; outline: none; transition: border-color 0.2s;
+            width: 100%; border-radius: 12px; border: 1px solid rgba(0,0,0,0.12);
+            background: #fafafa; padding: 14px 16px; font-size: 14px; color: #111827; outline: none; transition: border-color 0.2s;
         }
-        .field input:focus { border-color: rgba(242,181,29,0.4); }
+        .field input:focus { border-color: rgba(242,181,29,0.6); background: white; }
         .field-file {
-            border: 1px dashed rgba(255,255,255,0.2); border-radius: 12px; padding: 16px;
-            background: rgba(0,0,0,0.25);
+            border: 1px dashed rgba(0,0,0,0.18); border-radius: 12px; padding: 16px; background: #fafafa;
         }
-        .field-file input[type=file] { width: 100%; font-size: 13px; color: rgba(255,255,255,0.7); }
+        .field-file input[type=file] { width: 100%; font-size: 13px; color: #4b5563; }
         .hp-field { position: absolute; left: -9999px; top: -9999px; opacity: 0; height: 0; width: 0; overflow: hidden; }
 
-        #applyStatus.error { color: #ff8a8a; }
-        #applyStatus.success { color: #7de89a; }
+        #applyStatus.error { color: #dc2626; }
+        #applyStatus.success { color: #15803d; }
     </style>
 </head>
 
-<body class="min-h-screen bg-bg text-text font-sans overflow-x-hidden">
+<body class="min-h-screen bg-lightBg font-sans overflow-x-hidden text-lightText">
+
     <!-- Top Bar -->
-    <div class="relative z-10">
+    <div class="relative z-50 bg-bg/90 backdrop-blur-md border-b border-white/5 sticky top-0">
         <div class="max-w-[900px] mx-auto px-[18px]">
-            <div class="flex items-center justify-between py-5">
-                <a href="/index.html" class="flex items-center gap-3 hover:opacity-80 transition">
-                    <div class="w-11 h-11 rounded-2xl bg-white/5 border border-border flex flex-col items-center justify-center overflow-hidden">
-                        <img src="/images/studio19-icon.png" alt="Studio 19 Icon" class="w-8 h-8 object-contain" />
+            <div class="flex items-center justify-between py-4">
+                <a href="/talent/" class="flex items-center gap-3 hover:opacity-80 transition group">
+                    <div class="w-10 h-10 rounded-full bg-white/5 border border-white/10 grid place-items-center overflow-hidden">
+                        <img src="/images/studio19-icon.png" alt="Studio 19 Icon" class="w-6 h-6 object-contain" />
                     </div>
                     <div>
-                        <div class="text-sm font-extrabold text-white">Studio 19 | Talent</div>
-                        <div class="text-xs text-brand mt-0.5">← All Open Positions</div>
+                        <div class="text-[13px] font-extrabold text-white">Studio 19 | Talent</div>
+                        <div class="text-[11px] text-brand">← All Open Positions</div>
                     </div>
                 </a>
-                <a href="/talent/" class="btnBase px-4 py-2.5 text-[12px]">All Positions</a>
+                <a href="/talent/" class="btnGhost">All Positions</a>
             </div>
         </div>
     </div>
 
-    <main class="relative z-10 max-w-[900px] mx-auto px-[18px] pb-24">
+    <main class="relative z-10">
 
         <!-- Loading -->
-        <div id="loadingState" class="py-24 text-center text-muted2">Loading position…</div>
+        <div id="loadingState" class="py-32 text-center text-lightMuted">Loading position…</div>
 
         <!-- Not found -->
-        <div id="notFoundState" class="py-24 text-center" hidden>
-            <h1 class="text-2xl font-extrabold text-white mb-3">Position Not Found</h1>
-            <p class="text-muted2 mb-6">We couldn't find that position. It may have been removed or the link is incorrect.</p>
+        <div id="notFoundState" class="py-32 text-center px-[18px]" hidden>
+            <h1 class="text-2xl font-extrabold text-lightText mb-3">Position Not Found</h1>
+            <p class="text-lightMuted mb-6">We couldn't find that position. It may have been removed or the link is incorrect.</p>
             <a href="/talent/" class="btnPrimary">See Open Positions →</a>
         </div>
 
         <!-- Position content -->
         <article id="positionContent" hidden>
-            <header class="relative pt-8 pb-10 border-b border-border">
-                <div class="bgGlow"></div>
+            <!-- Hero -->
+            <header class="relative min-h-[32vh] flex items-end pb-12 pt-20 overflow-hidden bg-bg">
                 <div class="noise"></div>
-                <div class="relative z-20">
+                <div class="bgGlow"></div>
+                <div class="max-w-[900px] mx-auto px-[18px] w-full relative z-20">
                     <div id="badgeRow" class="flex flex-wrap items-center gap-2 mb-5"></div>
-                    <h1 id="positionTitleHeading" class="text-[clamp(28px,4vw,42px)] leading-[1.15] font-extrabold text-white heroText"></h1>
-                    <div id="metaChips" class="flex flex-wrap gap-3 mt-6"></div>
+                    <h1 id="positionTitleHeading" class="heroText font-extrabold text-white"></h1>
                 </div>
             </header>
 
-            <div id="closedNotice" class="mt-8 p-6 rounded-2xl border border-white/10 bg-white/5 text-center" hidden>
-                <h2 class="text-lg font-extrabold text-white mb-2">This Position Is Closed</h2>
-                <p id="closedNoticeText" class="text-muted2 mb-4"></p>
-                <a href="/talent/" class="btnPrimary">See Current Openings →</a>
-            </div>
-
-            <div id="positionBody" class="position-body mt-8"></div>
-
-            <!-- Apply form -->
-            <section id="applySection" class="mt-12 pt-10 border-t border-border">
-                <h2 class="text-2xl font-extrabold text-white mb-2">Apply for This Position</h2>
-                <p class="text-muted2 mb-8">Fill in your details below. Fields marked * are required.</p>
-
-                <form id="applyForm" class="space-y-6" novalidate>
-                    <input type="hidden" id="fPositionId" name="positionId" />
-                    <input type="hidden" id="fPositionTitle" name="positionTitle" />
-
-                    <!-- Honeypot: left blank by humans, often auto-filled by bots -->
-                    <div class="hp-field" aria-hidden="true">
-                        <label for="fWebsite">Leave this field blank</label>
-                        <input type="text" id="fWebsite" name="website" tabindex="-1" autocomplete="off" />
-                    </div>
-
-                    <div class="field">
-                        <label for="fName">Full Name *</label>
-                        <input type="text" id="fName" name="name" required autocomplete="name" />
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="field">
-                            <label for="fPhone">Phone Number *</label>
-                            <input type="tel" id="fPhone" name="phone" required autocomplete="tel" placeholder="+255…" />
-                        </div>
-                        <div class="field">
-                            <label for="fEmail">Email *</label>
-                            <input type="email" id="fEmail" name="email" required autocomplete="email" />
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <label for="fVideoLink">Link to Your Video *</label>
-                        <input type="url" id="fVideoLink" name="videoLink" required placeholder="https://drive.google.com/… or https://youtube.com/…" />
-                    </div>
-
-                    <div class="field">
-                        <label for="fCv">CV / Resume (PDF or Word, max 5MB) *</label>
-                        <div class="field-file">
-                            <input type="file" id="fCv" name="cv" accept=".pdf,.doc,.docx" required />
-                        </div>
-                    </div>
-
-                    <div id="applyStatus" class="text-[13px] min-h-[18px]" role="status" aria-live="polite"></div>
-
-                    <button type="submit" id="applySubmit" class="btnPrimary w-full sm:w-auto">
-                        Submit Application →
-                    </button>
-                </form>
-
-                <div id="applySuccess" class="p-8 rounded-2xl border border-brand/30 bg-brand/5 text-center" hidden>
-                    <h3 class="text-xl font-extrabold text-white mb-2">Application Received</h3>
-                    <p id="applySuccessText" class="text-muted2"></p>
+            <!-- At a Glance -->
+            <section id="metaChipsSection" class="relative py-8 border-b border-lightBorder bg-white">
+                <div class="max-w-[900px] mx-auto px-[18px]">
+                    <div id="metaChips" class="grid grid-cols-2 md:grid-cols-3 gap-6 divide-x divide-lightBorder"></div>
                 </div>
             </section>
+
+            <div class="max-w-[900px] mx-auto px-[18px] pb-24">
+
+                <div id="closedNotice" class="mt-10 p-8 rounded-[24px] glass-panel-light text-center" hidden>
+                    <h2 class="text-lg font-extrabold text-lightText mb-2">This Position Is Closed</h2>
+                    <p id="closedNoticeText" class="text-lightMuted mb-5"></p>
+                    <a href="/talent/" class="btnPrimary">See Current Openings →</a>
+                </div>
+
+                <div id="positionBody" class="position-body mt-12"></div>
+
+                <!-- Apply form -->
+                <section id="applySection" class="mt-12 pt-12 border-t border-lightBorder">
+                    <div class="p-8 md:p-10 rounded-[24px] glass-panel-light">
+                        <h2 class="text-2xl font-extrabold text-lightText mb-2">Apply for This Position</h2>
+                        <p class="text-lightMuted mb-8">Fill in your details below. Fields marked * are required.</p>
+
+                        <form id="applyForm" class="space-y-6" novalidate>
+                            <input type="hidden" id="fPositionId" name="positionId" />
+                            <input type="hidden" id="fPositionTitle" name="positionTitle" />
+
+                            <!-- Honeypot: left blank by humans, often auto-filled by bots -->
+                            <div class="hp-field" aria-hidden="true">
+                                <label for="fWebsite">Leave this field blank</label>
+                                <input type="text" id="fWebsite" name="website" tabindex="-1" autocomplete="off" />
+                            </div>
+
+                            <div class="field">
+                                <label for="fName">Full Name *</label>
+                                <input type="text" id="fName" name="name" required autocomplete="name" />
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div class="field">
+                                    <label for="fPhone">Phone Number *</label>
+                                    <input type="tel" id="fPhone" name="phone" required autocomplete="tel" placeholder="+255…" />
+                                </div>
+                                <div class="field">
+                                    <label for="fEmail">Email *</label>
+                                    <input type="email" id="fEmail" name="email" required autocomplete="email" />
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <label for="fVideoLink">Link to Your Video *</label>
+                                <input type="url" id="fVideoLink" name="videoLink" required placeholder="https://drive.google.com/… or https://youtube.com/…" />
+                            </div>
+
+                            <div class="field">
+                                <label for="fCv">CV / Resume (PDF or Word, max 5MB) *</label>
+                                <div class="field-file">
+                                    <input type="file" id="fCv" name="cv" accept=".pdf,.doc,.docx" required />
+                                </div>
+                            </div>
+
+                            <div id="applyStatus" class="text-[13px] min-h-[18px]" role="status" aria-live="polite"></div>
+
+                            <button type="submit" id="applySubmit" class="btnPrimary w-full sm:w-auto">
+                                Submit Application →
+                            </button>
+                        </form>
+
+                        <div id="applySuccess" class="text-center" hidden>
+                            <h3 class="text-xl font-extrabold text-lightText mb-2">Application Received</h3>
+                            <p id="applySuccessText" class="text-lightMuted"></p>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </article>
     </main>
 
-    <footer class="py-8 border-t border-border text-center"></footer>
+    <footer class="py-8 border-t border-white/5 bg-bg relative z-10 text-center"></footer>
 
     <script src="/talent/talent-data.js"></script>
     <script>
@@ -244,15 +263,16 @@
             const urgent = daysLeft <= 5 && daysLeft >= 0;
             const remoteLabel = p.remote ? " · Remote-friendly" : "";
             document.getElementById("badgeRow").innerHTML = `
-                <span class="badge">${talentEscapeHtml(p.type || "")}</span>
-                <span class="badge">${talentEscapeHtml(p.location || "")}${remoteLabel}</span>
-                <span class="badge ${urgent ? "badge-urgent" : ""}">Deadline: ${talentFormatDate(p.deadline)}</span>
+                <span class="badge-light">${talentEscapeHtml(p.type || "")}</span>
+                <span class="badge-light">${talentEscapeHtml(p.location || "")}${remoteLabel}</span>
+                <span class="badge-light ${urgent ? "badge-urgent" : ""}">Deadline: ${talentFormatDate(p.deadline)}</span>
             `;
         }
 
         function renderMetaChips(p) {
+            const section = document.getElementById("metaChipsSection");
             const el = document.getElementById("metaChips");
-            if (!Array.isArray(p.meta) || p.meta.length === 0) { el.innerHTML = ""; return; }
+            if (!Array.isArray(p.meta) || p.meta.length === 0) { section.hidden = true; return; }
             el.innerHTML = p.meta.map(m => `
                 <div class="meta-chip">
                     <div class="label">${talentEscapeHtml(m.label)}</div>

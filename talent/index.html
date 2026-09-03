@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
 <!-- Google tag (gtag.js) -->
@@ -13,7 +13,7 @@
 </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#050509" />
+    <meta name="theme-color" content="#fafafa" />
     <title>Talent &amp; Freelance Opportunities | Studio 19</title>
     <meta name="description" content="Open positions and freelance opportunities at Studio 19, a creative media production company based in Dar es Salaam, Tanzania." />
     <link rel="canonical" href="https://studio19.co.tz/talent/" />
@@ -27,26 +27,29 @@
     <script src="/js/footer-controller.js" defer></script>
     <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    fontFamily: { sans: ['Manrope', 'sans-serif'] },
                     colors: {
-                        bg: "#09141f",
-                        brand: "#F2B51D",
-                        panel: "rgba(255,255,255,0.06)",
-                        border: "rgba(255,255,255,0.12)",
-                        text: "rgba(255,255,255,0.92)",
-                        muted: "rgba(255,255,255,0.70)",
-                        muted2: "rgba(255,255,255,0.55)",
-                        muted3: "rgba(255,255,255,0.40)",
-                    },
-                    boxShadow: {
-                        soft: "0 0 0 1px rgba(255,255,255,0.08), 0 18px 55px rgba(0,0,0,0.55)",
-                    },
-                    borderRadius: {
-                        xl2: "24px",
+                        bg: '#040b12',
+                        brand: '#F2B51D',
+                        border: 'rgba(255, 255, 255, 0.08)',
+                        text: '#ffffff',
+                        muted: '#a3a3a3',
+                        muted2: '#8b9bb4',
+                        muted3: '#526075',
+                        lightBg: '#fafafa',
+                        lightCard: '#ffffff',
+                        lightBorder: 'rgba(0, 0, 0, 0.08)',
+                        lightText: '#111827',
+                        lightMuted: '#4b5563',
+                        lightMuted2: '#6b7280',
                     },
                 },
             },
@@ -54,78 +57,77 @@
     </script>
 
     <style>
-        html { scroll-behavior: smooth; }
-
         .noise {
-            position: absolute; inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
-            opacity: 0.18; mix-blend-mode: soft-light; pointer-events: none; z-index: 1;
+            position: fixed; inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.025; pointer-events: none; z-index: 50;
         }
-
         .bgGlow {
-            position: absolute; inset: 0; height: 100%; min-height: 100%;
-            background:
-                radial-gradient(circle at 18% 20%, rgba(242, 181, 29, 0.12), transparent 38%),
-                radial-gradient(circle at 76% 26%, rgba(255, 255, 255, 0.08), transparent 40%),
-                radial-gradient(circle at 55% 70%, rgba(255, 255, 255, 0.05), transparent 45%);
+            position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+            width: 100vw; height: 500px;
+            background: radial-gradient(circle at top, rgba(242, 181, 29, 0.15) 0%, transparent 70%);
             pointer-events: none; z-index: 0;
         }
+        .heroText { font-size: clamp(36px, 6vw, 64px); line-height: 1.05; letter-spacing: -0.02em; }
 
-        .heroText { text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45); }
+        .glass-panel-light {
+            background: rgba(255, 255, 255, 1);
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+        }
+        .glass-panel-light:hover { box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); transform: translateY(-3px); }
+
+        .badge-light {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 5px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.02em; border: 1px solid rgba(0,0,0,0.08); color: #4b5563;
+            background: rgba(0,0,0,0.03);
+        }
+        .badge-urgent { color: #b8860f; border-color: rgba(242,181,29,0.4); background: rgba(242,181,29,0.12); }
 
         .card-skeleton {
-            border-radius: 24px;
-            border: 1px solid rgba(255,255,255,0.1);
-            background: rgba(255,255,255,0.04);
-            height: 148px;
-            animation: pulse 1.6s ease-in-out infinite;
+            border-radius: 24px; border: 1px solid rgba(0,0,0,0.06); background: #ffffff;
+            height: 148px; animation: pulse 1.6s ease-in-out infinite;
         }
-        @keyframes pulse { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
-
-        .badge {
-            display: inline-flex; align-items: center; gap: 6px;
-            padding: 5px 10px; border-radius: 999px; font-size: 11px; font-weight: 800;
-            letter-spacing: 0.02em; border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.75);
-            background: rgba(255,255,255,0.05);
-        }
-        .badge-urgent { color: #F2B51D; border-color: rgba(242,181,29,0.4); background: rgba(242,181,29,0.1); }
+        @keyframes pulse { 0%,100% { opacity: 0.5; } 50% { opacity: 1; } }
     </style>
 </head>
 
-<body class="min-h-screen bg-bg text-text font-sans overflow-x-hidden">
+<body class="min-h-screen bg-lightBg font-sans overflow-x-hidden text-lightText">
+
     <!-- Top Bar -->
-    <div class="relative z-10">
+    <div class="relative z-50 bg-bg/90 backdrop-blur-md border-b border-white/5 sticky top-0">
         <div class="max-w-[1140px] mx-auto px-[18px]">
-            <div class="flex items-center justify-between py-5">
-                <a href="/index.html" class="flex items-center gap-3 hover:opacity-80 transition">
-                    <div class="w-11 h-11 rounded-2xl bg-white/5 border border-border flex flex-col items-center justify-center overflow-hidden">
-                        <img src="/images/studio19-icon.png" alt="Studio 19 Icon" class="w-8 h-8 object-contain" />
+            <div class="flex items-center justify-between py-4">
+                <a href="/index.html" class="flex items-center gap-3 hover:opacity-80 transition group">
+                    <div class="w-10 h-10 rounded-full bg-white/5 border border-white/10 grid place-items-center overflow-hidden">
+                        <img src="/images/studio19-icon.png" alt="Studio 19 Icon" class="w-6 h-6 object-contain" />
                     </div>
                     <div>
-                        <div class="text-sm font-extrabold text-white">Studio 19 | Talent</div>
-                        <div class="text-xs text-brand mt-0.5">← Back to Home</div>
+                        <div class="text-[13px] font-extrabold text-white">Studio 19 | Talent</div>
                     </div>
                 </a>
-                <div class="hidden lg:flex items-center gap-4">
-                    <a class="text-[13px] text-muted2 hover:text-white" href="#positions">Open Positions</a>
-                    <a class="text-[13px] text-muted2 hover:text-white" href="/index.html">All Services</a>
+                <div class="hidden md:flex items-center gap-5">
+                    <a class="text-[12px] font-bold text-white/70 hover:text-white transition" href="#positions">Open Positions</a>
+                    <a class="text-[12px] font-bold text-white/70 hover:text-white transition" href="/index.html">All Services</a>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Hero -->
-    <header class="relative z-10 min-h-[40vh] flex items-center overflow-hidden border-b border-border">
-        <div class="bgGlow"></div>
+    <header class="relative z-10 min-h-[42vh] flex items-end pb-16 pt-28 overflow-hidden bg-bg">
         <div class="noise"></div>
-        <div class="max-w-[1140px] mx-auto px-[18px] py-12 lg:py-16 relative z-20">
-            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-bold w-fit mb-6">
+        <div class="bgGlow"></div>
+        <div class="max-w-[1140px] mx-auto px-[18px] w-full relative z-20">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/10 border border-brand/20 text-brand text-[11px] font-bold w-fit mb-5 uppercase tracking-widest">
                 Join Studio 19
             </div>
-            <h1 class="text-[clamp(32px,4vw,52px)] leading-[1.1] font-extrabold text-white heroText max-w-[720px]">
-                Work With Us. <span class="text-white/80">Staff Roles &amp; Freelance Opportunities.</span>
+            <h1 class="heroText font-extrabold text-white mb-6 max-w-3xl">
+                Work With Us.
             </h1>
-            <p class="mt-5 text-[18px] leading-relaxed text-white/80 max-w-[600px]">
+            <p class="text-lg md:text-xl text-white/80 leading-relaxed max-w-2xl font-light">
                 We're a Dar es Salaam-based creative media production company. Below are our current openings,
                 for full-time roles, internships, and freelance or contract work alike.
             </p>
@@ -133,11 +135,11 @@
     </header>
 
     <!-- Positions -->
-    <section id="positions" class="relative z-10 py-20 bg-black">
+    <section id="positions" class="relative z-10 py-24 bg-lightBg">
         <div class="max-w-[900px] mx-auto px-[18px]">
-            <div class="mb-10">
+            <div class="mb-12">
                 <div class="text-[11px] tracking-[0.22em] text-brand font-extrabold mb-3">CURRENT OPENINGS</div>
-                <h2 class="text-3xl font-extrabold text-white">Open Positions</h2>
+                <h2 class="text-3xl font-extrabold text-lightText">Open Positions</h2>
             </div>
 
             <div id="loadingState" class="space-y-4">
@@ -147,22 +149,36 @@
 
             <div id="positionsList" class="space-y-4" hidden></div>
 
-            <div id="emptyState" class="text-center py-16 rounded-2xl border border-white/10 bg-white/5" hidden>
-                <h3 class="text-xl font-extrabold text-white mb-2">No open positions right now</h3>
-                <p class="text-muted2 max-w-[420px] mx-auto">
+            <div id="emptyState" class="text-center py-16 rounded-[24px] glass-panel-light" hidden>
+                <h3 class="text-xl font-extrabold text-lightText mb-2">No open positions right now</h3>
+                <p class="text-lightMuted max-w-[420px] mx-auto">
                     Check back soon, or send a speculative application, including your CV and a link to your
                     work, to <a href="mailto:talent@studio19.co.tz" class="text-brand font-bold">talent@studio19.co.tz</a>.
                 </p>
             </div>
 
-            <div id="errorState" class="text-center py-16 rounded-2xl border border-white/10 bg-white/5" hidden>
-                <p class="text-muted2">Couldn't load open positions right now. Please refresh, or email
+            <div id="errorState" class="text-center py-16 rounded-[24px] glass-panel-light" hidden>
+                <p class="text-lightMuted">Couldn't load open positions right now. Please refresh, or email
                     <a href="mailto:talent@studio19.co.tz" class="text-brand font-bold">talent@studio19.co.tz</a> directly.</p>
             </div>
         </div>
     </section>
 
-    <footer class="py-8 border-t border-border text-center"></footer>
+    <!-- CTA -->
+    <section class="py-20 bg-brand relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/5"></div>
+        <div class="max-w-[700px] mx-auto px-[18px] relative z-10 text-center">
+            <h2 class="text-[clamp(26px,3vw,36px)] leading-tight font-extrabold text-black mb-5">
+                Don't see the right role?
+            </h2>
+            <p class="text-[16px] text-black/80 mb-8 max-w-[520px] mx-auto">
+                We're always open to hearing from strong freelancers and collaborators. Send your CV and a link
+                to your work to <span class="font-bold">talent@studio19.co.tz</span>.
+            </p>
+        </div>
+    </section>
+
+    <footer class="py-8 border-t border-white/5 bg-bg relative z-10 text-center"></footer>
 
     <script src="/talent/talent-data.js"></script>
     <script>
@@ -174,16 +190,16 @@
             const remoteLabel = p.remote ? " · Remote-friendly" : "";
             return `
               <a href="/talent/${encodeURIComponent(p.id)}"
-                 class="group block p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-brand/40 hover:bg-white/[0.07] transition">
+                 class="group block p-6 rounded-[24px] glass-panel-light">
                 <div class="flex flex-wrap items-center gap-2 mb-3">
-                  <span class="badge">${typeLabel}</span>
-                  <span class="badge">${locationLabel}${remoteLabel}</span>
-                  <span class="badge ${urgent ? "badge-urgent" : ""}">
+                  <span class="badge-light">${typeLabel}</span>
+                  <span class="badge-light">${locationLabel}${remoteLabel}</span>
+                  <span class="badge-light ${urgent ? "badge-urgent" : ""}">
                     ${daysLeft >= 0 ? `Deadline: ${talentFormatDate(p.deadline)}` : "Closing"}
                   </span>
                 </div>
-                <h3 class="text-xl font-extrabold text-white mb-2 group-hover:text-brand transition">${talentEscapeHtml(p.title)}</h3>
-                <p class="text-[14px] text-muted2 leading-relaxed mb-3">${talentEscapeHtml(p.summary || "")}</p>
+                <h3 class="text-xl font-extrabold text-lightText mb-2 group-hover:text-brand transition">${talentEscapeHtml(p.title)}</h3>
+                <p class="text-[14px] text-lightMuted leading-relaxed mb-3">${talentEscapeHtml(p.summary || "")}</p>
                 <div class="text-[12px] font-extrabold text-brand tracking-wider">VIEW &amp; APPLY →</div>
               </a>
             `;
