@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z2JRG3PH7E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z2JRG3PH7E');
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050509" />
+    <title>Talent &amp; Freelance Opportunities | Studio 19</title>
+    <meta name="description" content="Open positions and freelance opportunities at Studio 19, a creative media production company based in Dar es Salaam, Tanzania." />
+    <link rel="canonical" href="https://studio19.co.tz/talent/" />
+    <meta property="og:title" content="Talent &amp; Freelance Opportunities | Studio 19" />
+    <meta property="og:description" content="Open positions and freelance opportunities at Studio 19, a creative media production company based in Dar es Salaam, Tanzania." />
+    <meta property="og:image" content="https://studio19.co.tz/images/studio19-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://studio19.co.tz/talent/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script src="/js/sidebar-controller.js" defer></script>
+    <script src="/js/footer-controller.js" defer></script>
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: "#09141f",
+                        brand: "#F2B51D",
+                        panel: "rgba(255,255,255,0.06)",
+                        border: "rgba(255,255,255,0.12)",
+                        text: "rgba(255,255,255,0.92)",
+                        muted: "rgba(255,255,255,0.70)",
+                        muted2: "rgba(255,255,255,0.55)",
+                        muted3: "rgba(255,255,255,0.40)",
+                    },
+                    boxShadow: {
+                        soft: "0 0 0 1px rgba(255,255,255,0.08), 0 18px 55px rgba(0,0,0,0.55)",
+                    },
+                    borderRadius: {
+                        xl2: "24px",
+                    },
+                },
+            },
+        };
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+
+        .noise {
+            position: absolute; inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+            opacity: 0.18; mix-blend-mode: soft-light; pointer-events: none; z-index: 1;
+        }
+
+        .bgGlow {
+            position: absolute; inset: 0; height: 100%; min-height: 100%;
+            background:
+                radial-gradient(circle at 18% 20%, rgba(242, 181, 29, 0.12), transparent 38%),
+                radial-gradient(circle at 76% 26%, rgba(255, 255, 255, 0.08), transparent 40%),
+                radial-gradient(circle at 55% 70%, rgba(255, 255, 255, 0.05), transparent 45%);
+            pointer-events: none; z-index: 0;
+        }
+
+        .heroText { text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45); }
+
+        .card-skeleton {
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.04);
+            height: 148px;
+            animation: pulse 1.6s ease-in-out infinite;
+        }
+        @keyframes pulse { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
+
+        .badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 5px 10px; border-radius: 999px; font-size: 11px; font-weight: 800;
+            letter-spacing: 0.02em; border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.75);
+            background: rgba(255,255,255,0.05);
+        }
+        .badge-urgent { color: #F2B51D; border-color: rgba(242,181,29,0.4); background: rgba(242,181,29,0.1); }
+    </style>
+</head>
+
+<body class="min-h-screen bg-bg text-text font-sans overflow-x-hidden">
+    <!-- Top Bar -->
+    <div class="relative z-10">
+        <div class="max-w-[1140px] mx-auto px-[18px]">
+            <div class="flex items-center justify-between py-5">
+                <a href="/index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+                    <div class="w-11 h-11 rounded-2xl bg-white/5 border border-border flex flex-col items-center justify-center overflow-hidden">
+                        <img src="/images/studio19-icon.png" alt="Studio 19 Icon" class="w-8 h-8 object-contain" />
+                    </div>
+                    <div>
+                        <div class="text-sm font-extrabold text-white">Studio 19 | Talent</div>
+                        <div class="text-xs text-brand mt-0.5">← Back to Home</div>
+                    </div>
+                </a>
+                <div class="hidden lg:flex items-center gap-4">
+                    <a class="text-[13px] text-muted2 hover:text-white" href="#positions">Open Positions</a>
+                    <a class="text-[13px] text-muted2 hover:text-white" href="/index.html">All Services</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <header class="relative z-10 min-h-[40vh] flex items-center overflow-hidden border-b border-border">
+        <div class="bgGlow"></div>
+        <div class="noise"></div>
+        <div class="max-w-[1140px] mx-auto px-[18px] py-12 lg:py-16 relative z-20">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-bold w-fit mb-6">
+                Join Studio 19
+            </div>
+            <h1 class="text-[clamp(32px,4vw,52px)] leading-[1.1] font-extrabold text-white heroText max-w-[720px]">
+                Work With Us. <span class="text-white/80">Staff Roles &amp; Freelance Opportunities.</span>
+            </h1>
+            <p class="mt-5 text-[18px] leading-relaxed text-white/80 max-w-[600px]">
+                We're a Dar es Salaam-based creative media production company. Below are our current openings,
+                for full-time roles, internships, and freelance or contract work alike.
+            </p>
+        </div>
+    </header>
+
+    <!-- Positions -->
+    <section id="positions" class="relative z-10 py-20 bg-black">
+        <div class="max-w-[900px] mx-auto px-[18px]">
+            <div class="mb-10">
+                <div class="text-[11px] tracking-[0.22em] text-brand font-extrabold mb-3">CURRENT OPENINGS</div>
+                <h2 class="text-3xl font-extrabold text-white">Open Positions</h2>
+            </div>
+
+            <div id="loadingState" class="space-y-4">
+                <div class="card-skeleton"></div>
+                <div class="card-skeleton"></div>
+            </div>
+
+            <div id="positionsList" class="space-y-4" hidden></div>
+
+            <div id="emptyState" class="text-center py-16 rounded-2xl border border-white/10 bg-white/5" hidden>
+                <h3 class="text-xl font-extrabold text-white mb-2">No open positions right now</h3>
+                <p class="text-muted2 max-w-[420px] mx-auto">
+                    Check back soon, or send a speculative application, including your CV and a link to your
+                    work, to <a href="mailto:talent@studio19.co.tz" class="text-brand font-bold">talent@studio19.co.tz</a>.
+                </p>
+            </div>
+
+            <div id="errorState" class="text-center py-16 rounded-2xl border border-white/10 bg-white/5" hidden>
+                <p class="text-muted2">Couldn't load open positions right now. Please refresh, or email
+                    <a href="mailto:talent@studio19.co.tz" class="text-brand font-bold">talent@studio19.co.tz</a> directly.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 border-t border-border text-center"></footer>
+
+    <script src="/talent/talent-data.js"></script>
+    <script>
+        function positionCardHtml(p) {
+            const daysLeft = talentDaysLeft(p.deadline);
+            const urgent = daysLeft <= 5;
+            const typeLabel = talentEscapeHtml(p.type || "");
+            const locationLabel = talentEscapeHtml(p.location || "");
+            const remoteLabel = p.remote ? " · Remote-friendly" : "";
+            return `
+              <a href="/talent/${encodeURIComponent(p.id)}"
+                 class="group block p-6 rounded-2xl border border-white/10 bg-white/5 hover:border-brand/40 hover:bg-white/[0.07] transition">
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                  <span class="badge">${typeLabel}</span>
+                  <span class="badge">${locationLabel}${remoteLabel}</span>
+                  <span class="badge ${urgent ? "badge-urgent" : ""}">
+                    ${daysLeft >= 0 ? `Deadline: ${talentFormatDate(p.deadline)}` : "Closing"}
+                  </span>
+                </div>
+                <h3 class="text-xl font-extrabold text-white mb-2 group-hover:text-brand transition">${talentEscapeHtml(p.title)}</h3>
+                <p class="text-[14px] text-muted2 leading-relaxed mb-3">${talentEscapeHtml(p.summary || "")}</p>
+                <div class="text-[12px] font-extrabold text-brand tracking-wider">VIEW &amp; APPLY →</div>
+              </a>
+            `;
+        }
+
+        async function initPositionsList() {
+            const loadingState = document.getElementById("loadingState");
+            const listEl = document.getElementById("positionsList");
+            const emptyState = document.getElementById("emptyState");
+            const errorState = document.getElementById("errorState");
+
+            try {
+                const positions = await talentFetchPositions();
+                const open = talentOpenPositionsSorted(positions);
+                loadingState.hidden = true;
+
+                if (open.length === 0) {
+                    emptyState.hidden = false;
+                    return;
+                }
+
+                listEl.innerHTML = open.map(positionCardHtml).join("");
+                listEl.hidden = false;
+            } catch (err) {
+                loadingState.hidden = true;
+                errorState.hidden = false;
+            }
+        }
+
+        initPositionsList();
+    </script>
+</body>
+
+</html>

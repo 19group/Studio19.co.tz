@@ -17,3 +17,10 @@ works/content/experiences/js/dist/script.dev.js
 *.zip
 # Backend Credentials
 inc/config.php
+
+# Applicant data (CVs, contact details) - never commit real applicant PII
+inc/applications/applications.jsonl
+inc/applications/uploads/
+
+# Un-ignore the access-lockdown file for the applications folder (blanket .htaccess rule above would hide it)
+!inc/applications/.htaccess
