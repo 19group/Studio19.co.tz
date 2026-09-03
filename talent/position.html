@@ -127,6 +127,15 @@
 
         #applyStatus.error { color: #dc2626; }
         #applyStatus.success { color: #15803d; }
+
+        .upload-progress-wrap { margin: -8px 0 4px; }
+        .upload-progress-track {
+            width: 100%; height: 8px; border-radius: 999px; background: rgba(0,0,0,0.08); overflow: hidden;
+        }
+        .upload-progress-bar {
+            height: 100%; background: #F2B51D; border-radius: 999px; transition: width 0.15s ease-out;
+        }
+        .upload-progress-text { font-size: 12px; color: #6b7280; margin-top: 6px; font-weight: 700; }
     </style>
 </head>
 
@@ -237,6 +246,13 @@
 
                             <div id="applyStatus" class="text-[13px] min-h-[18px]" role="status" aria-live="polite"></div>
 
+                            <div id="uploadProgressWrap" class="upload-progress-wrap" hidden>
+                                <div class="upload-progress-track">
+                                    <div id="uploadProgressBar" class="upload-progress-bar" style="width:0%"></div>
+                                </div>
+                                <div id="uploadProgressText" class="upload-progress-text">Uploading… 0%</div>
+                            </div>
+
                             <button type="submit" id="applySubmit" class="btnPrimary w-full sm:w-auto">
                                 Submit Application →
                             </button>
@@ -290,6 +306,30 @@
             el.className = "text-[13px] min-h-[18px]" + (type ? " " + type : "");
         }
 
+        // fetch() gives no upload progress, so use XHR for large CV uploads over slower connections.
+        function submitApplicationWithProgress(formData, onProgress) {
+            return new Promise((resolve, reject) => {
+                const xhr = new XMLHttpRequest();
+                xhr.open("POST", "/inc/submit-application.php");
+
+                xhr.upload.addEventListener("progress", (ev) => {
+                    if (ev.lengthComputable) onProgress(Math.round((ev.loaded / ev.total) * 100), false);
+                });
+                xhr.upload.addEventListener("load", () => onProgress(100, true));
+
+                xhr.onload = () => {
+                    try {
+                        resolve(JSON.parse(xhr.responseText));
+                    } catch (err) {
+                        reject(new Error("Invalid server response"));
+                    }
+                };
+                xhr.onerror = () => reject(new Error("Network error"));
+
+                xhr.send(formData);
+            });
+        }
+
         function wireApplyForm(p) {
             document.getElementById("fPositionId").value = p.id;
             document.getElementById("fPositionTitle").value = p.title;
@@ -321,11 +361,25 @@
                 const formData = new FormData(form);
                 submitBtn.disabled = true;
                 const originalText = submitBtn.innerHTML;
-                submitBtn.innerHTML = "Submitting…";
+                submitBtn.innerHTML = "Uploading…";
+
+                const progressWrap = document.getElementById("uploadProgressWrap");
+                const progressBar = document.getElementById("uploadProgressBar");
+                const progressText = document.getElementById("uploadProgressText");
+                progressWrap.hidden = false;
+                progressBar.style.width = "0%";
+                progressText.textContent = "Uploading… 0%";
 
                 try {
-                    const response = await fetch("/inc/submit-application.php", { method: "POST", body: formData });
-                    const result = await response.json();
+                    const result = await submitApplicationWithProgress(formData, (pct, uploadDone) => {
+                        progressBar.style.width = pct + "%";
+                        if (uploadDone) {
+                            progressText.textContent = "Processing…";
+                            submitBtn.innerHTML = "Processing…";
+                        } else {
+                            progressText.textContent = `Uploading… ${pct}%`;
+                        }
+                    });
 
                     if (result.success) {
                         form.hidden = true;
@@ -341,6 +395,7 @@
                 } finally {
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalText;
+                    progressWrap.hidden = true;
                 }
             });
         }
